@@ -2,10 +2,33 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>Deveel</RootNamespace>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Antonello Provenzano</Authors>
+    <Company>Deveel</Company>
+    <Description>A .NET client library that provides access to the LINK Mobility (https://linkmobility.com) messaging REST APIs</Description>
+    <Copyright>(C) 2021 Deveel</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://deveel.com</PackageProjectUrl>
+    <PackageIcon>deveel-logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/deveel/deveel.lm.client</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>sms link linkmobility rest client</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Rest.ClientRuntime" Version="2.3.23" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\deveel-logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
