@@ -20,7 +20,7 @@ PS C:\dev\link.example> dotnet add ./src/Link.Example.csproj package Deveel.Link
 
 ### NuGet.com
 
-**TODO:**...
+**TODO**: ...
 
 # Basic Usage
 
@@ -48,13 +48,13 @@ namespace Example {
         Password = "<Password>"
       };
       
-      var client = new LinkSmsClient(credentials);
+      var client = new LinkSmsClient(LinkNodes.General, credentials);
       
       // 2. replace <PlatformId> and <PlatformPartnerId> with the values
       // provided by LINK Mobility
       // 3. replace the "Source" and "Destination" values with your
       // sender and the receiver
-      var result = await client.Sms.SendAsync(new SmsMessage {
+      var result = await client.Sms.SendAsync(new SmsMessageRequest {
         Source = "2201",
         SourceTON = TypeOfNumber.SHORTCODE,
         Destination = "+472202100",
@@ -67,6 +67,62 @@ namespace Example {
         return 0;
       } else {
         Console.Out.WriteLine($"Error while sending the message - Code {result.ResultCode}");
+        return -1;
+      }
+    }
+  }
+}
+
+```
+
+### Batch Messaging
+
+
+``` csharp
+using System;
+
+using Microsoft.Rest;
+
+using Deveel.Link;
+using Deveel.Link.Models;
+
+namespace Example {
+  public class Program {
+    public static async Task<int> Main(string[] args) {
+      Console.Out.WriteLine("Sending a simple batch of Messages...");
+    
+      // 1. replace <UserName> and <Password> with the credentials
+      // you received from LINK Mobility
+      var credentials = new BasicAuthenticationCredentials {
+        UserName = "<UserName>",
+        Password = "<Password>"
+      };
+      
+      var client = new LinkSmsClient(LinkNodes.General, credentials);
+      
+      // 2. replace <PlatformId> and <PlatformPartnerId> with the values
+      // provided by LINK Mobility
+      // 3. replace the "Source" and "Destination" values with your
+      // sender and the receiver
+      var result = await client.Sms.BatchSendAsync(new SmsBatchSendRequest {
+        PlatformId = "<PlatformId>",
+        PlatformPartnerId = "<PlatformPartnerId>"
+        SendRequestMessages = new List<SmsBatchMessage> {
+          new SmsBatchMessage {
+            Source = "2201",
+            SourceTON = TypeOfNumber.SHORTCODE,
+            Destination = "+472202100"
+          }
+        }
+      });
+      
+      var failed = result.Where(r => !r.IsSuccessful);
+      
+      if (!failed.Any()) {
+        Console.Out.WriteLine("All  messages were successfully sent");
+        return 0;
+      } else {
+        Console.Out.WriteLine($"Some of the messages failed to be sent");
         return -1;
       }
     }
