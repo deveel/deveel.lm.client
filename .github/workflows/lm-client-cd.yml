@@ -1,4 +1,4 @@
-name: .NET
+name: CD Pipeline
 
 on:
   push:
@@ -27,4 +27,6 @@ jobs:
     - name: Package
       run: dotnet pack ./src/Deveel.Link.Client/Deveel.Link.Client.csproj --configuration Release --no-restore --no-build --include-symbols --version-suffix $GITHUB_RUN_ID --output ./nuget
     - name: Publish NuGet
-      run: dotnet nuget push ./nuget/**/*.nupkg --skip-duplicate --api-key ${{secrets.GITHUB_TOKEN}}
+      run: dotnet nuget push ./nuget/**/*.nupkg --skip-duplicate -s https://nuget.pkg.github.com/dev/index.json
+      env: 
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
