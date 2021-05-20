@@ -1,3 +1,5 @@
+[![Build](https://github.com/deveel/deveel.lm.client/actions/workflows/lm-client-cd.yml/badge.svg)](https://github.com/deveel/deveel.lm.client/actions/workflows/lm-client-cd.yml)
+
 # Deveel Client to the LINK Mobility SMS API
 A .NET Core client library to connect to the LINK Mobility SMS API, developed in absence of an official one from the provider.
 
