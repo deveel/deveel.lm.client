@@ -42,6 +42,11 @@ namespace Deveel.Link
         public ServiceClientCredentials Credentials { get; private set; }
 
         /// <summary>
+        /// Gets the IKeyword.
+        /// </summary>
+        public virtual IKeyword Keyword { get; private set; }
+
+        /// <summary>
         /// Gets the ISms.
         /// </summary>
         public virtual ISms Sms { get; private set; }
@@ -287,6 +292,7 @@ namespace Deveel.Link
         /// </summary>
         private void Initialize()
         {
+            Keyword = new Keyword(this);
             Sms = new Sms(this);
             BaseUri = new System.Uri("https://wsx.sp247.net");
             SerializationSettings = new JsonSerializerSettings

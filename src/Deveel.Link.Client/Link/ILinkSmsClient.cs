@@ -39,6 +39,11 @@ namespace Deveel.Link
 
 
         /// <summary>
+        /// Gets the IKeyword.
+        /// </summary>
+        IKeyword Keyword { get; }
+
+        /// <summary>
         /// Gets the ISms.
         /// </summary>
         ISms Sms { get; }

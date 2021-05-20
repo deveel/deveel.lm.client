@@ -25,20 +25,149 @@
         {
             "url": "https://c-eu.linkmobility.io",
             "description": "Central Europe Node (Germany) of API Gateway"
+        },
+        {
+            "url": ""
         }
     ],
     "paths": {
+        "/number/{number}/keyword": {
+            "post": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "number",
+                        "description": "The number that the keyword will be routed to",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": true
+                    }
+                ],
+                "operationId": "keyword_create",
+                "summary": "Creates a new Keyword Route",
+                "description": "Adds a keyword data to the storage by posting a keyword object",
+                "tags": ["keyword", "route"],
+                "security": [ { "basicAuth":[] } ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Route"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "The route as created successfully",
+                        "headers": {
+                            "Location": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "description": "The URL location where the newly created route is accessible"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "The request was not correctly formatted",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        }
+                    },
+                    "409": {
+                        "description": "A keyword route for the number already exists",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/number/{number}/keyword/platform/{platformId}/partner/{partnerId}/id/{id}": {
+            "post": {
+                "operationId": "keyword_get",
+                "summary": "Gets a Keyword Route by ID",
+                "description": "Retrieves a keyword route from a partner by its id",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "name": "number",
+                        "description": "The number that the keywords are routed to",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "platformId",
+                        "required": true,
+                        "in": "path",
+                        "description": "The ID of the Platform assigned by LINK Mobility",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "partnerId",
+                        "required": true,
+                        "in": "path",
+                        "description": "The ID of the Partner assigned by LINK Mobility",
+                        "schema": {
+                            "type": "string"
+                        }    
+                    },
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "description": "The ID of the Route to be returned",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The keyword route was found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Route"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "The keyword route was not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/sms/send": {
             "post": {
                 "operationId": "sms_send",
                 "summary": "",
                 "description": "Submits a message object for delivery to a mobile phone",
                 "tags": ["sms"],
-                "security": [
-                    {
-                        "basicAuth":[]
-                    }
-                ],
+                "security": [ { "basicAuth":[] } ],
                 "requestBody": {
                     "content": {
                         "application/json":{
@@ -374,6 +503,120 @@
                         "type": "integer",
                         "description": "The number of SMS messages produced by the request"
                     }
+                }
+            },
+            "ErrorResponse": {
+                "type": "object"
+            },
+            "Route": {
+                "type": "object",
+                "required": [
+                    "type",
+                    "number",
+                    "platformId",
+                    "platformPartnerId"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The unique identifier of the route, generated when created"
+                    },
+                    "refId": {
+                        "type": "string",
+                        "description": "Id supplied by the client"
+                    },
+                    "type": {
+                        "description": "The type of route",
+                        "$ref": "#/components/schemas/RouteType",
+                        "nullable": false
+                    },
+                    "keyword": {
+                        "type": "string",
+                        "description": "The keyword of the route (if the type is KEYWORD_ROUTE)"
+                    },
+                    "keywordType": {
+                        "description": "Defines the type of keyword matching (if the route type is KEYWORD_ROUTE)",
+                        "$ref": "#/components/schemas/KeywordType"
+                    },
+                    "active": {
+                        "description": "Indicates is the route is active",
+                        "type": "boolean",
+                        "default": true
+                    },
+                    "number": {
+                        "type": "string",
+                        "description": "Either a shortCode or a longnumber formatted as a MSISDN",
+                        "nullable": false
+                    },
+                    "start": {
+                        "type": "string",
+                        "format": "date",
+                        "nullable": true,
+                        "description": "The time when the route should start to be active"
+                    },
+                    "end": {
+                        "type": "string",
+                        "format": "date",
+                        "nullable": true,
+                        "description": "The time when the route should end to be active"
+                    },
+                    "platformId": {
+                        "type": "string",
+                        "nullable": false,
+                        "description": "The Platorm ID provided by LINK Mobility"
+                    },
+                    "platformPartnerId": {
+                        "description": "The ID of the Partner provided by LINK Mobility",
+                        "type":"string"
+                    },
+                    "platformServiceType": {
+                        "description": "] The type of the platform service",
+                        "type": "string"
+                    },
+                    "platformServiceId": {
+                        "description": "] The Id of the platform service",
+                        "type": "string"
+                    },
+                    "shared": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Indicates if the keyword may be registered multiple times"
+                    },
+                    "notifyStop": {
+                        "type": "boolean",
+                        "nullable": false,
+                        "description": "Indicates that stop notifications should be forwarded for this keyword"
+                    },
+                    "customParameters": {
+                        "type": "object",
+                        "description": " Additional parameters may be specified if needed"
+                    }
+                }
+            },
+            "KeywordType": {
+                "type": "string",
+                "description": "The type of keyword matching to activate a route",
+                "enum": [
+                    "DEFAULT",
+                    "EQUALS",
+                    "FIRST_WORD",
+                    "STARTS_WITH"
+                ],
+                "x-ms-enum": {
+                    "name": "KeywordType",
+                    "modelAsString": true
+                }
+            },
+            "RouteType": {
+                "type": "string",
+                "description": "Enumerates the type of routes",
+                "enum": [
+                    "KEYWORD_ROUTE",
+                    "SUBNUMBER_ROUTE"
+                ],
+                "x-ms-enum": {
+                    "name": "RouteType",
+                    "modelAsString": true
                 }
             },
             "DataCodingScheme": {

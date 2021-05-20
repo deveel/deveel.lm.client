@@ -157,6 +157,7 @@
    "serializedName": "SmsSendResult",
    "documentation": "The result of a SMS Send operation",
    "containsConstantProperties": false,
+   "deprecated": false,
    "name": {
     "$id": "27",
     "fixed": false,
@@ -175,8 +176,7 @@
       "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/SmsSendResult"
      ]
     }
-   },
-   "deprecated": false
+   }
   },
   {
    "$id": "28",
@@ -1263,6 +1263,7 @@
    "serializedName": "SmsMessageRequest",
    "documentation": "Describes a single SMS message object",
    "containsConstantProperties": false,
+   "deprecated": false,
    "name": {
     "$id": "189",
     "fixed": false,
@@ -1281,8 +1282,7 @@
       "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/SmsMessageRequest"
      ]
     }
-   },
-   "deprecated": false
+   }
   },
   {
    "$id": "190",
@@ -1866,6 +1866,7 @@
    "serializedName": "SmsBatchMessage",
    "documentation": "A single message within a batch",
    "containsConstantProperties": false,
+   "deprecated": false,
    "name": {
     "$id": "265",
     "fixed": false,
@@ -1884,8 +1885,7 @@
       "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/SmsBatchMessage"
      ]
     }
-   },
-   "deprecated": false
+   }
   },
   {
    "$id": "266",
@@ -2238,6 +2238,7 @@
    "serializedName": "SmsBatchSendRequest",
    "documentation": "A batch of messages that are sent in a single operation",
    "containsConstantProperties": false,
+   "deprecated": false,
    "name": {
     "$id": "323",
     "fixed": false,
@@ -2256,8 +2257,798 @@
       "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/SmsBatchSendRequest"
      ]
     }
+   }
+  },
+  {
+   "$id": "324",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "325",
+     "isReadOnly": false,
+     "realPath": [
+      "id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "326",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "327",
+      "fixed": false,
+      "raw": "The unique identifier of the route, generated when created"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "328",
+      "fixed": false,
+      "raw": "id"
+     },
+     "serializedName": "id",
+     "modelType": {
+      "$id": "329",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "330",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "331",
+     "isReadOnly": false,
+     "realPath": [
+      "refId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "332",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "333",
+      "fixed": false,
+      "raw": "Id supplied by the client"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "334",
+      "fixed": false,
+      "raw": "refId"
+     },
+     "serializedName": "refId",
+     "modelType": {
+      "$id": "335",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "336",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "337",
+     "isReadOnly": false,
+     "realPath": [
+      "type"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "338",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "339",
+      "fixed": false,
+      "raw": "The type of route"
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "RouteType",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/RouteType"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "RouteType",
+       "modelAsString": true,
+       "oldModelAsString": true
+      }
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "340",
+      "fixed": false,
+      "raw": "type"
+     },
+     "serializedName": "type",
+     "modelType": {
+      "$id": "341",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "342",
+        "name": "KEYWORD_ROUTE",
+        "serializedName": "KEYWORD_ROUTE"
+       },
+       {
+        "$id": "343",
+        "name": "SUBNUMBER_ROUTE",
+        "serializedName": "SUBNUMBER_ROUTE"
+       }
+      ],
+      "oldModelAsString": true,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "344",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "deprecated": false,
+       "name": {
+        "$id": "345",
+        "fixed": false,
+        "raw": "String"
+       }
+      },
+      "deprecated": false,
+      "name": {
+       "$id": "346",
+       "fixed": false,
+       "raw": "RouteType"
+      }
+     }
+    },
+    {
+     "$id": "347",
+     "isReadOnly": false,
+     "realPath": [
+      "keyword"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "348",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "349",
+      "fixed": false,
+      "raw": "The keyword of the route (if the type is KEYWORD_ROUTE)"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "350",
+      "fixed": false,
+      "raw": "keyword"
+     },
+     "serializedName": "keyword",
+     "modelType": {
+      "$id": "351",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "352",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "353",
+     "isReadOnly": false,
+     "realPath": [
+      "keywordType"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "354",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "355",
+      "fixed": false,
+      "raw": "Defines the type of keyword matching (if the route type is KEYWORD_ROUTE)"
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "KeywordType",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/KeywordType"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "KeywordType",
+       "modelAsString": true,
+       "oldModelAsString": true
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "356",
+      "fixed": false,
+      "raw": "keywordType"
+     },
+     "serializedName": "keywordType",
+     "modelType": {
+      "$id": "357",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "358",
+        "name": "DEFAULT",
+        "serializedName": "DEFAULT"
+       },
+       {
+        "$id": "359",
+        "name": "EQUALS",
+        "serializedName": "EQUALS"
+       },
+       {
+        "$id": "360",
+        "name": "FIRST_WORD",
+        "serializedName": "FIRST_WORD"
+       },
+       {
+        "$id": "361",
+        "name": "STARTS_WITH",
+        "serializedName": "STARTS_WITH"
+       }
+      ],
+      "oldModelAsString": true,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "362",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "deprecated": false,
+       "name": {
+        "$id": "363",
+        "fixed": false,
+        "raw": "String"
+       }
+      },
+      "deprecated": false,
+      "name": {
+       "$id": "364",
+       "fixed": false,
+       "raw": "KeywordType"
+      }
+     }
+    },
+    {
+     "$id": "365",
+     "isReadOnly": false,
+     "realPath": [
+      "active"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "366",
+      "fixed": false,
+      "raw": "true"
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "367",
+      "fixed": false,
+      "raw": "Indicates is the route is active"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "368",
+      "fixed": false,
+      "raw": "active"
+     },
+     "serializedName": "active",
+     "modelType": {
+      "$id": "369",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "deprecated": false,
+      "name": {
+       "$id": "370",
+       "fixed": false,
+       "raw": "Boolean"
+      }
+     }
+    },
+    {
+     "$id": "371",
+     "isReadOnly": false,
+     "realPath": [
+      "number"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "372",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "373",
+      "fixed": false,
+      "raw": "Either a shortCode or a longnumber formatted as a MSISDN"
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "374",
+      "fixed": false,
+      "raw": "number"
+     },
+     "serializedName": "number",
+     "modelType": {
+      "$id": "375",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "376",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "377",
+     "isReadOnly": false,
+     "realPath": [
+      "start"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "378",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "379",
+      "fixed": false,
+      "raw": "The time when the route should start to be active"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "380",
+      "fixed": false,
+      "raw": "start"
+     },
+     "serializedName": "start",
+     "modelType": {
+      "$id": "381",
+      "$type": "PrimaryType",
+      "format": "date",
+      "knownPrimaryType": "date",
+      "deprecated": false,
+      "name": {
+       "$id": "382",
+       "fixed": false,
+       "raw": "Date"
+      }
+     }
+    },
+    {
+     "$id": "383",
+     "isReadOnly": false,
+     "realPath": [
+      "end"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "384",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "385",
+      "fixed": false,
+      "raw": "The time when the route should end to be active"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "386",
+      "fixed": false,
+      "raw": "end"
+     },
+     "serializedName": "end",
+     "modelType": {
+      "$id": "387",
+      "$type": "PrimaryType",
+      "format": "date",
+      "knownPrimaryType": "date",
+      "deprecated": false,
+      "name": {
+       "$id": "388",
+       "fixed": false,
+       "raw": "Date"
+      }
+     }
+    },
+    {
+     "$id": "389",
+     "isReadOnly": false,
+     "realPath": [
+      "platformId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "390",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "391",
+      "fixed": false,
+      "raw": "The Platorm ID provided by LINK Mobility"
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "392",
+      "fixed": false,
+      "raw": "platformId"
+     },
+     "serializedName": "platformId",
+     "modelType": {
+      "$id": "393",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "394",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "395",
+     "isReadOnly": false,
+     "realPath": [
+      "platformPartnerId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "396",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "397",
+      "fixed": false,
+      "raw": "The ID of the Partner provided by LINK Mobility"
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "398",
+      "fixed": false,
+      "raw": "platformPartnerId"
+     },
+     "serializedName": "platformPartnerId",
+     "modelType": {
+      "$id": "399",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "400",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "401",
+     "isReadOnly": false,
+     "realPath": [
+      "platformServiceType"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "402",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "403",
+      "fixed": false,
+      "raw": "] The type of the platform service"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "404",
+      "fixed": false,
+      "raw": "platformServiceType"
+     },
+     "serializedName": "platformServiceType",
+     "modelType": {
+      "$id": "405",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "406",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "407",
+     "isReadOnly": false,
+     "realPath": [
+      "platformServiceId"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "408",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "409",
+      "fixed": false,
+      "raw": "] The Id of the platform service"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "410",
+      "fixed": false,
+      "raw": "platformServiceId"
+     },
+     "serializedName": "platformServiceId",
+     "modelType": {
+      "$id": "411",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "412",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "413",
+     "isReadOnly": false,
+     "realPath": [
+      "shared"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "414",
+      "fixed": false,
+      "raw": "false"
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "415",
+      "fixed": false,
+      "raw": "Indicates if the keyword may be registered multiple times"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "416",
+      "fixed": false,
+      "raw": "shared"
+     },
+     "serializedName": "shared",
+     "modelType": {
+      "$id": "417",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "deprecated": false,
+      "name": {
+       "$id": "418",
+       "fixed": false,
+       "raw": "Boolean"
+      }
+     }
+    },
+    {
+     "$id": "419",
+     "isReadOnly": false,
+     "realPath": [
+      "notifyStop"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "420",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "421",
+      "fixed": false,
+      "raw": "Indicates that stop notifications should be forwarded for this keyword"
+     },
+     "extensions": {
+      "x-nullable": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "422",
+      "fixed": false,
+      "raw": "notifyStop"
+     },
+     "serializedName": "notifyStop",
+     "modelType": {
+      "$id": "423",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "deprecated": false,
+      "name": {
+       "$id": "424",
+       "fixed": false,
+       "raw": "Boolean"
+      }
+     }
+    },
+    {
+     "$id": "425",
+     "isReadOnly": false,
+     "realPath": [
+      "customParameters"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "426",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "427",
+      "fixed": false,
+      "raw": " Additional parameters may be specified if needed"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "428",
+      "fixed": false,
+      "raw": "customParameters"
+     },
+     "serializedName": "customParameters",
+     "modelType": {
+      "$id": "429",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "object",
+      "deprecated": false,
+      "name": {
+       "$id": "430",
+       "fixed": false,
+       "raw": "Object"
+      }
+     }
+    }
+   ],
+   "serializedName": "Route",
+   "containsConstantProperties": false,
+   "deprecated": false,
+   "name": {
+    "$id": "431",
+    "fixed": false,
+    "raw": "Route"
    },
-   "deprecated": false
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "Route",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/Route"
+     ]
+    }
+   }
+  }
+ ],
+ "headerTypes": [
+  {
+   "$id": "432",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "433",
+     "isReadOnly": false,
+     "realPath": [
+      "Location"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "434",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "435",
+      "fixed": false,
+      "raw": "The URL location where the newly created route is accessible"
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "paths·6jtcpo·number-number-keyword·post·responses·201·headers·location",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/headers/paths·6jtcpo·number-number-keyword·post·responses·201·headers·location"
+       ]
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "436",
+      "fixed": false,
+      "raw": "Location"
+     },
+     "serializedName": "Location",
+     "modelType": {
+      "$id": "437",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "438",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    }
+   ],
+   "serializedName": "keyword-create-Headers",
+   "documentation": "Defines headers for create operation.",
+   "containsConstantProperties": false,
+   "deprecated": false,
+   "name": {
+    "$id": "439",
+    "fixed": false,
+    "raw": "keyword-create-Headers"
+   }
   }
  ],
  "enumTypes": [
@@ -2272,6 +3063,12 @@
   },
   {
    "$ref": "119"
+  },
+  {
+   "$ref": "341"
+  },
+  {
+   "$ref": "357"
   }
  ],
  "name": "LINKMobilityRESTAPIv10",
@@ -2280,24 +3077,882 @@
  "apiVersion": "v1.0",
  "baseUrl": "https://wsx.sp247.net",
  "documentation": "An OpenAPI Specification of the LINK Mobility Common Layer API Gateway produced by Deveel AS",
+ "properties": [
+  {
+   "$id": "440",
+   "isReadOnly": false,
+   "realPath": [
+    "number"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "441",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "442",
+    "fixed": false,
+    "raw": "The number that the keyword will be routed to"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "paths·518lg4·number-number-keyword·post·parameters·0",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·518lg4·number-number-keyword·post·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "443",
+    "fixed": false,
+    "raw": "number"
+   },
+   "serializedName": "number",
+   "modelType": {
+    "$id": "444",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "deprecated": false,
+    "name": {
+     "$id": "445",
+     "fixed": false,
+     "raw": "String"
+    }
+   }
+  },
+  {
+   "$id": "446",
+   "isReadOnly": false,
+   "realPath": [
+    "number"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "447",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "448",
+    "fixed": false,
+    "raw": "The number that the keywords are routed to"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "paths·1gjsgj5·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·0",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1gjsgj5·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "449",
+    "fixed": false,
+    "raw": "Number1"
+   },
+   "serializedName": "number",
+   "modelType": {
+    "$id": "450",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "deprecated": false,
+    "name": {
+     "$id": "451",
+     "fixed": false,
+     "raw": "String"
+    }
+   }
+  },
+  {
+   "$id": "452",
+   "isReadOnly": false,
+   "realPath": [
+    "platformId"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "453",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "454",
+    "fixed": false,
+    "raw": "The ID of the Platform assigned by LINK Mobility"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "paths·1m249zj·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·1",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1m249zj·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·1"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "455",
+    "fixed": false,
+    "raw": "platformId"
+   },
+   "serializedName": "platformId",
+   "modelType": {
+    "$id": "456",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "deprecated": false,
+    "name": {
+     "$id": "457",
+     "fixed": false,
+     "raw": "String"
+    }
+   }
+  },
+  {
+   "$id": "458",
+   "isReadOnly": false,
+   "realPath": [
+    "partnerId"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "459",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "460",
+    "fixed": false,
+    "raw": "The ID of the Partner assigned by LINK Mobility"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "paths·qmww66·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·2",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·qmww66·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·2"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "461",
+    "fixed": false,
+    "raw": "partnerId"
+   },
+   "serializedName": "partnerId",
+   "modelType": {
+    "$id": "462",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "deprecated": false,
+    "name": {
+     "$id": "463",
+     "fixed": false,
+     "raw": "String"
+    }
+   }
+  },
+  {
+   "$id": "464",
+   "isReadOnly": false,
+   "realPath": [
+    "id"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "465",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "466",
+    "fixed": false,
+    "raw": "The ID of the Route to be returned"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "paths·1yst67r·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·3",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1yst67r·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·3"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "467",
+    "fixed": false,
+    "raw": "id"
+   },
+   "serializedName": "id",
+   "modelType": {
+    "$id": "468",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "deprecated": false,
+    "name": {
+     "$id": "469",
+     "fixed": false,
+     "raw": "String"
+    }
+   }
+  }
+ ],
  "operations": [
   {
-   "$id": "324",
+   "$id": "470",
    "methods": [
     {
-     "$id": "325",
+     "$id": "471",
      "parameters": [
       {
-       "$id": "326",
+       "$id": "472",
        "location": "body",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "327",
+        "$id": "473",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "328",
+        "$id": "474",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·47w0k9·number-number-keyword·post·requestbody",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/requestBodies/paths·47w0k9·number-number-keyword·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "475",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "324"
+       }
+      },
+      {
+       "$id": "476",
+       "clientProperty": {
+        "$ref": "440"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "477",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "478",
+        "fixed": false,
+        "raw": "The number that the keyword will be routed to"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·518lg4·number-number-keyword·post·parameters·0",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·518lg4·number-number-keyword·post·parameters·0"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "479",
+        "fixed": false,
+        "raw": "number"
+       },
+       "serializedName": "number",
+       "modelType": {
+        "$id": "480",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "481",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      }
+     ],
+     "name": {
+      "$id": "482",
+      "fixed": false,
+      "raw": "create"
+     },
+     "group": {
+      "$id": "483",
+      "fixed": false,
+      "raw": "keyword"
+     },
+     "serializedName": "keyword_create",
+     "url": "/number/{number}/keyword",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "Created": {
+       "$id": "484",
+       "headers": {
+        "$ref": "432"
+       },
+       "extensions": {
+        "$id": "485",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·1cwunj·number-number-keyword·post·responses·201",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·1cwunj·number-number-keyword·post·responses·201"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "BadRequest": {
+       "$id": "486",
+       "body": {
+        "$id": "487",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "object",
+        "deprecated": false,
+        "name": {
+         "$id": "488",
+         "fixed": false,
+         "raw": "Object"
+        }
+       },
+       "headers": {
+        "$ref": "432"
+       },
+       "extensions": {
+        "$id": "489",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·w6lxh2·number-number-keyword·post·responses·400",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·w6lxh2·number-number-keyword·post·responses·400"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "Conflict": {
+       "$id": "490",
+       "body": {
+        "$id": "491",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "object",
+        "deprecated": false,
+        "name": {
+         "$id": "492",
+         "fixed": false,
+         "raw": "Object"
+        }
+       },
+       "headers": {
+        "$ref": "432"
+       },
+       "extensions": {
+        "$id": "493",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·1nffzml·number-number-keyword·post·responses·409",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·1nffzml·number-number-keyword·post·responses·409"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "494",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "495",
+      "body": {
+       "$ref": "487"
+      },
+      "headers": {
+       "$ref": "432"
+      },
+      "isNullable": true
+     },
+     "description": "Adds a keyword data to the storage by posting a keyword object",
+     "summary": "Creates a new Keyword Route",
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": [
+       {
+        "url": "https://wsx.sp247.net/",
+        "description": "General API Gateway"
+       },
+       {
+        "url": "https://n-eu.linkmobility.io",
+        "description": "Northern Europe (Sweden) Node of API Gateway"
+       },
+       {
+        "url": "https://s-eu.linkmobility.io",
+        "description": "Southern European (Spain) Node of API Gateway"
+       },
+       {
+        "url": "https://c-eu.linkmobility.io",
+        "description": "Central Europe Node (Germany) of API Gateway"
+       },
+       {
+        "url": ""
+       }
+      ],
+      "security": [
+       {
+        "basicAuth": []
+       }
+      ]
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "496",
+     "parameters": [
+      {
+       "$id": "497",
+       "clientProperty": {
+        "$ref": "440"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "498",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "499",
+        "fixed": false,
+        "raw": "The number that the keywords are routed to"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·1gjsgj5·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·0",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1gjsgj5·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·0"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "500",
+        "fixed": false,
+        "raw": "number"
+       },
+       "serializedName": "number",
+       "modelType": {
+        "$id": "501",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "502",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "503",
+       "clientProperty": {
+        "$ref": "452"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "504",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "505",
+        "fixed": false,
+        "raw": "The ID of the Platform assigned by LINK Mobility"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·1m249zj·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·1",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1m249zj·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·1"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "506",
+        "fixed": false,
+        "raw": "platformId"
+       },
+       "serializedName": "platformId",
+       "modelType": {
+        "$id": "507",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "508",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "509",
+       "clientProperty": {
+        "$ref": "458"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "510",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "511",
+        "fixed": false,
+        "raw": "The ID of the Partner assigned by LINK Mobility"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·qmww66·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·2",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·qmww66·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·2"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "512",
+        "fixed": false,
+        "raw": "partnerId"
+       },
+       "serializedName": "partnerId",
+       "modelType": {
+        "$id": "513",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "514",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "515",
+       "clientProperty": {
+        "$ref": "464"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "516",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "517",
+        "fixed": false,
+        "raw": "The ID of the Route to be returned"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·1yst67r·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·3",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1yst67r·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·3"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "518",
+        "fixed": false,
+        "raw": "id"
+       },
+       "serializedName": "id",
+       "modelType": {
+        "$id": "519",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "520",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      }
+     ],
+     "name": {
+      "$id": "521",
+      "fixed": false,
+      "raw": "get"
+     },
+     "group": {
+      "$id": "522",
+      "fixed": false,
+      "raw": "keyword"
+     },
+     "serializedName": "keyword_get",
+     "url": "/number/{number}/keyword/platform/{platformId}/partner/{partnerId}/id/{id}",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "523",
+       "body": {
+        "$ref": "324"
+       },
+       "extensions": {
+        "$id": "524",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·1gw8mef·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·responses·200",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·1gw8mef·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "NotFound": {
+       "$id": "525",
+       "body": {
+        "$id": "526",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "object",
+        "deprecated": false,
+        "name": {
+         "$id": "527",
+         "fixed": false,
+         "raw": "Object"
+        }
+       },
+       "extensions": {
+        "$id": "528",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·108986o·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·responses·404",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·108986o·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·responses·404"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "529",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "530",
+      "body": {
+       "$id": "531",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "object",
+       "deprecated": false,
+       "name": {
+        "$id": "532",
+        "fixed": false,
+        "raw": "Object"
+       }
+      },
+      "isNullable": true
+     },
+     "description": "Retrieves a keyword route from a partner by its id",
+     "summary": "Gets a Keyword Route by ID",
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": [
+       {
+        "url": "https://wsx.sp247.net/",
+        "description": "General API Gateway"
+       },
+       {
+        "url": "https://n-eu.linkmobility.io",
+        "description": "Northern Europe (Sweden) Node of API Gateway"
+       },
+       {
+        "url": "https://s-eu.linkmobility.io",
+        "description": "Southern European (Spain) Node of API Gateway"
+       },
+       {
+        "url": "https://c-eu.linkmobility.io",
+        "description": "Central Europe Node (Germany) of API Gateway"
+       },
+       {
+        "url": ""
+       }
+      ]
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "533",
+    "fixed": false,
+    "raw": "Keyword"
+   },
+   "typeName": {
+    "$id": "534",
+    "fixed": false
+   },
+   "nameForProperty": "Keyword"
+  },
+  {
+   "$id": "535",
+   "methods": [
+    {
+     "$id": "536",
+     "parameters": [
+      {
+       "$id": "537",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "538",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "539",
         "fixed": false
        },
        "extensions": {
@@ -2317,7 +3972,7 @@
        "isRequired": false,
        "isConstant": false,
        "name": {
-        "$id": "329",
+        "$id": "540",
         "fixed": false,
         "raw": "body"
        },
@@ -2328,12 +3983,12 @@
       }
      ],
      "name": {
-      "$id": "330",
+      "$id": "541",
       "fixed": false,
       "raw": "send"
      },
      "group": {
-      "$id": "331",
+      "$id": "542",
       "fixed": false,
       "raw": "sms"
      },
@@ -2343,12 +3998,12 @@
      "httpMethod": "post",
      "responses": {
       "OK": {
-       "$id": "332",
+       "$id": "543",
        "body": {
         "$ref": "2"
        },
        "extensions": {
-        "$id": "333",
+        "$id": "544",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -2365,9 +4020,9 @@
        "isNullable": true
       },
       "NoContent": {
-       "$id": "334",
+       "$id": "545",
        "extensions": {
-        "$id": "335",
+        "$id": "546",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -2385,11 +4040,11 @@
       }
      },
      "defaultResponse": {
-      "$id": "336",
+      "$id": "547",
       "isNullable": true
      },
      "returnType": {
-      "$id": "337",
+      "$id": "548",
       "body": {
        "$ref": "2"
       },
@@ -2418,6 +4073,9 @@
        {
         "url": "https://c-eu.linkmobility.io",
         "description": "Central Europe Node (Germany) of API Gateway"
+       },
+       {
+        "url": ""
        }
       ],
       "security": [
@@ -2430,19 +4088,19 @@
      "hidden": false
     },
     {
-     "$id": "338",
+     "$id": "549",
      "parameters": [
       {
-       "$id": "339",
+       "$id": "550",
        "location": "body",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "340",
+        "$id": "551",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "341",
+        "$id": "552",
         "fixed": false
        },
        "extensions": {
@@ -2462,7 +4120,7 @@
        "isRequired": false,
        "isConstant": false,
        "name": {
-        "$id": "342",
+        "$id": "553",
         "fixed": false,
         "raw": "body"
        },
@@ -2473,12 +4131,12 @@
       }
      ],
      "name": {
-      "$id": "343",
+      "$id": "554",
       "fixed": false,
       "raw": "batchSend"
      },
      "group": {
-      "$id": "344",
+      "$id": "555",
       "fixed": false,
       "raw": "sms"
      },
@@ -2488,21 +4146,21 @@
      "httpMethod": "post",
      "responses": {
       "OK": {
-       "$id": "345",
+       "$id": "556",
        "body": {
-        "$id": "346",
+        "$id": "557",
         "$type": "SequenceType",
         "elementType": {
          "$ref": "2"
         },
         "deprecated": false,
         "name": {
-         "$id": "347",
+         "$id": "558",
          "fixed": false
         }
        },
        "extensions": {
-        "$id": "348",
+        "$id": "559",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -2519,9 +4177,9 @@
        "isNullable": true
       },
       "NoContent": {
-       "$id": "349",
+       "$id": "560",
        "extensions": {
-        "$id": "350",
+        "$id": "561",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -2539,13 +4197,13 @@
       }
      },
      "defaultResponse": {
-      "$id": "351",
+      "$id": "562",
       "isNullable": true
      },
      "returnType": {
-      "$id": "352",
+      "$id": "563",
       "body": {
-       "$ref": "346"
+       "$ref": "557"
       },
       "isNullable": true
      },
@@ -2572,6 +4230,9 @@
        {
         "url": "https://c-eu.linkmobility.io",
         "description": "Central Europe Node (Germany) of API Gateway"
+       },
+       {
+        "url": ""
        }
       ],
       "security": [
@@ -2585,12 +4246,12 @@
     }
    ],
    "name": {
-    "$id": "353",
+    "$id": "564",
     "fixed": false,
     "raw": "Sms"
    },
    "typeName": {
-    "$id": "354",
+    "$id": "565",
     "fixed": false
    },
    "nameForProperty": "Sms"

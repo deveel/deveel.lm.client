@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Newtonsoft.Json;
 
-namespace Deveel.Link.Client.Link.Models {
+namespace Deveel.Link.Models {
 	public class SmsDeliveryReport {
 		[JsonProperty("refId")]
 		public string RefId { get; set; }
