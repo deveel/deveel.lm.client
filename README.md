@@ -3,6 +3,23 @@ A .NET Core client library to connect to the LINK Mobility SMS API, developed in
 
 The library is generated using AutoRest, from an OpenAPI document created for this project, based on the definitions provided by LINK Mobility itself: given this model, it is possible to generate client libraries in other languages supported by the generation tool (see [AutoRest](https://github.com/Azure/autorest) for more details).
 
+# Installation
+
+## NuGet Package for .NET Project
+
+### Pre-releases
+
+Before adding a pre-release package you need to add Deveel's GitHub NuGet repository, where the latest builds are stored  
+
+``` powershell
+PS C:\dev\link.example>  dotnet nuget add source "https://nuget.pkg.github.com/deveel/index.json" -n "Deveel NuGet"
+PS C:\dev\link.example> dotnet add ./src/Link.Example.csproj package Deveel.Link.Client --prerelease
+```
+
+### NuGet.com
+
+**TODO:**...
+
 # Basic Usage
 
 ## .NET
@@ -43,10 +60,12 @@ namespace Example {
         PlatformPartnerId = "<PlatformPartnerId>"
       });
       
-      if (!result.IsSuccess()) {
+      if (!result.IsSuccessful) {
         Console.Out.WriteLine($"Message successfully sent - ID {result.MessageId}");
+        return 0;
       } else {
         Console.Out.WriteLine($"Error while sending the message - Code {result.ResultCode}");
+        return -1;
       }
     }
   }
@@ -61,9 +80,9 @@ namespace Example {
 
 To contribute to the .NET version of this library simply open pull requests, that will be reviewed
 
-## Other Languages
+## Other Frameworks
 
-In case you are looking to leverage the OpenAPI Specification available in this project to generate libraries in other languages supported by AutoRest, please take contact with _antonello at deveel dot com_ to align on the structure of the project and the further contributions.
+In case you are looking to leverage the OpenAPI Specification available in this project to generate libraries in other languages and frameworks (eg. go, python, typescript, etc.) supported by AutoRest, please take contact with _antonello at deveel dot com_ to align on the structure of the project and the further contributions.
 
 # References
 
