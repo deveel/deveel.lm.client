@@ -1,9 +1,28 @@
 [![Build](https://github.com/deveel/deveel.lm.client/actions/workflows/lm-client-cd.yml/badge.svg)](https://github.com/deveel/deveel.lm.client/actions/workflows/lm-client-cd.yml)
 
-# Deveel Client to the LINK Mobility SMS API
-A .NET Core client library to connect to the LINK Mobility SMS API, developed in absence of an official one from the provider.
+# LINK Mobility REST API Client
+This is a .NET Core client library to connect to the LINK Mobility SMS API, developed in absence of an official one from the provider.
 
-The library is generated using AutoRest, from an OpenAPI document created for this project, based on the definitions provided by LINK Mobility itself: given this model, it is possible to generate client libraries in other languages supported by the generation tool (see [AutoRest](https://github.com/Azure/autorest) for more details).
+The library is generated using **AutoRest**, from an _OpenAPI_ specification document created for this project (in absence of an official one from LINK Mobility itself), based on the public [documentation of the LINK Mobility REST APIs](https://linkmobility.com/developer/): since this approach chosen for the development, it would be possible to generate client libraries in other languages supported by the generation tool (eg. python, go, typescript, etc.).
+
+# Pre-Requisites
+
+Before you can use this library, you must receive the following parameters from **LINK Mobility**: take contact with the Support services of the company to obtain them.
+
+| Parameter                 | Required  | Description                                                    |
+|---------------------------|-----------|----------------------------------------------------------------|
+| **Platform ID**           |     X     | Identifies a platform from where the functions are accessed    |
+| **Platform Partner ID**   |     X     | The unique identifier of the account within the Platform       |
+| **User Name**             |     X     | The name of the user accessing the functions of the API        |
+| **Password**              |     X     | A secret password used to authenticate the user                |
+| **Platform Service Type** |     -     | The type of service within the Platform that is using the APIs |
+| **Platform Service ID**   |     -     | The unique identifier of the service                           |
+| **Gate IDs** *            |     -     | One or more identifiers of Gates (HTTP callbacks)              |
+
+## * Gates
+Gates must be configured by LINK Mobility and callback one or more URLs that you will chose: their identifiers (_Gate ID_) can be specified in the single messages or in  the batches of messages, to hint LINK Mobility on the destination of the callbacks for the notification of the status of deliver (_Delivery Report_ or _DLR_) of the individual message.
+
+These callbacks are also providing the receiver inbound messages (_Mobile Originated_ or _MO_) directed to a number and optionally configured to a given routing logic (_MO Route_ or  _Keyword Route_).
 
 # Installation
 
@@ -150,4 +169,4 @@ In case you are looking to leverage the OpenAPI Specification available in this 
 
 
 
-**Note**: This project is not affiliated, driven or contributed by by LINK Mobility
+**Note**: This project is not affiliated, driven or contributed by LINK Mobility
