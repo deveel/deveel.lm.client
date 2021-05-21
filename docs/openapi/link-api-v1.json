@@ -516,7 +516,10 @@
                     },
                     "customParameters": {
                         "description": "Additional parameters may be specified if needed",
-                        "type": "object"
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object"
+                        }
                     }
                 }
             },
@@ -562,7 +565,10 @@
                         "description": "Indicates whether you want a response in the body when you submit the message."
                     },
                     "customParameters": {
-                        "type": "object"
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object"
+                        }
                     },
                     "sendRequestMessages": {
                         "type": "array",
@@ -673,10 +679,13 @@
             "ErrorResponse": {
                 "type": "object",
                 "properties": {
-                    "errorCode": {
-                        "type": "string"
+                    "status": {
+                        "type": "integer"
                     },
                     "description": {
+                        "type": "string"
+                    },
+                    "transaltedDescription": {
                         "type": "string"
                     }
                 }
@@ -762,6 +771,9 @@
                     },
                     "customParameters": {
                         "type": "object",
+                        "additionalProperties": {
+                            "type": "object"
+                        },
                         "description": " Additional parameters may be specified if needed"
                     }
                 }

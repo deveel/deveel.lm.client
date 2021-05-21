@@ -77,7 +77,7 @@ namespace Deveel.Link.Models
         /// in the body when you submit the message.</param>
         /// <param name="customParameters">Additional parameters may be
         /// specified if needed</param>
-        public SmsMessageRequest(string source, string destination, string platformId, string platformPartnerId, string sourceTON = default(string), string destinationTON = default(string), string dcs = default(string), string userDataHeader = default(string), string userData = default(string), string priority = default(string), int? age = default(int?), string productDescription = default(string), int? productCategory = default(int?), int? tariff = default(int?), string currency = default(string), bool? useDeliveryReport = default(bool?), IList<string> deliveryReportGates = default(IList<string>), int? relativeValidityTime = default(int?), System.DateTimeOffset? absoluteValidityTime = default(System.DateTimeOffset?), string moReferenceId = default(string), string refId = default(string), bool? ignoreResponse = default(bool?), object customParameters = default(object))
+        public SmsMessageRequest(string source, string destination, string platformId, string platformPartnerId, string sourceTON = default(string), string destinationTON = default(string), string dcs = default(string), string userDataHeader = default(string), string userData = default(string), string priority = default(string), int? age = default(int?), string productDescription = default(string), int? productCategory = default(int?), int? tariff = default(int?), string currency = default(string), bool? useDeliveryReport = default(bool?), IList<string> deliveryReportGates = default(IList<string>), int? relativeValidityTime = default(int?), System.DateTimeOffset? absoluteValidityTime = default(System.DateTimeOffset?), string moReferenceId = default(string), string refId = default(string), bool? ignoreResponse = default(bool?), IDictionary<string, object> customParameters = default(IDictionary<string, object>))
         {
             Source = source;
             SourceTON = sourceTON;
@@ -264,7 +264,7 @@ namespace Deveel.Link.Models
         /// Gets or sets additional parameters may be specified if needed
         /// </summary>
         [JsonProperty(PropertyName = "customParameters")]
-        public object CustomParameters { get; set; }
+        public IDictionary<string, object> CustomParameters { get; set; }
 
         /// <summary>
         /// Validate the object.

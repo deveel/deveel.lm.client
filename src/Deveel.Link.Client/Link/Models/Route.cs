@@ -9,6 +9,8 @@ namespace Deveel.Link.Models
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
     using Newtonsoft.Json;
+    using System.Collections;
+    using System.Collections.Generic;
     using System.Linq;
 
     public partial class Route
@@ -55,7 +57,7 @@ namespace Deveel.Link.Models
         /// be forwarded for this keyword</param>
         /// <param name="customParameters"> Additional parameters may be
         /// specified if needed</param>
-        public Route(string type, string number, string platformId, string platformPartnerId, string id = default(string), string refId = default(string), string keyword = default(string), string keywordType = default(string), bool? active = default(bool?), System.DateTime? start = default(System.DateTime?), System.DateTime? end = default(System.DateTime?), string platformServiceType = default(string), string platformServiceId = default(string), bool? shared = default(bool?), bool notifyStop = default(bool), object customParameters = default(object))
+        public Route(string type, string number, string platformId, string platformPartnerId, string id = default(string), string refId = default(string), string keyword = default(string), string keywordType = default(string), bool? active = default(bool?), System.DateTime? start = default(System.DateTime?), System.DateTime? end = default(System.DateTime?), string platformServiceType = default(string), string platformServiceId = default(string), bool? shared = default(bool?), bool notifyStop = default(bool), IDictionary<string, object> customParameters = default(IDictionary<string, object>))
         {
             Id = id;
             RefId = refId;
@@ -185,7 +187,7 @@ namespace Deveel.Link.Models
         /// Gets or sets  Additional parameters may be specified if needed
         /// </summary>
         [JsonProperty(PropertyName = "customParameters")]
-        public object CustomParameters { get; set; }
+        public IDictionary<string, object> CustomParameters { get; set; }
 
         /// <summary>
         /// Validate the object.

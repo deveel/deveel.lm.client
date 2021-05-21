@@ -22,10 +22,11 @@ namespace Deveel.Link.Models
         /// <summary>
         /// Initializes a new instance of the ErrorResponse class.
         /// </summary>
-        public ErrorResponse(string errorCode = default(string), string description = default(string))
+        public ErrorResponse(int? status = default(int?), string description = default(string), string transaltedDescription = default(string))
         {
-            ErrorCode = errorCode;
+            Status = status;
             Description = description;
+            TransaltedDescription = transaltedDescription;
             CustomInit();
         }
 
@@ -36,13 +37,18 @@ namespace Deveel.Link.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "errorCode")]
-        public string ErrorCode { get; set; }
+        [JsonProperty(PropertyName = "status")]
+        public int? Status { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "transaltedDescription")]
+        public string TransaltedDescription { get; set; }
 
     }
 }

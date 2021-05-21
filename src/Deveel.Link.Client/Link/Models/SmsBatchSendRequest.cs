@@ -42,7 +42,7 @@ namespace Deveel.Link.Models
         /// milliseconds) the message is supposed to live</param>
         /// <param name="ignoreResponse">Indicates whether you want a response
         /// in the body when you submit the message.</param>
-        public SmsBatchSendRequest(string platformId, string platformPartnerId, bool? useDeliveryReport = default(bool?), IList<string> deliveryReportGates = default(IList<string>), int? relativeValidityTime = default(int?), System.DateTime? absoluteValidityTime = default(System.DateTime?), bool? ignoreResponse = default(bool?), object customParameters = default(object), IList<SmsBatchMessage> sendRequestMessages = default(IList<SmsBatchMessage>))
+        public SmsBatchSendRequest(string platformId, string platformPartnerId, bool? useDeliveryReport = default(bool?), IList<string> deliveryReportGates = default(IList<string>), int? relativeValidityTime = default(int?), System.DateTime? absoluteValidityTime = default(System.DateTime?), bool? ignoreResponse = default(bool?), IDictionary<string, object> customParameters = default(IDictionary<string, object>), IList<SmsBatchMessage> sendRequestMessages = default(IList<SmsBatchMessage>))
         {
             UseDeliveryReport = useDeliveryReport;
             DeliveryReportGates = deliveryReportGates;
@@ -110,7 +110,7 @@ namespace Deveel.Link.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "customParameters")]
-        public object CustomParameters { get; set; }
+        public IDictionary<string, object> CustomParameters { get; set; }
 
         /// <summary>
         /// </summary>

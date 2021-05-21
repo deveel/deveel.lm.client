@@ -19,7 +19,7 @@ namespace Deveel.Link {
 		[Fact]
 		public async Task SendSingleMessage_Queued() {
 			// setup the test http client to intercept the call
-			var httpClient = HttpClientUtil.CreateTestClient(async request => {
+			var httpClient = HttpClientUtil.CreateTestClient(request => {
 				var resultJson = JObject.FromObject(new SmsSendResult {
 					ResultCode = ResultCodes.Queued,
 					Description = "Queued",
@@ -57,7 +57,7 @@ namespace Deveel.Link {
 		[Fact]
 		public async Task SendSingleMessage_MissingPlatformId() {
 			// setup the test http client to intercept the call (although it should never be reached...)
-			var httpClient = HttpClientUtil.CreateTestClient(async request => {
+			var httpClient = HttpClientUtil.CreateTestClient(request => {
 				var resultJson = JObject.FromObject(new SmsSendResult {
 					ResultCode = ResultCodes.InvalidMessageContent,
 					Description = "Missing Platform ID",
@@ -88,7 +88,7 @@ namespace Deveel.Link {
 		[Fact]
 		public async Task SendBatch_AllQueued() {
 			// setup the test http client to intercept the call
-			var httpClient = HttpClientUtil.CreateTestClient(async request => {
+			var httpClient = HttpClientUtil.CreateTestClient(request => {
 				var resultJson = JArray.FromObject(new SmsSendResult[] {
 					new SmsSendResult {
 						ResultCode = ResultCodes.Queued,
