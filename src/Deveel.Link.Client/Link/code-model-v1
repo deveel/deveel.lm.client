@@ -3076,7 +3076,7 @@
  "modelsName": "Models",
  "apiVersion": "v1.0",
  "baseUrl": "https://wsx.sp247.net",
- "documentation": "An OpenAPI Specification of the LINK Mobility Common Layer API Gateway produced by Deveel AS",
+ "documentation": "OpenAPI Specification of the LINK Mobility Common Layer",
  "properties": [
   {
    "$id": "440",
@@ -3155,9 +3155,9 @@
      "filename": [
       "mem:///103?oai3.shaken.json"
      ],
-     "name": "paths·1gjsgj5·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·0",
+     "name": "paths·1shf5zx·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·0",
      "originalLocations": [
-      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1gjsgj5·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·0"
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1shf5zx·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -3207,9 +3207,9 @@
      "filename": [
       "mem:///103?oai3.shaken.json"
      ],
-     "name": "paths·1m249zj·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·1",
+     "name": "paths·1ohsko1·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·1",
      "originalLocations": [
-      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1m249zj·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·1"
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1ohsko1·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·1"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -3259,9 +3259,9 @@
      "filename": [
       "mem:///103?oai3.shaken.json"
      ],
-     "name": "paths·qmww66·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·2",
+     "name": "paths·dtk9fd·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·2",
      "originalLocations": [
-      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·qmww66·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·2"
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·dtk9fd·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·2"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -3311,9 +3311,9 @@
      "filename": [
       "mem:///103?oai3.shaken.json"
      ],
-     "name": "paths·1yst67r·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·3",
+     "name": "paths·errrdo·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·3",
      "originalLocations": [
-      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1yst67r·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·3"
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·errrdo·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·3"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -3337,26 +3337,234 @@
      "raw": "String"
     }
    }
+  },
+  {
+   "$id": "470",
+   "isReadOnly": false,
+   "realPath": [
+    "number"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "471",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "472",
+    "fixed": false,
+    "raw": "The number that the keywords are routed to"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "paths·eb3x2a·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·0",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·eb3x2a·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "473",
+    "fixed": false,
+    "raw": "Number2"
+   },
+   "serializedName": "number",
+   "modelType": {
+    "$id": "474",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "deprecated": false,
+    "name": {
+     "$id": "475",
+     "fixed": false,
+     "raw": "String"
+    }
+   }
+  },
+  {
+   "$id": "476",
+   "isReadOnly": false,
+   "realPath": [
+    "platformId"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "477",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "478",
+    "fixed": false,
+    "raw": "The ID of the Platform assigned by LINK Mobility"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "paths·nlbnqp·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·1",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·nlbnqp·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·1"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "479",
+    "fixed": false,
+    "raw": "PlatformId1"
+   },
+   "serializedName": "platformId",
+   "modelType": {
+    "$id": "480",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "deprecated": false,
+    "name": {
+     "$id": "481",
+     "fixed": false,
+     "raw": "String"
+    }
+   }
+  },
+  {
+   "$id": "482",
+   "isReadOnly": false,
+   "realPath": [
+    "partnerId"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "483",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "484",
+    "fixed": false,
+    "raw": "The ID of the Partner assigned by LINK Mobility"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "paths·fyumxl·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·2",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·fyumxl·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·2"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "485",
+    "fixed": false,
+    "raw": "PartnerId1"
+   },
+   "serializedName": "partnerId",
+   "modelType": {
+    "$id": "486",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "deprecated": false,
+    "name": {
+     "$id": "487",
+     "fixed": false,
+     "raw": "String"
+    }
+   }
+  },
+  {
+   "$id": "488",
+   "isReadOnly": false,
+   "realPath": [
+    "refid"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "489",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "490",
+    "fixed": false,
+    "raw": ""
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "paths·1lq0urk·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·3",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1lq0urk·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·3"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "491",
+    "fixed": false,
+    "raw": "refid"
+   },
+   "serializedName": "refid",
+   "modelType": {
+    "$id": "492",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "deprecated": false,
+    "name": {
+     "$id": "493",
+     "fixed": false,
+     "raw": "String"
+    }
+   }
   }
  ],
  "operations": [
   {
-   "$id": "470",
+   "$id": "494",
    "methods": [
     {
-     "$id": "471",
+     "$id": "495",
      "parameters": [
       {
-       "$id": "472",
+       "$id": "496",
        "location": "body",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "473",
+        "$id": "497",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "474",
+        "$id": "498",
         "fixed": false
        },
        "extensions": {
@@ -3376,7 +3584,7 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "475",
+        "$id": "499",
         "fixed": false,
         "raw": "body"
        },
@@ -3386,19 +3594,19 @@
        }
       },
       {
-       "$id": "476",
+       "$id": "500",
        "clientProperty": {
         "$ref": "440"
        },
        "location": "path",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "477",
+        "$id": "501",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "478",
+        "$id": "502",
         "fixed": false,
         "raw": "The number that the keyword will be routed to"
        },
@@ -3420,18 +3628,18 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "479",
+        "$id": "503",
         "fixed": false,
         "raw": "number"
        },
        "serializedName": "number",
        "modelType": {
-        "$id": "480",
+        "$id": "504",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "481",
+         "$id": "505",
          "fixed": false,
          "raw": "String"
         }
@@ -3439,12 +3647,12 @@
       }
      ],
      "name": {
-      "$id": "482",
+      "$id": "506",
       "fixed": false,
       "raw": "create"
      },
      "group": {
-      "$id": "483",
+      "$id": "507",
       "fixed": false,
       "raw": "keyword"
      },
@@ -3454,12 +3662,12 @@
      "httpMethod": "post",
      "responses": {
       "Created": {
-       "$id": "484",
+       "$id": "508",
        "headers": {
         "$ref": "432"
        },
        "extensions": {
-        "$id": "485",
+        "$id": "509",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -3476,14 +3684,14 @@
        "isNullable": true
       },
       "BadRequest": {
-       "$id": "486",
+       "$id": "510",
        "body": {
-        "$id": "487",
+        "$id": "511",
         "$type": "PrimaryType",
         "knownPrimaryType": "object",
         "deprecated": false,
         "name": {
-         "$id": "488",
+         "$id": "512",
          "fixed": false,
          "raw": "Object"
         }
@@ -3492,7 +3700,7 @@
         "$ref": "432"
        },
        "extensions": {
-        "$id": "489",
+        "$id": "513",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -3509,14 +3717,14 @@
        "isNullable": true
       },
       "Conflict": {
-       "$id": "490",
+       "$id": "514",
        "body": {
-        "$id": "491",
+        "$id": "515",
         "$type": "PrimaryType",
         "knownPrimaryType": "object",
         "deprecated": false,
         "name": {
-         "$id": "492",
+         "$id": "516",
          "fixed": false,
          "raw": "Object"
         }
@@ -3525,7 +3733,7 @@
         "$ref": "432"
        },
        "extensions": {
-        "$id": "493",
+        "$id": "517",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -3543,13 +3751,13 @@
       }
      },
      "defaultResponse": {
-      "$id": "494",
+      "$id": "518",
       "isNullable": true
      },
      "returnType": {
-      "$id": "495",
+      "$id": "519",
       "body": {
-       "$ref": "487"
+       "$ref": "511"
       },
       "headers": {
        "$ref": "432"
@@ -3570,18 +3778,23 @@
        },
        {
         "url": "https://n-eu.linkmobility.io",
-        "description": "Northern Europe (Sweden) Node of API Gateway"
+        "description": "Northern Europe (Sweden) Node"
        },
        {
         "url": "https://s-eu.linkmobility.io",
-        "description": "Southern European (Spain) Node of API Gateway"
+        "description": "Southern European (Spain) Node"
        },
        {
         "url": "https://c-eu.linkmobility.io",
-        "description": "Central Europe Node (Germany) of API Gateway"
+        "description": "Central Europe (Germany) Node"
        },
        {
-        "url": ""
+        "url": "https://no.linkmobility.io",
+        "description": "Norwegian Node"
+       },
+       {
+        "url": "https://deb.linkmobility.io",
+        "description": "Germany 2 (Franfurt) Node"
        }
       ],
       "security": [
@@ -3594,22 +3807,22 @@
      "hidden": false
     },
     {
-     "$id": "496",
+     "$id": "520",
      "parameters": [
       {
-       "$id": "497",
+       "$id": "521",
        "clientProperty": {
         "$ref": "440"
        },
        "location": "path",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "498",
+        "$id": "522",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "499",
+        "$id": "523",
         "fixed": false,
         "raw": "The number that the keywords are routed to"
        },
@@ -3621,9 +3834,9 @@
          "filename": [
           "mem:///103?oai3.shaken.json"
          ],
-         "name": "paths·1gjsgj5·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·0",
+         "name": "paths·1shf5zx·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·0",
          "originalLocations": [
-          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1gjsgj5·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·0"
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1shf5zx·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·0"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -3631,37 +3844,37 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "500",
+        "$id": "524",
         "fixed": false,
         "raw": "number"
        },
        "serializedName": "number",
        "modelType": {
-        "$id": "501",
+        "$id": "525",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "502",
+         "$id": "526",
          "fixed": false,
          "raw": "String"
         }
        }
       },
       {
-       "$id": "503",
+       "$id": "527",
        "clientProperty": {
         "$ref": "452"
        },
        "location": "path",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "504",
+        "$id": "528",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "505",
+        "$id": "529",
         "fixed": false,
         "raw": "The ID of the Platform assigned by LINK Mobility"
        },
@@ -3673,9 +3886,9 @@
          "filename": [
           "mem:///103?oai3.shaken.json"
          ],
-         "name": "paths·1m249zj·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·1",
+         "name": "paths·1ohsko1·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·1",
          "originalLocations": [
-          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1m249zj·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·1"
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1ohsko1·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·1"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -3683,37 +3896,37 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "506",
+        "$id": "530",
         "fixed": false,
         "raw": "platformId"
        },
        "serializedName": "platformId",
        "modelType": {
-        "$id": "507",
+        "$id": "531",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "508",
+         "$id": "532",
          "fixed": false,
          "raw": "String"
         }
        }
       },
       {
-       "$id": "509",
+       "$id": "533",
        "clientProperty": {
         "$ref": "458"
        },
        "location": "path",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "510",
+        "$id": "534",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "511",
+        "$id": "535",
         "fixed": false,
         "raw": "The ID of the Partner assigned by LINK Mobility"
        },
@@ -3725,9 +3938,9 @@
          "filename": [
           "mem:///103?oai3.shaken.json"
          ],
-         "name": "paths·qmww66·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·2",
+         "name": "paths·dtk9fd·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·2",
          "originalLocations": [
-          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·qmww66·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·2"
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·dtk9fd·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·2"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -3735,37 +3948,37 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "512",
+        "$id": "536",
         "fixed": false,
         "raw": "partnerId"
        },
        "serializedName": "partnerId",
        "modelType": {
-        "$id": "513",
+        "$id": "537",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "514",
+         "$id": "538",
          "fixed": false,
          "raw": "String"
         }
        }
       },
       {
-       "$id": "515",
+       "$id": "539",
        "clientProperty": {
         "$ref": "464"
        },
        "location": "path",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "516",
+        "$id": "540",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "517",
+        "$id": "541",
         "fixed": false,
         "raw": "The ID of the Route to be returned"
        },
@@ -3777,9 +3990,9 @@
          "filename": [
           "mem:///103?oai3.shaken.json"
          ],
-         "name": "paths·1yst67r·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·3",
+         "name": "paths·errrdo·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·3",
          "originalLocations": [
-          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1yst67r·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·parameters·3"
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·errrdo·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·3"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -3787,18 +4000,18 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "518",
+        "$id": "542",
         "fixed": false,
         "raw": "id"
        },
        "serializedName": "id",
        "modelType": {
-        "$id": "519",
+        "$id": "543",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "520",
+         "$id": "544",
          "fixed": false,
          "raw": "String"
         }
@@ -3806,27 +4019,27 @@
       }
      ],
      "name": {
-      "$id": "521",
+      "$id": "545",
       "fixed": false,
       "raw": "get"
      },
      "group": {
-      "$id": "522",
+      "$id": "546",
       "fixed": false,
       "raw": "keyword"
      },
      "serializedName": "keyword_get",
      "url": "/number/{number}/keyword/platform/{platformId}/partner/{partnerId}/id/{id}",
      "isAbsoluteUrl": false,
-     "httpMethod": "post",
+     "httpMethod": "get",
      "responses": {
       "OK": {
-       "$id": "523",
+       "$id": "547",
        "body": {
         "$ref": "324"
        },
        "extensions": {
-        "$id": "524",
+        "$id": "548",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -3834,29 +4047,29 @@
          "filename": [
           "mem:///103?oai3.shaken.json"
          ],
-         "name": "paths·1gw8mef·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·responses·200",
+         "name": "paths·twfz5d·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·responses·200",
          "originalLocations": [
-          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·1gw8mef·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·responses·200"
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·twfz5d·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·responses·200"
          ]
         }
        },
        "isNullable": true
       },
       "NotFound": {
-       "$id": "525",
+       "$id": "549",
        "body": {
-        "$id": "526",
+        "$id": "550",
         "$type": "PrimaryType",
         "knownPrimaryType": "object",
         "deprecated": false,
         "name": {
-         "$id": "527",
+         "$id": "551",
          "fixed": false,
          "raw": "Object"
         }
        },
        "extensions": {
-        "$id": "528",
+        "$id": "552",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -3864,9 +4077,9 @@
          "filename": [
           "mem:///103?oai3.shaken.json"
          ],
-         "name": "paths·108986o·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·responses·404",
+         "name": "paths·31xg7w·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·responses·404",
          "originalLocations": [
-          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·108986o·number-number-keyword-platform-platformid-partner-partnerid-id-id·post·responses·404"
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·31xg7w·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·responses·404"
          ]
         }
        },
@@ -3874,18 +4087,18 @@
       }
      },
      "defaultResponse": {
-      "$id": "529",
+      "$id": "553",
       "isNullable": true
      },
      "returnType": {
-      "$id": "530",
+      "$id": "554",
       "body": {
-       "$id": "531",
+       "$id": "555",
        "$type": "PrimaryType",
        "knownPrimaryType": "object",
        "deprecated": false,
        "name": {
-        "$id": "532",
+        "$id": "556",
         "fixed": false,
         "raw": "Object"
        }
@@ -3906,18 +4119,358 @@
        },
        {
         "url": "https://n-eu.linkmobility.io",
-        "description": "Northern Europe (Sweden) Node of API Gateway"
+        "description": "Northern Europe (Sweden) Node"
        },
        {
         "url": "https://s-eu.linkmobility.io",
-        "description": "Southern European (Spain) Node of API Gateway"
+        "description": "Southern European (Spain) Node"
        },
        {
         "url": "https://c-eu.linkmobility.io",
-        "description": "Central Europe Node (Germany) of API Gateway"
+        "description": "Central Europe (Germany) Node"
        },
        {
-        "url": ""
+        "url": "https://no.linkmobility.io",
+        "description": "Norwegian Node"
+       },
+       {
+        "url": "https://deb.linkmobility.io",
+        "description": "Germany 2 (Franfurt) Node"
+       }
+      ]
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "557",
+     "parameters": [
+      {
+       "$id": "558",
+       "clientProperty": {
+        "$ref": "440"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "559",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "560",
+        "fixed": false,
+        "raw": "The number that the keywords are routed to"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·eb3x2a·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·0",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·eb3x2a·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·0"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "561",
+        "fixed": false,
+        "raw": "number"
+       },
+       "serializedName": "number",
+       "modelType": {
+        "$id": "562",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "563",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "564",
+       "clientProperty": {
+        "$ref": "452"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "565",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "566",
+        "fixed": false,
+        "raw": "The ID of the Platform assigned by LINK Mobility"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·nlbnqp·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·1",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·nlbnqp·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·1"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "567",
+        "fixed": false,
+        "raw": "platformId"
+       },
+       "serializedName": "platformId",
+       "modelType": {
+        "$id": "568",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "569",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "570",
+       "clientProperty": {
+        "$ref": "458"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "571",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "572",
+        "fixed": false,
+        "raw": "The ID of the Partner assigned by LINK Mobility"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·fyumxl·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·2",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·fyumxl·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·2"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "573",
+        "fixed": false,
+        "raw": "partnerId"
+       },
+       "serializedName": "partnerId",
+       "modelType": {
+        "$id": "574",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "575",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "576",
+       "clientProperty": {
+        "$ref": "488"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "577",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "578",
+        "fixed": false,
+        "raw": ""
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·1lq0urk·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·3",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1lq0urk·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·parameters·3"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "579",
+        "fixed": false,
+        "raw": "refid"
+       },
+       "serializedName": "refid",
+       "modelType": {
+        "$id": "580",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "581",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      }
+     ],
+     "name": {
+      "$id": "582",
+      "fixed": false,
+      "raw": "getByRefId"
+     },
+     "group": {
+      "$id": "583",
+      "fixed": false,
+      "raw": "keyword"
+     },
+     "serializedName": "keyword_getByRefId",
+     "url": "/number/{number}/keyword/platform/{platformId}/partner/{partnerId}/refid/{refid}",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "584",
+       "body": {
+        "$ref": "324"
+       },
+       "extensions": {
+        "$id": "585",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·9caioi·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·responses·200",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·9caioi·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "NotFound": {
+       "$id": "586",
+       "body": {
+        "$id": "587",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "object",
+        "deprecated": false,
+        "name": {
+         "$id": "588",
+         "fixed": false,
+         "raw": "Object"
+        }
+       },
+       "extensions": {
+        "$id": "589",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·vdk6lx·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·responses·404",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·vdk6lx·number-number-keyword-platform-platformid-partner-partnerid-refid-refid·get·responses·404"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "590",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "591",
+      "body": {
+       "$id": "592",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "object",
+       "deprecated": false,
+       "name": {
+        "$id": "593",
+        "fixed": false,
+        "raw": "Object"
+       }
+      },
+      "isNullable": true
+     },
+     "summary": "Gets a Keyword Route by a Reference ID",
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": [
+       {
+        "url": "https://wsx.sp247.net/",
+        "description": "General API Gateway"
+       },
+       {
+        "url": "https://n-eu.linkmobility.io",
+        "description": "Northern Europe (Sweden) Node"
+       },
+       {
+        "url": "https://s-eu.linkmobility.io",
+        "description": "Southern European (Spain) Node"
+       },
+       {
+        "url": "https://c-eu.linkmobility.io",
+        "description": "Central Europe (Germany) Node"
+       },
+       {
+        "url": "https://no.linkmobility.io",
+        "description": "Norwegian Node"
+       },
+       {
+        "url": "https://deb.linkmobility.io",
+        "description": "Germany 2 (Franfurt) Node"
        }
       ]
      },
@@ -3926,33 +4479,33 @@
     }
    ],
    "name": {
-    "$id": "533",
+    "$id": "594",
     "fixed": false,
     "raw": "Keyword"
    },
    "typeName": {
-    "$id": "534",
+    "$id": "595",
     "fixed": false
    },
    "nameForProperty": "Keyword"
   },
   {
-   "$id": "535",
+   "$id": "596",
    "methods": [
     {
-     "$id": "536",
+     "$id": "597",
      "parameters": [
       {
-       "$id": "537",
+       "$id": "598",
        "location": "body",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "538",
+        "$id": "599",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "539",
+        "$id": "600",
         "fixed": false
        },
        "extensions": {
@@ -3972,7 +4525,7 @@
        "isRequired": false,
        "isConstant": false,
        "name": {
-        "$id": "540",
+        "$id": "601",
         "fixed": false,
         "raw": "body"
        },
@@ -3983,12 +4536,12 @@
       }
      ],
      "name": {
-      "$id": "541",
+      "$id": "602",
       "fixed": false,
       "raw": "send"
      },
      "group": {
-      "$id": "542",
+      "$id": "603",
       "fixed": false,
       "raw": "sms"
      },
@@ -3998,12 +4551,12 @@
      "httpMethod": "post",
      "responses": {
       "OK": {
-       "$id": "543",
+       "$id": "604",
        "body": {
         "$ref": "2"
        },
        "extensions": {
-        "$id": "544",
+        "$id": "605",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -4020,9 +4573,9 @@
        "isNullable": true
       },
       "NoContent": {
-       "$id": "545",
+       "$id": "606",
        "extensions": {
-        "$id": "546",
+        "$id": "607",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -4040,11 +4593,11 @@
       }
      },
      "defaultResponse": {
-      "$id": "547",
+      "$id": "608",
       "isNullable": true
      },
      "returnType": {
-      "$id": "548",
+      "$id": "609",
       "body": {
        "$ref": "2"
       },
@@ -4064,18 +4617,23 @@
        },
        {
         "url": "https://n-eu.linkmobility.io",
-        "description": "Northern Europe (Sweden) Node of API Gateway"
+        "description": "Northern Europe (Sweden) Node"
        },
        {
         "url": "https://s-eu.linkmobility.io",
-        "description": "Southern European (Spain) Node of API Gateway"
+        "description": "Southern European (Spain) Node"
        },
        {
         "url": "https://c-eu.linkmobility.io",
-        "description": "Central Europe Node (Germany) of API Gateway"
+        "description": "Central Europe (Germany) Node"
        },
        {
-        "url": ""
+        "url": "https://no.linkmobility.io",
+        "description": "Norwegian Node"
+       },
+       {
+        "url": "https://deb.linkmobility.io",
+        "description": "Germany 2 (Franfurt) Node"
        }
       ],
       "security": [
@@ -4088,19 +4646,19 @@
      "hidden": false
     },
     {
-     "$id": "549",
+     "$id": "610",
      "parameters": [
       {
-       "$id": "550",
+       "$id": "611",
        "location": "body",
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "551",
+        "$id": "612",
         "fixed": false
        },
        "deprecated": false,
        "documentation": {
-        "$id": "552",
+        "$id": "613",
         "fixed": false
        },
        "extensions": {
@@ -4120,7 +4678,7 @@
        "isRequired": false,
        "isConstant": false,
        "name": {
-        "$id": "553",
+        "$id": "614",
         "fixed": false,
         "raw": "body"
        },
@@ -4131,12 +4689,12 @@
       }
      ],
      "name": {
-      "$id": "554",
+      "$id": "615",
       "fixed": false,
       "raw": "batchSend"
      },
      "group": {
-      "$id": "555",
+      "$id": "616",
       "fixed": false,
       "raw": "sms"
      },
@@ -4146,21 +4704,21 @@
      "httpMethod": "post",
      "responses": {
       "OK": {
-       "$id": "556",
+       "$id": "617",
        "body": {
-        "$id": "557",
+        "$id": "618",
         "$type": "SequenceType",
         "elementType": {
          "$ref": "2"
         },
         "deprecated": false,
         "name": {
-         "$id": "558",
+         "$id": "619",
          "fixed": false
         }
        },
        "extensions": {
-        "$id": "559",
+        "$id": "620",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -4177,9 +4735,9 @@
        "isNullable": true
       },
       "NoContent": {
-       "$id": "560",
+       "$id": "621",
        "extensions": {
-        "$id": "561",
+        "$id": "622",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -4197,13 +4755,13 @@
       }
      },
      "defaultResponse": {
-      "$id": "562",
+      "$id": "623",
       "isNullable": true
      },
      "returnType": {
-      "$id": "563",
+      "$id": "624",
       "body": {
-       "$ref": "557"
+       "$ref": "618"
       },
       "isNullable": true
      },
@@ -4221,18 +4779,23 @@
        },
        {
         "url": "https://n-eu.linkmobility.io",
-        "description": "Northern Europe (Sweden) Node of API Gateway"
+        "description": "Northern Europe (Sweden) Node"
        },
        {
         "url": "https://s-eu.linkmobility.io",
-        "description": "Southern European (Spain) Node of API Gateway"
+        "description": "Southern European (Spain) Node"
        },
        {
         "url": "https://c-eu.linkmobility.io",
-        "description": "Central Europe Node (Germany) of API Gateway"
+        "description": "Central Europe (Germany) Node"
        },
        {
-        "url": ""
+        "url": "https://no.linkmobility.io",
+        "description": "Norwegian Node"
+       },
+       {
+        "url": "https://deb.linkmobility.io",
+        "description": "Germany 2 (Franfurt) Node"
        }
       ],
       "security": [
@@ -4246,12 +4809,12 @@
     }
    ],
    "name": {
-    "$id": "564",
+    "$id": "625",
     "fixed": false,
     "raw": "Sms"
    },
    "typeName": {
-    "$id": "565",
+    "$id": "626",
     "fixed": false
    },
    "nameForProperty": "Sms"

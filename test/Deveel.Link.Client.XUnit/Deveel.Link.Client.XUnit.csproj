@@ -20,8 +20,4 @@
     <ProjectReference Include="..\..\src\Deveel.Link.Client\Deveel.Link.Client.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Link\" />
-  </ItemGroup>
-
 </Project>

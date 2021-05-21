@@ -171,5 +171,80 @@ namespace Deveel.Link
                 return operations.GetWithHttpMessagesAsync(number, platformId, partnerId, id, customHeaders, CancellationToken.None).ConfigureAwait(false).GetAwaiter().GetResult();
             }
 
+            /// <summary>
+            /// Gets a Keyword Route by a Reference ID
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='number'>
+            /// The number that the keywords are routed to
+            /// </param>
+            /// <param name='platformId'>
+            /// The ID of the Platform assigned by LINK Mobility
+            /// </param>
+            /// <param name='partnerId'>
+            /// The ID of the Partner assigned by LINK Mobility
+            /// </param>
+            /// <param name='refid'>
+            /// </param>
+            public static object GetByRefId(this IKeyword operations, string number, string platformId, string partnerId, string refid)
+            {
+                return operations.GetByRefIdAsync(number, platformId, partnerId, refid).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Gets a Keyword Route by a Reference ID
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='number'>
+            /// The number that the keywords are routed to
+            /// </param>
+            /// <param name='platformId'>
+            /// The ID of the Platform assigned by LINK Mobility
+            /// </param>
+            /// <param name='partnerId'>
+            /// The ID of the Partner assigned by LINK Mobility
+            /// </param>
+            /// <param name='refid'>
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task<object> GetByRefIdAsync(this IKeyword operations, string number, string platformId, string partnerId, string refid, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                using (var _result = await operations.GetByRefIdWithHttpMessagesAsync(number, platformId, partnerId, refid, null, cancellationToken).ConfigureAwait(false))
+                {
+                    return _result.Body;
+                }
+            }
+
+            /// <summary>
+            /// Gets a Keyword Route by a Reference ID
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='number'>
+            /// The number that the keywords are routed to
+            /// </param>
+            /// <param name='platformId'>
+            /// The ID of the Platform assigned by LINK Mobility
+            /// </param>
+            /// <param name='partnerId'>
+            /// The ID of the Partner assigned by LINK Mobility
+            /// </param>
+            /// <param name='refid'>
+            /// </param>
+            /// <param name='customHeaders'>
+            /// Headers that will be added to request.
+            /// </param>
+            public static HttpOperationResponse<object> GetByRefIdWithHttpMessages(this IKeyword operations, string number, string platformId, string partnerId, string refid, Dictionary<string, List<string>> customHeaders = null)
+            {
+                return operations.GetByRefIdWithHttpMessagesAsync(number, platformId, partnerId, refid, customHeaders, CancellationToken.None).ConfigureAwait(false).GetAwaiter().GetResult();
+            }
+
     }
 }

@@ -16,10 +16,9 @@ namespace Deveel.Link
     using System.Net.Http;
 
     /// <summary>
-    /// An OpenAPI Specification of the LINK Mobility Common Layer API Gateway
-    /// produced by Deveel AS
+    /// OpenAPI Specification of the LINK Mobility Common Layer
     /// </summary>
-    public partial class LinkSmsClient : ServiceClient<LinkSmsClient>, ILinkSmsClient
+    public partial class LinkClient : ServiceClient<LinkClient>, ILinkClient
     {
         /// <summary>
         /// The base URI of the service.
@@ -52,31 +51,31 @@ namespace Deveel.Link
         public virtual ISms Sms { get; private set; }
 
         /// <summary>
-        /// Initializes a new instance of the LinkSmsClient class.
+        /// Initializes a new instance of the LinkClient class.
         /// </summary>
         /// <param name='httpClient'>
         /// HttpClient to be used
         /// </param>
         /// <param name='disposeHttpClient'>
-        /// True: will dispose the provided httpClient on calling LinkSmsClient.Dispose(). False: will not dispose provided httpClient</param>
-        protected LinkSmsClient(HttpClient httpClient, bool disposeHttpClient) : base(httpClient, disposeHttpClient)
+        /// True: will dispose the provided httpClient on calling LinkClient.Dispose(). False: will not dispose provided httpClient</param>
+        protected LinkClient(HttpClient httpClient, bool disposeHttpClient) : base(httpClient, disposeHttpClient)
         {
             Initialize();
         }
 
         /// <summary>
-        /// Initializes a new instance of the LinkSmsClient class.
+        /// Initializes a new instance of the LinkClient class.
         /// </summary>
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        protected LinkSmsClient(params DelegatingHandler[] handlers) : base(handlers)
+        protected LinkClient(params DelegatingHandler[] handlers) : base(handlers)
         {
             Initialize();
         }
 
         /// <summary>
-        /// Initializes a new instance of the LinkSmsClient class.
+        /// Initializes a new instance of the LinkClient class.
         /// </summary>
         /// <param name='rootHandler'>
         /// Optional. The http client handler used to handle http transport.
@@ -84,13 +83,13 @@ namespace Deveel.Link
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        protected LinkSmsClient(HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : base(rootHandler, handlers)
+        protected LinkClient(HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : base(rootHandler, handlers)
         {
             Initialize();
         }
 
         /// <summary>
-        /// Initializes a new instance of the LinkSmsClient class.
+        /// Initializes a new instance of the LinkClient class.
         /// </summary>
         /// <param name='baseUri'>
         /// Optional. The base URI of the service.
@@ -101,7 +100,7 @@ namespace Deveel.Link
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        protected LinkSmsClient(System.Uri baseUri, params DelegatingHandler[] handlers) : this(handlers)
+        protected LinkClient(System.Uri baseUri, params DelegatingHandler[] handlers) : this(handlers)
         {
             if (baseUri == null)
             {
@@ -111,7 +110,7 @@ namespace Deveel.Link
         }
 
         /// <summary>
-        /// Initializes a new instance of the LinkSmsClient class.
+        /// Initializes a new instance of the LinkClient class.
         /// </summary>
         /// <param name='baseUri'>
         /// Optional. The base URI of the service.
@@ -125,7 +124,7 @@ namespace Deveel.Link
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        protected LinkSmsClient(System.Uri baseUri, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
+        protected LinkClient(System.Uri baseUri, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
         {
             if (baseUri == null)
             {
@@ -135,7 +134,7 @@ namespace Deveel.Link
         }
 
         /// <summary>
-        /// Initializes a new instance of the LinkSmsClient class.
+        /// Initializes a new instance of the LinkClient class.
         /// </summary>
         /// <param name='credentials'>
         /// Required. Subscription credentials which uniquely identify client subscription.
@@ -146,7 +145,7 @@ namespace Deveel.Link
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        public LinkSmsClient(ServiceClientCredentials credentials, params DelegatingHandler[] handlers) : this(handlers)
+        public LinkClient(ServiceClientCredentials credentials, params DelegatingHandler[] handlers) : this(handlers)
         {
             if (credentials == null)
             {
@@ -160,7 +159,7 @@ namespace Deveel.Link
         }
 
         /// <summary>
-        /// Initializes a new instance of the LinkSmsClient class.
+        /// Initializes a new instance of the LinkClient class.
         /// </summary>
         /// <param name='credentials'>
         /// Required. Subscription credentials which uniquely identify client subscription.
@@ -169,11 +168,11 @@ namespace Deveel.Link
         /// HttpClient to be used
         /// </param>
         /// <param name='disposeHttpClient'>
-        /// True: will dispose the provided httpClient on calling LinkSmsClient.Dispose(). False: will not dispose provided httpClient</param>
+        /// True: will dispose the provided httpClient on calling LinkClient.Dispose(). False: will not dispose provided httpClient</param>
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        public LinkSmsClient(ServiceClientCredentials credentials, HttpClient httpClient, bool disposeHttpClient) : this(httpClient, disposeHttpClient)
+        public LinkClient(ServiceClientCredentials credentials, HttpClient httpClient, bool disposeHttpClient) : this(httpClient, disposeHttpClient)
         {
             if (credentials == null)
             {
@@ -187,7 +186,7 @@ namespace Deveel.Link
         }
 
         /// <summary>
-        /// Initializes a new instance of the LinkSmsClient class.
+        /// Initializes a new instance of the LinkClient class.
         /// </summary>
         /// <param name='credentials'>
         /// Required. Subscription credentials which uniquely identify client subscription.
@@ -201,7 +200,7 @@ namespace Deveel.Link
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        public LinkSmsClient(ServiceClientCredentials credentials, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
+        public LinkClient(ServiceClientCredentials credentials, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
         {
             if (credentials == null)
             {
@@ -215,7 +214,7 @@ namespace Deveel.Link
         }
 
         /// <summary>
-        /// Initializes a new instance of the LinkSmsClient class.
+        /// Initializes a new instance of the LinkClient class.
         /// </summary>
         /// <param name='baseUri'>
         /// Optional. The base URI of the service.
@@ -229,7 +228,7 @@ namespace Deveel.Link
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        public LinkSmsClient(System.Uri baseUri, ServiceClientCredentials credentials, params DelegatingHandler[] handlers) : this(handlers)
+        public LinkClient(System.Uri baseUri, ServiceClientCredentials credentials, params DelegatingHandler[] handlers) : this(handlers)
         {
             if (baseUri == null)
             {
@@ -248,7 +247,7 @@ namespace Deveel.Link
         }
 
         /// <summary>
-        /// Initializes a new instance of the LinkSmsClient class.
+        /// Initializes a new instance of the LinkClient class.
         /// </summary>
         /// <param name='baseUri'>
         /// Optional. The base URI of the service.
@@ -265,7 +264,7 @@ namespace Deveel.Link
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        public LinkSmsClient(System.Uri baseUri, ServiceClientCredentials credentials, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
+        public LinkClient(System.Uri baseUri, ServiceClientCredentials credentials, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
         {
             if (baseUri == null)
             {

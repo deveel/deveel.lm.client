@@ -23,8 +23,28 @@ namespace Deveel {
 		public static HttpClient CreateTestClient(Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>> callback)
 			=> CreateTestClient(new AsyncRequestCallback(callback));
 
+		public static HttpClient CreateTestClient(Func<HttpRequestMessage, Task<HttpResponseMessage>> callback)
+			=> CreateTestClient(new NotCancellableAsyncRequestCallback(callback));
+
+
 		public static HttpClient CreateTestClient(Func<HttpRequestMessage, HttpResponseMessage> func)
 			=> CreateTestClient(new SyncRequestCallback(func));
+
+
+		#region NotCancellableAsyncRequestCallback
+
+		class NotCancellableAsyncRequestCallback : IHttpRequestCallback {
+			private readonly Func<HttpRequestMessage, Task<HttpResponseMessage>> func;
+
+			public NotCancellableAsyncRequestCallback(Func<HttpRequestMessage, Task<HttpResponseMessage>> func) {
+				this.func = func;
+			}
+
+			public Task<HttpResponseMessage> RequestAsync(HttpRequestMessage request, CancellationToken cancellationToken) 
+				=> func(request);
+		}
+
+		#endregion
 
 		#region AsyncRequestCallback
 

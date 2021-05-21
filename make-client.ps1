@@ -1,1 +1,1 @@
-autorest --input-file=./docs/openapi/link-api-v1.json --output-folder=./src/Deveel.Link.Client/Link --namespace=Deveel.Link --csharp --add-credentials --sync-methods=all --override-client-name=LinkSmsClient --use-datetimeoffset --version=3.0.6274 --v3
+autorest --input-file=./docs/openapi/link-api-v1.json --output-folder=./src/Deveel.Link.Client/Link --namespace=Deveel.Link --csharp --add-credentials --sync-methods=all --override-client-name=LinkClient --use-datetimeoffset --version=3.0.6274 --v3

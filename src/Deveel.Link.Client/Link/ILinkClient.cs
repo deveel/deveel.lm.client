@@ -11,10 +11,9 @@ namespace Deveel.Link
     using Newtonsoft.Json;
 
     /// <summary>
-    /// An OpenAPI Specification of the LINK Mobility Common Layer API Gateway
-    /// produced by Deveel AS
+    /// OpenAPI Specification of the LINK Mobility Common Layer
     /// </summary>
-    public partial interface ILinkSmsClient : System.IDisposable
+    public partial interface ILinkClient : System.IDisposable
     {
         /// <summary>
         /// The base URI of the service.

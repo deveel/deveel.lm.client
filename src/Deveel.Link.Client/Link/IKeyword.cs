@@ -79,5 +79,35 @@ namespace Deveel.Link
         /// Thrown when a required parameter is null
         /// </exception>
         Task<HttpOperationResponse<object>> GetWithHttpMessagesAsync(string number, string platformId, string partnerId, string id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Gets a Keyword Route by a Reference ID
+        /// </summary>
+        /// <param name='number'>
+        /// The number that the keywords are routed to
+        /// </param>
+        /// <param name='platformId'>
+        /// The ID of the Platform assigned by LINK Mobility
+        /// </param>
+        /// <param name='partnerId'>
+        /// The ID of the Partner assigned by LINK Mobility
+        /// </param>
+        /// <param name='refid'>
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        /// <exception cref="Microsoft.Rest.HttpOperationException">
+        /// Thrown when the operation returned an invalid status code
+        /// </exception>
+        /// <exception cref="Microsoft.Rest.SerializationException">
+        /// Thrown when unable to deserialize the response
+        /// </exception>
+        /// <exception cref="Microsoft.Rest.ValidationException">
+        /// Thrown when a required parameter is null
+        /// </exception>
+        Task<HttpOperationResponse<object>> GetByRefIdWithHttpMessagesAsync(string number, string platformId, string partnerId, string refid, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

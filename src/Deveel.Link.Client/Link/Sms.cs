@@ -21,7 +21,7 @@ namespace Deveel.Link
     /// <summary>
     /// Sms operations.
     /// </summary>
-    public partial class Sms : IServiceOperations<LinkSmsClient>, ISms
+    public partial class Sms : IServiceOperations<LinkClient>, ISms
     {
         /// <summary>
         /// Initializes a new instance of the Sms class.
@@ -32,7 +32,7 @@ namespace Deveel.Link
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        public Sms(LinkSmsClient client)
+        public Sms(LinkClient client)
         {
             if (client == null)
             {
@@ -42,9 +42,9 @@ namespace Deveel.Link
         }
 
         /// <summary>
-        /// Gets a reference to the LinkSmsClient
+        /// Gets a reference to the LinkClient
         /// </summary>
-        public LinkSmsClient Client { get; private set; }
+        public LinkClient Client { get; private set; }
 
         /// <summary>
         /// Submits a message object for delivery to a mobile phone
