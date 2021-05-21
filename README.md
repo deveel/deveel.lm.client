@@ -30,16 +30,20 @@ These callbacks are also providing the receiver inbound messages (_Mobile Origin
 
 ### Pre-releases
 
-Before adding a pre-release package you need to add Deveel's GitHub NuGet repository, where the latest builds are stored  
+Before adding a pre-release package you need to add _Deveel's GitHub NuGet_ repository, where the latest builds are stored  
 
 ``` powershell
-PS C:\dev\link.example>  dotnet nuget add source "https://nuget.pkg.github.com/deveel/index.json" -n "Deveel NuGet"
+PS C:\dev\link.example> dotnet nuget add source "https://nuget.pkg.github.com/deveel/index.json" -n "Deveel NuGet"
 PS C:\dev\link.example> dotnet add ./src/Link.Example.csproj package Deveel.Link.Client --prerelease
 ```
 
 ### NuGet.com
 
-**TODO**: ...
+We are currently publishing only _beta_ versions of the library in the NuGet repository
+
+``` powershell
+PS C:\dev\link.example> dotnet add package Deveel.Link.Client --version 1.0.0-beta1
+```
 
 # Basic Usage
 
