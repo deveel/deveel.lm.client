@@ -9,27 +9,27 @@
      "$id": "3",
      "isReadOnly": false,
      "realPath": [
-      "messageId"
+      "id"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
       "$id": "4",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
       "$id": "5",
       "fixed": false,
-      "raw": "The unique identifier of the message handled by LINK Mobility"
+      "raw": "The unique identifier of the route, generated when created"
      },
      "isRequired": false,
      "isConstant": false,
      "name": {
       "$id": "6",
       "fixed": false,
-      "raw": "messageId"
+      "raw": "id"
      },
-     "serializedName": "messageId",
+     "serializedName": "id",
      "modelType": {
       "$id": "7",
       "$type": "PrimaryType",
@@ -46,36 +46,36 @@
      "$id": "9",
      "isReadOnly": false,
      "realPath": [
-      "resultCode"
+      "refId"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
       "$id": "10",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
       "$id": "11",
       "fixed": false,
-      "raw": "Indicates the code of the "
+      "raw": "Id supplied by the client"
      },
      "isRequired": false,
      "isConstant": false,
      "name": {
       "$id": "12",
       "fixed": false,
-      "raw": "resultCode"
+      "raw": "refId"
      },
-     "serializedName": "resultCode",
+     "serializedName": "refId",
      "modelType": {
       "$id": "13",
       "$type": "PrimaryType",
-      "knownPrimaryType": "int",
+      "knownPrimaryType": "string",
       "deprecated": false,
       "name": {
        "$id": "14",
        "fixed": false,
-       "raw": "Int"
+       "raw": "String"
       }
      }
     },
@@ -83,2274 +83,16 @@
      "$id": "15",
      "isReadOnly": false,
      "realPath": [
-      "description"
+      "type"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
       "$id": "16",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
       "$id": "17",
-      "fixed": false,
-      "raw": "A descriptive message of the result"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "18",
-      "fixed": false,
-      "raw": "description"
-     },
-     "serializedName": "description",
-     "modelType": {
-      "$id": "19",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "20",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "21",
-     "isReadOnly": false,
-     "realPath": [
-      "smsCount"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "22",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "23",
-      "fixed": false,
-      "raw": "The number of SMS messages produced by the request"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "24",
-      "fixed": false,
-      "raw": "smsCount"
-     },
-     "serializedName": "smsCount",
-     "modelType": {
-      "$id": "25",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "int",
-      "deprecated": false,
-      "name": {
-       "$id": "26",
-       "fixed": false,
-       "raw": "Int"
-      }
-     }
-    }
-   ],
-   "serializedName": "SmsSendResult",
-   "documentation": "The result of a SMS Send operation",
-   "containsConstantProperties": false,
-   "deprecated": false,
-   "name": {
-    "$id": "27",
-    "fixed": false,
-    "raw": "SmsSendResult"
-   },
-   "extensions": {
-    "x-ms-metadata": {
-     "apiVersions": [
-      "v1.0"
-     ],
-     "filename": [
-      "mem:///103?oai3.shaken.json"
-     ],
-     "name": "SmsSendResult",
-     "originalLocations": [
-      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/SmsSendResult"
-     ]
-    }
-   }
-  },
-  {
-   "$id": "28",
-   "$type": "CompositeType",
-   "properties": [
-    {
-     "$id": "29",
-     "isReadOnly": false,
-     "realPath": [
-      "source"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "30",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "31",
-      "fixed": false,
-      "raw": " This is the source number from where the message should be sent"
-     },
-     "isRequired": true,
-     "isConstant": false,
-     "name": {
-      "$id": "32",
-      "fixed": false,
-      "raw": "source"
-     },
-     "serializedName": "source",
-     "modelType": {
-      "$id": "33",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "34",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "35",
-     "isReadOnly": false,
-     "realPath": [
-      "sourceTON"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "36",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "37",
-      "fixed": false,
-      "raw": "This is the source type of number. See allowed TON values below."
-     },
-     "extensions": {
-      "x-ms-metadata": {
-       "apiVersions": [
-        "v1.0"
-       ],
-       "filename": [
-        "mem:///103?oai3.shaken.json"
-       ],
-       "name": "TypeOfNumber",
-       "originalLocations": [
-        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/TypeOfNumber"
-       ]
-      },
-      "x-ms-enum": {
-       "name": "TypeOfNumber",
-       "modelAsString": true,
-       "oldModelAsString": true
-      }
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "38",
-      "fixed": false,
-      "raw": "sourceTON"
-     },
-     "serializedName": "sourceTON",
-     "modelType": {
-      "$id": "39",
-      "$type": "EnumType",
-      "values": [
-       {
-        "$id": "40",
-        "name": "ALPHANUMERIC",
-        "serializedName": "ALPHANUMERIC"
-       },
-       {
-        "$id": "41",
-        "name": "SHORTCODE",
-        "serializedName": "SHORTCODE"
-       },
-       {
-        "$id": "42",
-        "name": "MSISDN",
-        "serializedName": "MSISDN"
-       }
-      ],
-      "oldModelAsString": true,
-      "modelAsString": true,
-      "underlyingType": {
-       "$id": "43",
-       "$type": "PrimaryType",
-       "knownPrimaryType": "string",
-       "deprecated": false,
-       "name": {
-        "$id": "44",
-        "fixed": false,
-        "raw": "String"
-       }
-      },
-      "deprecated": false,
-      "name": {
-       "$id": "45",
-       "fixed": false,
-       "raw": "TypeOfNumber"
-      }
-     }
-    },
-    {
-     "$id": "46",
-     "isReadOnly": false,
-     "realPath": [
-      "destination"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "47",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "48",
-      "fixed": false,
-      "raw": "This is the destination number"
-     },
-     "isRequired": true,
-     "isConstant": false,
-     "name": {
-      "$id": "49",
-      "fixed": false,
-      "raw": "destination"
-     },
-     "serializedName": "destination",
-     "modelType": {
-      "$id": "50",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "51",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "52",
-     "isReadOnly": false,
-     "realPath": [
-      "destinationTON"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "53",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "54",
-      "fixed": false,
-      "raw": "This is the destination type of number"
-     },
-     "extensions": {
-      "x-ms-metadata": {
-       "apiVersions": [
-        "v1.0"
-       ],
-       "filename": [
-        "mem:///103?oai3.shaken.json"
-       ],
-       "name": "TypeOfNumber",
-       "originalLocations": [
-        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/TypeOfNumber"
-       ]
-      },
-      "x-ms-enum": {
-       "name": "TypeOfNumber",
-       "modelAsString": true,
-       "oldModelAsString": true
-      }
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "55",
-      "fixed": false,
-      "raw": "destinationTON"
-     },
-     "serializedName": "destinationTON",
-     "modelType": {
-      "$ref": "39"
-     }
-    },
-    {
-     "$id": "56",
-     "isReadOnly": false,
-     "realPath": [
-      "dcs"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "57",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "58",
-      "fixed": false,
-      "raw": "This is the Data Coding Scheme that should be used when sending the SMS"
-     },
-     "extensions": {
-      "x-ms-metadata": {
-       "apiVersions": [
-        "v1.0"
-       ],
-       "filename": [
-        "mem:///103?oai3.shaken.json"
-       ],
-       "name": "DataCodingScheme",
-       "originalLocations": [
-        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/DataCodingScheme"
-       ]
-      },
-      "x-ms-enum": {
-       "name": "DataCodingScheme",
-       "modelAsString": true,
-       "oldModelAsString": true
-      }
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "59",
-      "fixed": false,
-      "raw": "dcs"
-     },
-     "serializedName": "dcs",
-     "modelType": {
-      "$id": "60",
-      "$type": "EnumType",
-      "values": [
-       {
-        "$id": "61",
-        "name": "BINARY",
-        "serializedName": "BINARY"
-       },
-       {
-        "$id": "62",
-        "name": "GSM",
-        "serializedName": "GSM"
-       },
-       {
-        "$id": "63",
-        "name": "TEXT",
-        "serializedName": "TEXT"
-       },
-       {
-        "$id": "64",
-        "name": "UC2",
-        "serializedName": "UC2"
-       }
-      ],
-      "oldModelAsString": true,
-      "modelAsString": true,
-      "underlyingType": {
-       "$id": "65",
-       "$type": "PrimaryType",
-       "knownPrimaryType": "string",
-       "deprecated": false,
-       "name": {
-        "$id": "66",
-        "fixed": false,
-        "raw": "String"
-       }
-      },
-      "deprecated": false,
-      "name": {
-       "$id": "67",
-       "fixed": false,
-       "raw": "DataCodingScheme"
-      }
-     }
-    },
-    {
-     "$id": "68",
-     "isReadOnly": false,
-     "realPath": [
-      "userDataHeader"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "69",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "70",
-      "fixed": false,
-      "raw": "This value may be specified when sending concatenated SMS, WAP-push, etc. The format is hex encoded 8-bit bytes"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "71",
-      "fixed": false,
-      "raw": "userDataHeader"
-     },
-     "serializedName": "userDataHeader",
-     "modelType": {
-      "$id": "72",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "73",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "74",
-     "isReadOnly": false,
-     "realPath": [
-      "userData"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "75",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "76",
-      "fixed": false,
-      "raw": "This is the message content itself. The DCS specifies the format (encoding) on this value"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "77",
-      "fixed": false,
-      "raw": "userData"
-     },
-     "serializedName": "userData",
-     "modelType": {
-      "$id": "78",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "79",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "80",
-     "isReadOnly": false,
-     "realPath": [
-      "priority"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "81",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "82",
-      "fixed": false,
-      "raw": "Specifies the priority to be given to the message"
-     },
-     "extensions": {
-      "x-ms-metadata": {
-       "apiVersions": [
-        "v1.0"
-       ],
-       "filename": [
-        "mem:///103?oai3.shaken.json"
-       ],
-       "name": "Priority",
-       "originalLocations": [
-        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/Priority"
-       ]
-      },
-      "x-ms-enum": {
-       "name": "Priority",
-       "modelAsString": true,
-       "oldModelAsString": true
-      }
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "83",
-      "fixed": false,
-      "raw": "priority"
-     },
-     "serializedName": "priority",
-     "modelType": {
-      "$id": "84",
-      "$type": "EnumType",
-      "values": [
-       {
-        "$id": "85",
-        "name": "HIGH",
-        "serializedName": "HIGH"
-       },
-       {
-        "$id": "86",
-        "name": "NORMAL",
-        "serializedName": "NORMAL"
-       },
-       {
-        "$id": "87",
-        "name": "LOW",
-        "serializedName": "LOW"
-       }
-      ],
-      "oldModelAsString": true,
-      "modelAsString": true,
-      "underlyingType": {
-       "$id": "88",
-       "$type": "PrimaryType",
-       "knownPrimaryType": "string",
-       "deprecated": false,
-       "name": {
-        "$id": "89",
-        "fixed": false,
-        "raw": "String"
-       }
-      },
-      "deprecated": false,
-      "name": {
-       "$id": "90",
-       "fixed": false,
-       "raw": "Priority"
-      }
-     }
-    },
-    {
-     "$id": "91",
-     "isReadOnly": false,
-     "realPath": [
-      "age"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "92",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "93",
-      "fixed": false,
-      "raw": "Allowed age for (adult) content"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "94",
-      "fixed": false,
-      "raw": "age"
-     },
-     "serializedName": "age",
-     "modelType": {
-      "$id": "95",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "int",
-      "deprecated": false,
-      "name": {
-       "$id": "96",
-       "fixed": false,
-       "raw": "Int"
-      }
-     }
-    },
-    {
-     "$id": "97",
-     "isReadOnly": false,
-     "realPath": [
-      "productDescription"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "98",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "99",
-      "fixed": false,
-      "raw": "When sending premium messages, a description of the service"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "100",
-      "fixed": false,
-      "raw": "productDescription"
-     },
-     "serializedName": "productDescription",
-     "modelType": {
-      "$id": "101",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "102",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "103",
-     "isReadOnly": false,
-     "realPath": [
-      "productCategory"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "104",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "105",
-      "fixed": false,
-      "raw": "When sending premium messages, specify which category the service is"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "106",
-      "fixed": false,
-      "raw": "productCategory"
-     },
-     "serializedName": "productCategory",
-     "modelType": {
-      "$id": "107",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "int",
-      "deprecated": false,
-      "name": {
-       "$id": "108",
-       "fixed": false,
-       "raw": "Int"
-      }
-     }
-    },
-    {
-     "$id": "109",
-     "isReadOnly": false,
-     "realPath": [
-      "tariff"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "110",
-      "fixed": false,
-      "raw": "0"
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "111",
-      "fixed": false,
-      "raw": "Price, in local currency, in 1/100 of currency"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "112",
-      "fixed": false,
-      "raw": "tariff"
-     },
-     "serializedName": "tariff",
-     "modelType": {
-      "$id": "113",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "int",
-      "deprecated": false,
-      "name": {
-       "$id": "114",
-       "fixed": false,
-       "raw": "Int"
-      }
-     }
-    },
-    {
-     "$id": "115",
-     "isReadOnly": false,
-     "realPath": [
-      "currency"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "116",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "117",
-      "fixed": false,
-      "raw": "The currency should be set if the default country currency not to be used."
-     },
-     "extensions": {
-      "x-ms-metadata": {
-       "apiVersions": [
-        "v1.0"
-       ],
-       "filename": [
-        "mem:///103?oai3.shaken.json"
-       ],
-       "name": "Currency",
-       "originalLocations": [
-        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/Currency"
-       ]
-      },
-      "x-ms-enum": {
-       "name": "Currency",
-       "modelAsString": true,
-       "oldModelAsString": true
-      }
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "118",
-      "fixed": false,
-      "raw": "currency"
-     },
-     "serializedName": "currency",
-     "modelType": {
-      "$id": "119",
-      "$type": "EnumType",
-      "values": [
-       {
-        "$id": "120",
-        "name": "NOK",
-        "serializedName": "NOK"
-       },
-       {
-        "$id": "121",
-        "name": "DKK",
-        "serializedName": "DKK"
-       },
-       {
-        "$id": "122",
-        "name": "SEK",
-        "serializedName": "SEK"
-       },
-       {
-        "$id": "123",
-        "name": "EUR",
-        "serializedName": "EUR"
-       }
-      ],
-      "oldModelAsString": true,
-      "modelAsString": true,
-      "underlyingType": {
-       "$id": "124",
-       "$type": "PrimaryType",
-       "knownPrimaryType": "string",
-       "deprecated": false,
-       "name": {
-        "$id": "125",
-        "fixed": false,
-        "raw": "String"
-       }
-      },
-      "deprecated": false,
-      "name": {
-       "$id": "126",
-       "fixed": false,
-       "raw": "Currency"
-      }
-     }
-    },
-    {
-     "$id": "127",
-     "isReadOnly": false,
-     "realPath": [
-      "useDeliveryReport"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "128",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "129",
-      "fixed": false,
-      "raw": "True indicates that a delivery report should be sent back when the message has come to a final state"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "130",
-      "fixed": false,
-      "raw": "useDeliveryReport"
-     },
-     "serializedName": "useDeliveryReport",
-     "modelType": {
-      "$id": "131",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "boolean",
-      "deprecated": false,
-      "name": {
-       "$id": "132",
-       "fixed": false,
-       "raw": "Boolean"
-      }
-     }
-    },
-    {
-     "$id": "133",
-     "isReadOnly": false,
-     "realPath": [
-      "deliveryReportGates"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "134",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "135",
-      "fixed": false,
-      "raw": "One or more gates that should be used for sending delivery reports"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "136",
-      "fixed": false,
-      "raw": "deliveryReportGates"
-     },
-     "serializedName": "deliveryReportGates",
-     "modelType": {
-      "$id": "137",
-      "$type": "SequenceType",
-      "elementType": {
-       "$id": "138",
-       "$type": "PrimaryType",
-       "knownPrimaryType": "string",
-       "deprecated": false,
-       "name": {
-        "$id": "139",
-        "fixed": false,
-        "raw": "String"
-       }
-      },
-      "deprecated": false,
-      "name": {
-       "$id": "140",
-       "fixed": false
-      }
-     }
-    },
-    {
-     "$id": "141",
-     "isReadOnly": false,
-     "realPath": [
-      "relativeValidityTime"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "142",
-      "fixed": false,
-      "raw": "172800000"
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "143",
-      "fixed": false,
-      "raw": "This specifies how long (in milliseconds) the message is supposed to live"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "144",
-      "fixed": false,
-      "raw": "relativeValidityTime"
-     },
-     "serializedName": "relativeValidityTime",
-     "modelType": {
-      "$id": "145",
-      "$type": "PrimaryType",
-      "format": "long",
-      "knownPrimaryType": "int",
-      "deprecated": false,
-      "name": {
-       "$id": "146",
-       "fixed": false,
-       "raw": "Int"
-      }
-     }
-    },
-    {
-     "$id": "147",
-     "isReadOnly": false,
-     "realPath": [
-      "absoluteValidityTime"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "148",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "149",
-      "fixed": false,
-      "raw": "The absolute time when a message should expire"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "150",
-      "fixed": false,
-      "raw": "absoluteValidityTime"
-     },
-     "serializedName": "absoluteValidityTime",
-     "modelType": {
-      "$id": "151",
-      "$type": "PrimaryType",
-      "format": "date-time",
-      "knownPrimaryType": "dateTime",
-      "deprecated": false,
-      "name": {
-       "$id": "152",
-       "fixed": false,
-       "raw": "DateTime"
-      }
-     }
-    },
-    {
-     "$id": "153",
-     "isReadOnly": false,
-     "realPath": [
-      "platformId"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "154",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "155",
-      "fixed": false,
-      "raw": "The Platform ID provided by LINK Mobility"
-     },
-     "isRequired": true,
-     "isConstant": false,
-     "name": {
-      "$id": "156",
-      "fixed": false,
-      "raw": "platformId"
-     },
-     "serializedName": "platformId",
-     "modelType": {
-      "$id": "157",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "158",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "159",
-     "isReadOnly": false,
-     "realPath": [
-      "platformPartnerId"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "160",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "161",
-      "fixed": false,
-      "raw": "The Platform Partner ID provided by LINK Mobility"
-     },
-     "isRequired": true,
-     "isConstant": false,
-     "name": {
-      "$id": "162",
-      "fixed": false,
-      "raw": "platformPartnerId"
-     },
-     "serializedName": "platformPartnerId",
-     "modelType": {
-      "$id": "163",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "164",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "165",
-     "isReadOnly": false,
-     "realPath": [
-      "moReferenceId"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "166",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "167",
-      "fixed": false,
-      "raw": "A reference to the ID of the MO message which triggered the MT message"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "168",
-      "fixed": false,
-      "raw": "moReferenceId"
-     },
-     "serializedName": "moReferenceId",
-     "modelType": {
-      "$id": "169",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "170",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "171",
-     "isReadOnly": false,
-     "realPath": [
-      "refId"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "172",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "173",
-      "fixed": false,
-      "raw": "Your own internal transaction ID"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "174",
-      "fixed": false,
-      "raw": "refId"
-     },
-     "serializedName": "refId",
-     "modelType": {
-      "$id": "175",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "176",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "177",
-     "isReadOnly": false,
-     "realPath": [
-      "ignoreResponse"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "178",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "179",
-      "fixed": false,
-      "raw": "Indicates whether you want a response in the body when you submit the message."
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "180",
-      "fixed": false,
-      "raw": "ignoreResponse"
-     },
-     "serializedName": "ignoreResponse",
-     "modelType": {
-      "$id": "181",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "boolean",
-      "deprecated": false,
-      "name": {
-       "$id": "182",
-       "fixed": false,
-       "raw": "Boolean"
-      }
-     }
-    },
-    {
-     "$id": "183",
-     "isReadOnly": false,
-     "realPath": [
-      "customParameters"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "184",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "185",
-      "fixed": false,
-      "raw": "Additional parameters may be specified if needed"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "186",
-      "fixed": false,
-      "raw": "customParameters"
-     },
-     "serializedName": "customParameters",
-     "modelType": {
-      "$id": "187",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "object",
-      "deprecated": false,
-      "name": {
-       "$id": "188",
-       "fixed": false,
-       "raw": "Object"
-      }
-     }
-    }
-   ],
-   "serializedName": "SmsMessageRequest",
-   "documentation": "Describes a single SMS message object",
-   "containsConstantProperties": false,
-   "deprecated": false,
-   "name": {
-    "$id": "189",
-    "fixed": false,
-    "raw": "SmsMessageRequest"
-   },
-   "extensions": {
-    "x-ms-metadata": {
-     "apiVersions": [
-      "v1.0"
-     ],
-     "filename": [
-      "mem:///103?oai3.shaken.json"
-     ],
-     "name": "SmsMessageRequest",
-     "originalLocations": [
-      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/SmsMessageRequest"
-     ]
-    }
-   }
-  },
-  {
-   "$id": "190",
-   "$type": "CompositeType",
-   "properties": [
-    {
-     "$id": "191",
-     "isReadOnly": false,
-     "realPath": [
-      "source"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "192",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "193",
-      "fixed": false,
-      "raw": " This is the source number from where the message should be sent"
-     },
-     "isRequired": true,
-     "isConstant": false,
-     "name": {
-      "$id": "194",
-      "fixed": false,
-      "raw": "source"
-     },
-     "serializedName": "source",
-     "modelType": {
-      "$id": "195",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "196",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "197",
-     "isReadOnly": false,
-     "realPath": [
-      "sourceTON"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "198",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "199",
-      "fixed": false,
-      "raw": "This is the source type of number. See allowed TON values below."
-     },
-     "extensions": {
-      "x-ms-metadata": {
-       "apiVersions": [
-        "v1.0"
-       ],
-       "filename": [
-        "mem:///103?oai3.shaken.json"
-       ],
-       "name": "TypeOfNumber",
-       "originalLocations": [
-        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/TypeOfNumber"
-       ]
-      },
-      "x-ms-enum": {
-       "name": "TypeOfNumber",
-       "modelAsString": true,
-       "oldModelAsString": true
-      }
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "200",
-      "fixed": false,
-      "raw": "sourceTON"
-     },
-     "serializedName": "sourceTON",
-     "modelType": {
-      "$ref": "39"
-     }
-    },
-    {
-     "$id": "201",
-     "isReadOnly": false,
-     "realPath": [
-      "destination"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "202",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "203",
-      "fixed": false,
-      "raw": "This is the destination number"
-     },
-     "isRequired": true,
-     "isConstant": false,
-     "name": {
-      "$id": "204",
-      "fixed": false,
-      "raw": "destination"
-     },
-     "serializedName": "destination",
-     "modelType": {
-      "$id": "205",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "206",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "207",
-     "isReadOnly": false,
-     "realPath": [
-      "destinationTON"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "208",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "209",
-      "fixed": false,
-      "raw": "This is the destination type of number"
-     },
-     "extensions": {
-      "x-ms-metadata": {
-       "apiVersions": [
-        "v1.0"
-       ],
-       "filename": [
-        "mem:///103?oai3.shaken.json"
-       ],
-       "name": "TypeOfNumber",
-       "originalLocations": [
-        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/TypeOfNumber"
-       ]
-      },
-      "x-ms-enum": {
-       "name": "TypeOfNumber",
-       "modelAsString": true,
-       "oldModelAsString": true
-      }
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "210",
-      "fixed": false,
-      "raw": "destinationTON"
-     },
-     "serializedName": "destinationTON",
-     "modelType": {
-      "$ref": "39"
-     }
-    },
-    {
-     "$id": "211",
-     "isReadOnly": false,
-     "realPath": [
-      "dcs"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "212",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "213",
-      "fixed": false,
-      "raw": "This is the Data Coding Scheme that should be used when sending the SMS"
-     },
-     "extensions": {
-      "x-ms-metadata": {
-       "apiVersions": [
-        "v1.0"
-       ],
-       "filename": [
-        "mem:///103?oai3.shaken.json"
-       ],
-       "name": "DataCodingScheme",
-       "originalLocations": [
-        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/DataCodingScheme"
-       ]
-      },
-      "x-ms-enum": {
-       "name": "DataCodingScheme",
-       "modelAsString": true,
-       "oldModelAsString": true
-      }
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "214",
-      "fixed": false,
-      "raw": "dcs"
-     },
-     "serializedName": "dcs",
-     "modelType": {
-      "$ref": "60"
-     }
-    },
-    {
-     "$id": "215",
-     "isReadOnly": false,
-     "realPath": [
-      "userDataHeader"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "216",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "217",
-      "fixed": false,
-      "raw": "This value may be specified when sending concatenated SMS, WAP-push, etc. The format is hex encoded 8-bit bytes"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "218",
-      "fixed": false,
-      "raw": "userDataHeader"
-     },
-     "serializedName": "userDataHeader",
-     "modelType": {
-      "$id": "219",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "220",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "221",
-     "isReadOnly": false,
-     "realPath": [
-      "userData"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "222",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "223",
-      "fixed": false,
-      "raw": "This is the message content itself. The DCS specifies the format (encoding) on this value"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "224",
-      "fixed": false,
-      "raw": "userData"
-     },
-     "serializedName": "userData",
-     "modelType": {
-      "$id": "225",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "226",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "227",
-     "isReadOnly": false,
-     "realPath": [
-      "priority"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "228",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "229",
-      "fixed": false,
-      "raw": "Specifies the priority to be given to the message"
-     },
-     "extensions": {
-      "x-ms-metadata": {
-       "apiVersions": [
-        "v1.0"
-       ],
-       "filename": [
-        "mem:///103?oai3.shaken.json"
-       ],
-       "name": "Priority",
-       "originalLocations": [
-        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/Priority"
-       ]
-      },
-      "x-ms-enum": {
-       "name": "Priority",
-       "modelAsString": true,
-       "oldModelAsString": true
-      }
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "230",
-      "fixed": false,
-      "raw": "priority"
-     },
-     "serializedName": "priority",
-     "modelType": {
-      "$ref": "84"
-     }
-    },
-    {
-     "$id": "231",
-     "isReadOnly": false,
-     "realPath": [
-      "age"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "232",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "233",
-      "fixed": false,
-      "raw": "Allowed age for (adult) content"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "234",
-      "fixed": false,
-      "raw": "age"
-     },
-     "serializedName": "age",
-     "modelType": {
-      "$id": "235",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "int",
-      "deprecated": false,
-      "name": {
-       "$id": "236",
-       "fixed": false,
-       "raw": "Int"
-      }
-     }
-    },
-    {
-     "$id": "237",
-     "isReadOnly": false,
-     "realPath": [
-      "productDescription"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "238",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "239",
-      "fixed": false,
-      "raw": "When sending premium messages, a description of the service"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "240",
-      "fixed": false,
-      "raw": "productDescription"
-     },
-     "serializedName": "productDescription",
-     "modelType": {
-      "$id": "241",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "242",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "243",
-     "isReadOnly": false,
-     "realPath": [
-      "productCategory"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "244",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "245",
-      "fixed": false,
-      "raw": "When sending premium messages, specify which category the service is"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "246",
-      "fixed": false,
-      "raw": "productCategory"
-     },
-     "serializedName": "productCategory",
-     "modelType": {
-      "$id": "247",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "int",
-      "deprecated": false,
-      "name": {
-       "$id": "248",
-       "fixed": false,
-       "raw": "Int"
-      }
-     }
-    },
-    {
-     "$id": "249",
-     "isReadOnly": false,
-     "realPath": [
-      "tariff"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "250",
-      "fixed": false,
-      "raw": "0"
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "251",
-      "fixed": false,
-      "raw": "Price, in local currency, in 1/100 of currency"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "252",
-      "fixed": false,
-      "raw": "tariff"
-     },
-     "serializedName": "tariff",
-     "modelType": {
-      "$id": "253",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "int",
-      "deprecated": false,
-      "name": {
-       "$id": "254",
-       "fixed": false,
-       "raw": "Int"
-      }
-     }
-    },
-    {
-     "$id": "255",
-     "isReadOnly": false,
-     "realPath": [
-      "currency"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "256",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "257",
-      "fixed": false,
-      "raw": "The currency should be set if the default country currency not to be used."
-     },
-     "extensions": {
-      "x-ms-metadata": {
-       "apiVersions": [
-        "v1.0"
-       ],
-       "filename": [
-        "mem:///103?oai3.shaken.json"
-       ],
-       "name": "Currency",
-       "originalLocations": [
-        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/Currency"
-       ]
-      },
-      "x-ms-enum": {
-       "name": "Currency",
-       "modelAsString": true,
-       "oldModelAsString": true
-      }
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "258",
-      "fixed": false,
-      "raw": "currency"
-     },
-     "serializedName": "currency",
-     "modelType": {
-      "$ref": "119"
-     }
-    },
-    {
-     "$id": "259",
-     "isReadOnly": false,
-     "realPath": [
-      "moReferenceId"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "260",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "261",
-      "fixed": false,
-      "raw": "A reference to the ID of the MO message which triggered the MT message"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "262",
-      "fixed": false,
-      "raw": "moReferenceId"
-     },
-     "serializedName": "moReferenceId",
-     "modelType": {
-      "$id": "263",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "264",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    }
-   ],
-   "serializedName": "SmsBatchMessage",
-   "documentation": "A single message within a batch",
-   "containsConstantProperties": false,
-   "deprecated": false,
-   "name": {
-    "$id": "265",
-    "fixed": false,
-    "raw": "SmsBatchMessage"
-   },
-   "extensions": {
-    "x-ms-metadata": {
-     "apiVersions": [
-      "v1.0"
-     ],
-     "filename": [
-      "mem:///103?oai3.shaken.json"
-     ],
-     "name": "SmsBatchMessage",
-     "originalLocations": [
-      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/SmsBatchMessage"
-     ]
-    }
-   }
-  },
-  {
-   "$id": "266",
-   "$type": "CompositeType",
-   "properties": [
-    {
-     "$id": "267",
-     "isReadOnly": false,
-     "realPath": [
-      "useDeliveryReport"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "268",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "269",
-      "fixed": false,
-      "raw": "True indicates that a delivery report should be sent back when the message has come to a final state"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "270",
-      "fixed": false,
-      "raw": "useDeliveryReport"
-     },
-     "serializedName": "useDeliveryReport",
-     "modelType": {
-      "$id": "271",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "boolean",
-      "deprecated": false,
-      "name": {
-       "$id": "272",
-       "fixed": false,
-       "raw": "Boolean"
-      }
-     }
-    },
-    {
-     "$id": "273",
-     "isReadOnly": false,
-     "realPath": [
-      "deliveryReportGates"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "274",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "275",
-      "fixed": false,
-      "raw": "One or more gates that should be used for sending delivery reports"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "276",
-      "fixed": false,
-      "raw": "deliveryReportGates"
-     },
-     "serializedName": "deliveryReportGates",
-     "modelType": {
-      "$id": "277",
-      "$type": "SequenceType",
-      "elementType": {
-       "$id": "278",
-       "$type": "PrimaryType",
-       "knownPrimaryType": "string",
-       "deprecated": false,
-       "name": {
-        "$id": "279",
-        "fixed": false,
-        "raw": "String"
-       }
-      },
-      "deprecated": false,
-      "name": {
-       "$id": "280",
-       "fixed": false
-      }
-     }
-    },
-    {
-     "$id": "281",
-     "isReadOnly": false,
-     "realPath": [
-      "relativeValidityTime"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "282",
-      "fixed": false,
-      "raw": "172800000"
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "283",
-      "fixed": false,
-      "raw": "This specifies how long (in milliseconds) the message is supposed to live"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "284",
-      "fixed": false,
-      "raw": "relativeValidityTime"
-     },
-     "serializedName": "relativeValidityTime",
-     "modelType": {
-      "$id": "285",
-      "$type": "PrimaryType",
-      "format": "long",
-      "knownPrimaryType": "int",
-      "deprecated": false,
-      "name": {
-       "$id": "286",
-       "fixed": false,
-       "raw": "Int"
-      }
-     }
-    },
-    {
-     "$id": "287",
-     "isReadOnly": false,
-     "realPath": [
-      "absoluteValidityTime"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "288",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "289",
-      "fixed": false
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "290",
-      "fixed": false,
-      "raw": "absoluteValidityTime"
-     },
-     "serializedName": "absoluteValidityTime",
-     "modelType": {
-      "$id": "291",
-      "$type": "PrimaryType",
-      "format": "date",
-      "knownPrimaryType": "date",
-      "deprecated": false,
-      "name": {
-       "$id": "292",
-       "fixed": false,
-       "raw": "Date"
-      }
-     }
-    },
-    {
-     "$id": "293",
-     "isReadOnly": false,
-     "realPath": [
-      "platformId"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "294",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "295",
-      "fixed": false,
-      "raw": "The Platform ID provided by LINK Mobility"
-     },
-     "isRequired": true,
-     "isConstant": false,
-     "name": {
-      "$id": "296",
-      "fixed": false,
-      "raw": "platformId"
-     },
-     "serializedName": "platformId",
-     "modelType": {
-      "$id": "297",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "298",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "299",
-     "isReadOnly": false,
-     "realPath": [
-      "platformPartnerId"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "300",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "301",
-      "fixed": false,
-      "raw": "The Platform Partner ID provided by LINK Mobility"
-     },
-     "isRequired": true,
-     "isConstant": false,
-     "name": {
-      "$id": "302",
-      "fixed": false,
-      "raw": "platformPartnerId"
-     },
-     "serializedName": "platformPartnerId",
-     "modelType": {
-      "$id": "303",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "304",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "305",
-     "isReadOnly": false,
-     "realPath": [
-      "ignoreResponse"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "306",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "307",
-      "fixed": false,
-      "raw": "Indicates whether you want a response in the body when you submit the message."
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "308",
-      "fixed": false,
-      "raw": "ignoreResponse"
-     },
-     "serializedName": "ignoreResponse",
-     "modelType": {
-      "$id": "309",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "boolean",
-      "deprecated": false,
-      "name": {
-       "$id": "310",
-       "fixed": false,
-       "raw": "Boolean"
-      }
-     }
-    },
-    {
-     "$id": "311",
-     "isReadOnly": false,
-     "realPath": [
-      "customParameters"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "312",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "313",
-      "fixed": false
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "314",
-      "fixed": false,
-      "raw": "customParameters"
-     },
-     "serializedName": "customParameters",
-     "modelType": {
-      "$id": "315",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "object",
-      "deprecated": false,
-      "name": {
-       "$id": "316",
-       "fixed": false,
-       "raw": "Object"
-      }
-     }
-    },
-    {
-     "$id": "317",
-     "isReadOnly": false,
-     "realPath": [
-      "sendRequestMessages"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "318",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "319",
-      "fixed": false
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "320",
-      "fixed": false,
-      "raw": "sendRequestMessages"
-     },
-     "serializedName": "sendRequestMessages",
-     "modelType": {
-      "$id": "321",
-      "$type": "SequenceType",
-      "elementType": {
-       "$ref": "190"
-      },
-      "deprecated": false,
-      "name": {
-       "$id": "322",
-       "fixed": false
-      }
-     }
-    }
-   ],
-   "serializedName": "SmsBatchSendRequest",
-   "documentation": "A batch of messages that are sent in a single operation",
-   "containsConstantProperties": false,
-   "deprecated": false,
-   "name": {
-    "$id": "323",
-    "fixed": false,
-    "raw": "SmsBatchSendRequest"
-   },
-   "extensions": {
-    "x-ms-metadata": {
-     "apiVersions": [
-      "v1.0"
-     ],
-     "filename": [
-      "mem:///103?oai3.shaken.json"
-     ],
-     "name": "SmsBatchSendRequest",
-     "originalLocations": [
-      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/SmsBatchSendRequest"
-     ]
-    }
-   }
-  },
-  {
-   "$id": "324",
-   "$type": "CompositeType",
-   "properties": [
-    {
-     "$id": "325",
-     "isReadOnly": false,
-     "realPath": [
-      "id"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "326",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "327",
-      "fixed": false,
-      "raw": "The unique identifier of the route, generated when created"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "328",
-      "fixed": false,
-      "raw": "id"
-     },
-     "serializedName": "id",
-     "modelType": {
-      "$id": "329",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "330",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "331",
-     "isReadOnly": false,
-     "realPath": [
-      "refId"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "332",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "333",
-      "fixed": false,
-      "raw": "Id supplied by the client"
-     },
-     "isRequired": false,
-     "isConstant": false,
-     "name": {
-      "$id": "334",
-      "fixed": false,
-      "raw": "refId"
-     },
-     "serializedName": "refId",
-     "modelType": {
-      "$id": "335",
-      "$type": "PrimaryType",
-      "knownPrimaryType": "string",
-      "deprecated": false,
-      "name": {
-       "$id": "336",
-       "fixed": false,
-       "raw": "String"
-      }
-     }
-    },
-    {
-     "$id": "337",
-     "isReadOnly": false,
-     "realPath": [
-      "type"
-     ],
-     "collectionFormat": "none",
-     "defaultValue": {
-      "$id": "338",
-      "fixed": false
-     },
-     "deprecated": false,
-     "documentation": {
-      "$id": "339",
       "fixed": false,
       "raw": "The type of route"
      },
@@ -2376,22 +118,22 @@
      "isRequired": true,
      "isConstant": false,
      "name": {
-      "$id": "340",
+      "$id": "18",
       "fixed": false,
       "raw": "type"
      },
      "serializedName": "type",
      "modelType": {
-      "$id": "341",
+      "$id": "19",
       "$type": "EnumType",
       "values": [
        {
-        "$id": "342",
+        "$id": "20",
         "name": "KEYWORD_ROUTE",
         "serializedName": "KEYWORD_ROUTE"
        },
        {
-        "$id": "343",
+        "$id": "21",
         "name": "SUBNUMBER_ROUTE",
         "serializedName": "SUBNUMBER_ROUTE"
        }
@@ -2399,75 +141,75 @@
       "oldModelAsString": true,
       "modelAsString": true,
       "underlyingType": {
-       "$id": "344",
+       "$id": "22",
        "$type": "PrimaryType",
        "knownPrimaryType": "string",
        "deprecated": false,
        "name": {
-        "$id": "345",
+        "$id": "23",
         "fixed": false,
         "raw": "String"
        }
       },
       "deprecated": false,
       "name": {
-       "$id": "346",
+       "$id": "24",
        "fixed": false,
        "raw": "RouteType"
       }
      }
     },
     {
-     "$id": "347",
+     "$id": "25",
      "isReadOnly": false,
      "realPath": [
       "keyword"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "348",
+      "$id": "26",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "349",
+      "$id": "27",
       "fixed": false,
       "raw": "The keyword of the route (if the type is KEYWORD_ROUTE)"
      },
      "isRequired": false,
      "isConstant": false,
      "name": {
-      "$id": "350",
+      "$id": "28",
       "fixed": false,
       "raw": "keyword"
      },
      "serializedName": "keyword",
      "modelType": {
-      "$id": "351",
+      "$id": "29",
       "$type": "PrimaryType",
       "knownPrimaryType": "string",
       "deprecated": false,
       "name": {
-       "$id": "352",
+       "$id": "30",
        "fixed": false,
        "raw": "String"
       }
      }
     },
     {
-     "$id": "353",
+     "$id": "31",
      "isReadOnly": false,
      "realPath": [
       "keywordType"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "354",
+      "$id": "32",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "355",
+      "$id": "33",
       "fixed": false,
       "raw": "Defines the type of keyword matching (if the route type is KEYWORD_ROUTE)"
      },
@@ -2493,32 +235,32 @@
      "isRequired": false,
      "isConstant": false,
      "name": {
-      "$id": "356",
+      "$id": "34",
       "fixed": false,
       "raw": "keywordType"
      },
      "serializedName": "keywordType",
      "modelType": {
-      "$id": "357",
+      "$id": "35",
       "$type": "EnumType",
       "values": [
        {
-        "$id": "358",
+        "$id": "36",
         "name": "DEFAULT",
         "serializedName": "DEFAULT"
        },
        {
-        "$id": "359",
+        "$id": "37",
         "name": "EQUALS",
         "serializedName": "EQUALS"
        },
        {
-        "$id": "360",
+        "$id": "38",
         "name": "FIRST_WORD",
         "serializedName": "FIRST_WORD"
        },
        {
-        "$id": "361",
+        "$id": "39",
         "name": "STARTS_WITH",
         "serializedName": "STARTS_WITH"
        }
@@ -2526,375 +268,375 @@
       "oldModelAsString": true,
       "modelAsString": true,
       "underlyingType": {
-       "$id": "362",
+       "$id": "40",
        "$type": "PrimaryType",
        "knownPrimaryType": "string",
        "deprecated": false,
        "name": {
-        "$id": "363",
+        "$id": "41",
         "fixed": false,
         "raw": "String"
        }
       },
       "deprecated": false,
       "name": {
-       "$id": "364",
+       "$id": "42",
        "fixed": false,
        "raw": "KeywordType"
       }
      }
     },
     {
-     "$id": "365",
+     "$id": "43",
      "isReadOnly": false,
      "realPath": [
       "active"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "366",
+      "$id": "44",
       "fixed": false,
       "raw": "true"
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "367",
+      "$id": "45",
       "fixed": false,
       "raw": "Indicates is the route is active"
      },
      "isRequired": false,
      "isConstant": false,
      "name": {
-      "$id": "368",
+      "$id": "46",
       "fixed": false,
       "raw": "active"
      },
      "serializedName": "active",
      "modelType": {
-      "$id": "369",
+      "$id": "47",
       "$type": "PrimaryType",
       "knownPrimaryType": "boolean",
       "deprecated": false,
       "name": {
-       "$id": "370",
+       "$id": "48",
        "fixed": false,
        "raw": "Boolean"
       }
      }
     },
     {
-     "$id": "371",
+     "$id": "49",
      "isReadOnly": false,
      "realPath": [
       "number"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "372",
+      "$id": "50",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "373",
+      "$id": "51",
       "fixed": false,
       "raw": "Either a shortCode or a longnumber formatted as a MSISDN"
      },
      "isRequired": true,
      "isConstant": false,
      "name": {
-      "$id": "374",
+      "$id": "52",
       "fixed": false,
       "raw": "number"
      },
      "serializedName": "number",
      "modelType": {
-      "$id": "375",
+      "$id": "53",
       "$type": "PrimaryType",
       "knownPrimaryType": "string",
       "deprecated": false,
       "name": {
-       "$id": "376",
+       "$id": "54",
        "fixed": false,
        "raw": "String"
       }
      }
     },
     {
-     "$id": "377",
+     "$id": "55",
      "isReadOnly": false,
      "realPath": [
       "start"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "378",
+      "$id": "56",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "379",
+      "$id": "57",
       "fixed": false,
       "raw": "The time when the route should start to be active"
      },
      "isRequired": false,
      "isConstant": false,
      "name": {
-      "$id": "380",
+      "$id": "58",
       "fixed": false,
       "raw": "start"
      },
      "serializedName": "start",
      "modelType": {
-      "$id": "381",
+      "$id": "59",
       "$type": "PrimaryType",
       "format": "date",
       "knownPrimaryType": "date",
       "deprecated": false,
       "name": {
-       "$id": "382",
+       "$id": "60",
        "fixed": false,
        "raw": "Date"
       }
      }
     },
     {
-     "$id": "383",
+     "$id": "61",
      "isReadOnly": false,
      "realPath": [
       "end"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "384",
+      "$id": "62",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "385",
+      "$id": "63",
       "fixed": false,
       "raw": "The time when the route should end to be active"
      },
      "isRequired": false,
      "isConstant": false,
      "name": {
-      "$id": "386",
+      "$id": "64",
       "fixed": false,
       "raw": "end"
      },
      "serializedName": "end",
      "modelType": {
-      "$id": "387",
+      "$id": "65",
       "$type": "PrimaryType",
       "format": "date",
       "knownPrimaryType": "date",
       "deprecated": false,
       "name": {
-       "$id": "388",
+       "$id": "66",
        "fixed": false,
        "raw": "Date"
       }
      }
     },
     {
-     "$id": "389",
+     "$id": "67",
      "isReadOnly": false,
      "realPath": [
       "platformId"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "390",
+      "$id": "68",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "391",
+      "$id": "69",
       "fixed": false,
       "raw": "The Platorm ID provided by LINK Mobility"
      },
      "isRequired": true,
      "isConstant": false,
      "name": {
-      "$id": "392",
+      "$id": "70",
       "fixed": false,
       "raw": "platformId"
      },
      "serializedName": "platformId",
      "modelType": {
-      "$id": "393",
+      "$id": "71",
       "$type": "PrimaryType",
       "knownPrimaryType": "string",
       "deprecated": false,
       "name": {
-       "$id": "394",
+       "$id": "72",
        "fixed": false,
        "raw": "String"
       }
      }
     },
     {
-     "$id": "395",
+     "$id": "73",
      "isReadOnly": false,
      "realPath": [
       "platformPartnerId"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "396",
+      "$id": "74",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "397",
+      "$id": "75",
       "fixed": false,
       "raw": "The ID of the Partner provided by LINK Mobility"
      },
      "isRequired": true,
      "isConstant": false,
      "name": {
-      "$id": "398",
+      "$id": "76",
       "fixed": false,
       "raw": "platformPartnerId"
      },
      "serializedName": "platformPartnerId",
      "modelType": {
-      "$id": "399",
+      "$id": "77",
       "$type": "PrimaryType",
       "knownPrimaryType": "string",
       "deprecated": false,
       "name": {
-       "$id": "400",
+       "$id": "78",
        "fixed": false,
        "raw": "String"
       }
      }
     },
     {
-     "$id": "401",
+     "$id": "79",
      "isReadOnly": false,
      "realPath": [
       "platformServiceType"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "402",
+      "$id": "80",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "403",
+      "$id": "81",
       "fixed": false,
       "raw": "] The type of the platform service"
      },
      "isRequired": false,
      "isConstant": false,
      "name": {
-      "$id": "404",
+      "$id": "82",
       "fixed": false,
       "raw": "platformServiceType"
      },
      "serializedName": "platformServiceType",
      "modelType": {
-      "$id": "405",
+      "$id": "83",
       "$type": "PrimaryType",
       "knownPrimaryType": "string",
       "deprecated": false,
       "name": {
-       "$id": "406",
+       "$id": "84",
        "fixed": false,
        "raw": "String"
       }
      }
     },
     {
-     "$id": "407",
+     "$id": "85",
      "isReadOnly": false,
      "realPath": [
       "platformServiceId"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "408",
+      "$id": "86",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "409",
+      "$id": "87",
       "fixed": false,
       "raw": "] The Id of the platform service"
      },
      "isRequired": false,
      "isConstant": false,
      "name": {
-      "$id": "410",
+      "$id": "88",
       "fixed": false,
       "raw": "platformServiceId"
      },
      "serializedName": "platformServiceId",
      "modelType": {
-      "$id": "411",
+      "$id": "89",
       "$type": "PrimaryType",
       "knownPrimaryType": "string",
       "deprecated": false,
       "name": {
-       "$id": "412",
+       "$id": "90",
        "fixed": false,
        "raw": "String"
       }
      }
     },
     {
-     "$id": "413",
+     "$id": "91",
      "isReadOnly": false,
      "realPath": [
       "shared"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "414",
+      "$id": "92",
       "fixed": false,
       "raw": "false"
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "415",
+      "$id": "93",
       "fixed": false,
       "raw": "Indicates if the keyword may be registered multiple times"
      },
      "isRequired": false,
      "isConstant": false,
      "name": {
-      "$id": "416",
+      "$id": "94",
       "fixed": false,
       "raw": "shared"
      },
      "serializedName": "shared",
      "modelType": {
-      "$id": "417",
+      "$id": "95",
       "$type": "PrimaryType",
       "knownPrimaryType": "boolean",
       "deprecated": false,
       "name": {
-       "$id": "418",
+       "$id": "96",
        "fixed": false,
        "raw": "Boolean"
       }
      }
     },
     {
-     "$id": "419",
+     "$id": "97",
      "isReadOnly": false,
      "realPath": [
       "notifyStop"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "420",
+      "$id": "98",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "421",
+      "$id": "99",
       "fixed": false,
       "raw": "Indicates that stop notifications should be forwarded for this keyword"
      },
@@ -2904,55 +646,55 @@
      "isRequired": false,
      "isConstant": false,
      "name": {
-      "$id": "422",
+      "$id": "100",
       "fixed": false,
       "raw": "notifyStop"
      },
      "serializedName": "notifyStop",
      "modelType": {
-      "$id": "423",
+      "$id": "101",
       "$type": "PrimaryType",
       "knownPrimaryType": "boolean",
       "deprecated": false,
       "name": {
-       "$id": "424",
+       "$id": "102",
        "fixed": false,
        "raw": "Boolean"
       }
      }
     },
     {
-     "$id": "425",
+     "$id": "103",
      "isReadOnly": false,
      "realPath": [
       "customParameters"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
-      "$id": "426",
+      "$id": "104",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
-      "$id": "427",
+      "$id": "105",
       "fixed": false,
       "raw": " Additional parameters may be specified if needed"
      },
      "isRequired": false,
      "isConstant": false,
      "name": {
-      "$id": "428",
+      "$id": "106",
       "fixed": false,
       "raw": "customParameters"
      },
      "serializedName": "customParameters",
      "modelType": {
-      "$id": "429",
+      "$id": "107",
       "$type": "PrimaryType",
       "knownPrimaryType": "object",
       "deprecated": false,
       "name": {
-       "$id": "430",
+       "$id": "108",
        "fixed": false,
        "raw": "Object"
       }
@@ -2963,7 +705,7 @@
    "containsConstantProperties": false,
    "deprecated": false,
    "name": {
-    "$id": "431",
+    "$id": "109",
     "fixed": false,
     "raw": "Route"
    },
@@ -2981,9 +723,2265 @@
      ]
     }
    }
-  }
- ],
- "headerTypes": [
+  },
+  {
+   "$id": "110",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "111",
+     "isReadOnly": false,
+     "realPath": [
+      "messageId"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "112",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "113",
+      "fixed": false,
+      "raw": "The unique identifier of the message handled by LINK Mobility"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "114",
+      "fixed": false,
+      "raw": "messageId"
+     },
+     "serializedName": "messageId",
+     "modelType": {
+      "$id": "115",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "116",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "117",
+     "isReadOnly": false,
+     "realPath": [
+      "resultCode"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "118",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "119",
+      "fixed": false,
+      "raw": "Indicates the code of the "
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "120",
+      "fixed": false,
+      "raw": "resultCode"
+     },
+     "serializedName": "resultCode",
+     "modelType": {
+      "$id": "121",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "deprecated": false,
+      "name": {
+       "$id": "122",
+       "fixed": false,
+       "raw": "Int"
+      }
+     }
+    },
+    {
+     "$id": "123",
+     "isReadOnly": false,
+     "realPath": [
+      "description"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "124",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "125",
+      "fixed": false,
+      "raw": "A descriptive message of the result"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "126",
+      "fixed": false,
+      "raw": "description"
+     },
+     "serializedName": "description",
+     "modelType": {
+      "$id": "127",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "128",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "129",
+     "isReadOnly": false,
+     "realPath": [
+      "smsCount"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "130",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "131",
+      "fixed": false,
+      "raw": "The number of SMS messages produced by the request"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "132",
+      "fixed": false,
+      "raw": "smsCount"
+     },
+     "serializedName": "smsCount",
+     "modelType": {
+      "$id": "133",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "deprecated": false,
+      "name": {
+       "$id": "134",
+       "fixed": false,
+       "raw": "Int"
+      }
+     }
+    }
+   ],
+   "serializedName": "SmsSendResult",
+   "documentation": "The result of a SMS Send operation",
+   "containsConstantProperties": false,
+   "deprecated": false,
+   "name": {
+    "$id": "135",
+    "fixed": false,
+    "raw": "SmsSendResult"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "SmsSendResult",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/SmsSendResult"
+     ]
+    }
+   }
+  },
+  {
+   "$id": "136",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "137",
+     "isReadOnly": false,
+     "realPath": [
+      "source"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "138",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "139",
+      "fixed": false,
+      "raw": " This is the source number from where the message should be sent"
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "140",
+      "fixed": false,
+      "raw": "source"
+     },
+     "serializedName": "source",
+     "modelType": {
+      "$id": "141",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "142",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "143",
+     "isReadOnly": false,
+     "realPath": [
+      "sourceTON"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "144",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "145",
+      "fixed": false,
+      "raw": "This is the source type of number. See allowed TON values below."
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "TypeOfNumber",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/TypeOfNumber"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "TypeOfNumber",
+       "modelAsString": true,
+       "oldModelAsString": true
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "146",
+      "fixed": false,
+      "raw": "sourceTON"
+     },
+     "serializedName": "sourceTON",
+     "modelType": {
+      "$id": "147",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "148",
+        "name": "ALPHANUMERIC",
+        "serializedName": "ALPHANUMERIC"
+       },
+       {
+        "$id": "149",
+        "name": "SHORTCODE",
+        "serializedName": "SHORTCODE"
+       },
+       {
+        "$id": "150",
+        "name": "MSISDN",
+        "serializedName": "MSISDN"
+       }
+      ],
+      "oldModelAsString": true,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "151",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "deprecated": false,
+       "name": {
+        "$id": "152",
+        "fixed": false,
+        "raw": "String"
+       }
+      },
+      "deprecated": false,
+      "name": {
+       "$id": "153",
+       "fixed": false,
+       "raw": "TypeOfNumber"
+      }
+     }
+    },
+    {
+     "$id": "154",
+     "isReadOnly": false,
+     "realPath": [
+      "destination"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "155",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "156",
+      "fixed": false,
+      "raw": "This is the destination number"
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "157",
+      "fixed": false,
+      "raw": "destination"
+     },
+     "serializedName": "destination",
+     "modelType": {
+      "$id": "158",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "159",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "160",
+     "isReadOnly": false,
+     "realPath": [
+      "destinationTON"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "161",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "162",
+      "fixed": false,
+      "raw": "This is the destination type of number"
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "TypeOfNumber",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/TypeOfNumber"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "TypeOfNumber",
+       "modelAsString": true,
+       "oldModelAsString": true
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "163",
+      "fixed": false,
+      "raw": "destinationTON"
+     },
+     "serializedName": "destinationTON",
+     "modelType": {
+      "$ref": "147"
+     }
+    },
+    {
+     "$id": "164",
+     "isReadOnly": false,
+     "realPath": [
+      "dcs"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "165",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "166",
+      "fixed": false,
+      "raw": "This is the Data Coding Scheme that should be used when sending the SMS"
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "DataCodingScheme",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/DataCodingScheme"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "DataCodingScheme",
+       "modelAsString": true,
+       "oldModelAsString": true
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "167",
+      "fixed": false,
+      "raw": "dcs"
+     },
+     "serializedName": "dcs",
+     "modelType": {
+      "$id": "168",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "169",
+        "name": "BINARY",
+        "serializedName": "BINARY"
+       },
+       {
+        "$id": "170",
+        "name": "GSM",
+        "serializedName": "GSM"
+       },
+       {
+        "$id": "171",
+        "name": "TEXT",
+        "serializedName": "TEXT"
+       },
+       {
+        "$id": "172",
+        "name": "UC2",
+        "serializedName": "UC2"
+       }
+      ],
+      "oldModelAsString": true,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "173",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "deprecated": false,
+       "name": {
+        "$id": "174",
+        "fixed": false,
+        "raw": "String"
+       }
+      },
+      "deprecated": false,
+      "name": {
+       "$id": "175",
+       "fixed": false,
+       "raw": "DataCodingScheme"
+      }
+     }
+    },
+    {
+     "$id": "176",
+     "isReadOnly": false,
+     "realPath": [
+      "userDataHeader"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "177",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "178",
+      "fixed": false,
+      "raw": "This value may be specified when sending concatenated SMS, WAP-push, etc. The format is hex encoded 8-bit bytes"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "179",
+      "fixed": false,
+      "raw": "userDataHeader"
+     },
+     "serializedName": "userDataHeader",
+     "modelType": {
+      "$id": "180",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "181",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "182",
+     "isReadOnly": false,
+     "realPath": [
+      "userData"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "183",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "184",
+      "fixed": false,
+      "raw": "This is the message content itself. The DCS specifies the format (encoding) on this value"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "185",
+      "fixed": false,
+      "raw": "userData"
+     },
+     "serializedName": "userData",
+     "modelType": {
+      "$id": "186",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "187",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "188",
+     "isReadOnly": false,
+     "realPath": [
+      "priority"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "189",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "190",
+      "fixed": false,
+      "raw": "Specifies the priority to be given to the message"
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "Priority",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/Priority"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "Priority",
+       "modelAsString": true,
+       "oldModelAsString": true
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "191",
+      "fixed": false,
+      "raw": "priority"
+     },
+     "serializedName": "priority",
+     "modelType": {
+      "$id": "192",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "193",
+        "name": "HIGH",
+        "serializedName": "HIGH"
+       },
+       {
+        "$id": "194",
+        "name": "NORMAL",
+        "serializedName": "NORMAL"
+       },
+       {
+        "$id": "195",
+        "name": "LOW",
+        "serializedName": "LOW"
+       }
+      ],
+      "oldModelAsString": true,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "196",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "deprecated": false,
+       "name": {
+        "$id": "197",
+        "fixed": false,
+        "raw": "String"
+       }
+      },
+      "deprecated": false,
+      "name": {
+       "$id": "198",
+       "fixed": false,
+       "raw": "Priority"
+      }
+     }
+    },
+    {
+     "$id": "199",
+     "isReadOnly": false,
+     "realPath": [
+      "age"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "200",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "201",
+      "fixed": false,
+      "raw": "Allowed age for (adult) content"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "202",
+      "fixed": false,
+      "raw": "age"
+     },
+     "serializedName": "age",
+     "modelType": {
+      "$id": "203",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "deprecated": false,
+      "name": {
+       "$id": "204",
+       "fixed": false,
+       "raw": "Int"
+      }
+     }
+    },
+    {
+     "$id": "205",
+     "isReadOnly": false,
+     "realPath": [
+      "productDescription"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "206",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "207",
+      "fixed": false,
+      "raw": "When sending premium messages, a description of the service"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "208",
+      "fixed": false,
+      "raw": "productDescription"
+     },
+     "serializedName": "productDescription",
+     "modelType": {
+      "$id": "209",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "210",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "211",
+     "isReadOnly": false,
+     "realPath": [
+      "productCategory"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "212",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "213",
+      "fixed": false,
+      "raw": "When sending premium messages, specify which category the service is"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "214",
+      "fixed": false,
+      "raw": "productCategory"
+     },
+     "serializedName": "productCategory",
+     "modelType": {
+      "$id": "215",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "deprecated": false,
+      "name": {
+       "$id": "216",
+       "fixed": false,
+       "raw": "Int"
+      }
+     }
+    },
+    {
+     "$id": "217",
+     "isReadOnly": false,
+     "realPath": [
+      "tariff"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "218",
+      "fixed": false,
+      "raw": "0"
+     },
+     "documentation": {
+      "$id": "219",
+      "fixed": false,
+      "raw": "Price, in local currency, in 1/100 of currency"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "220",
+      "fixed": false,
+      "raw": "tariff"
+     },
+     "serializedName": "tariff",
+     "modelType": {
+      "$id": "221",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "deprecated": false,
+      "name": {
+       "$id": "222",
+       "fixed": false,
+       "raw": "Int"
+      }
+     }
+    },
+    {
+     "$id": "223",
+     "isReadOnly": false,
+     "realPath": [
+      "currency"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "224",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "225",
+      "fixed": false,
+      "raw": "The currency should be set if the default country currency not to be used."
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "Currency",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/Currency"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "Currency",
+       "modelAsString": true,
+       "oldModelAsString": true
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "226",
+      "fixed": false,
+      "raw": "currency"
+     },
+     "serializedName": "currency",
+     "modelType": {
+      "$id": "227",
+      "$type": "EnumType",
+      "values": [
+       {
+        "$id": "228",
+        "name": "NOK",
+        "serializedName": "NOK"
+       },
+       {
+        "$id": "229",
+        "name": "DKK",
+        "serializedName": "DKK"
+       },
+       {
+        "$id": "230",
+        "name": "SEK",
+        "serializedName": "SEK"
+       },
+       {
+        "$id": "231",
+        "name": "EUR",
+        "serializedName": "EUR"
+       }
+      ],
+      "oldModelAsString": true,
+      "modelAsString": true,
+      "underlyingType": {
+       "$id": "232",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "deprecated": false,
+       "name": {
+        "$id": "233",
+        "fixed": false,
+        "raw": "String"
+       }
+      },
+      "deprecated": false,
+      "name": {
+       "$id": "234",
+       "fixed": false,
+       "raw": "Currency"
+      }
+     }
+    },
+    {
+     "$id": "235",
+     "isReadOnly": false,
+     "realPath": [
+      "useDeliveryReport"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "236",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "237",
+      "fixed": false,
+      "raw": "True indicates that a delivery report should be sent back when the message has come to a final state"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "238",
+      "fixed": false,
+      "raw": "useDeliveryReport"
+     },
+     "serializedName": "useDeliveryReport",
+     "modelType": {
+      "$id": "239",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "deprecated": false,
+      "name": {
+       "$id": "240",
+       "fixed": false,
+       "raw": "Boolean"
+      }
+     }
+    },
+    {
+     "$id": "241",
+     "isReadOnly": false,
+     "realPath": [
+      "deliveryReportGates"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "242",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "243",
+      "fixed": false,
+      "raw": "One or more gates that should be used for sending delivery reports"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "244",
+      "fixed": false,
+      "raw": "deliveryReportGates"
+     },
+     "serializedName": "deliveryReportGates",
+     "modelType": {
+      "$id": "245",
+      "$type": "SequenceType",
+      "elementType": {
+       "$id": "246",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "deprecated": false,
+       "name": {
+        "$id": "247",
+        "fixed": false,
+        "raw": "String"
+       }
+      },
+      "deprecated": false,
+      "name": {
+       "$id": "248",
+       "fixed": false
+      }
+     }
+    },
+    {
+     "$id": "249",
+     "isReadOnly": false,
+     "realPath": [
+      "relativeValidityTime"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "250",
+      "fixed": false,
+      "raw": "172800000"
+     },
+     "documentation": {
+      "$id": "251",
+      "fixed": false,
+      "raw": "This specifies how long (in milliseconds) the message is supposed to live"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "252",
+      "fixed": false,
+      "raw": "relativeValidityTime"
+     },
+     "serializedName": "relativeValidityTime",
+     "modelType": {
+      "$id": "253",
+      "$type": "PrimaryType",
+      "format": "long",
+      "knownPrimaryType": "int",
+      "deprecated": false,
+      "name": {
+       "$id": "254",
+       "fixed": false,
+       "raw": "Int"
+      }
+     }
+    },
+    {
+     "$id": "255",
+     "isReadOnly": false,
+     "realPath": [
+      "absoluteValidityTime"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "256",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "257",
+      "fixed": false,
+      "raw": "The absolute time when a message should expire"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "258",
+      "fixed": false,
+      "raw": "absoluteValidityTime"
+     },
+     "serializedName": "absoluteValidityTime",
+     "modelType": {
+      "$id": "259",
+      "$type": "PrimaryType",
+      "format": "date-time",
+      "knownPrimaryType": "dateTime",
+      "deprecated": false,
+      "name": {
+       "$id": "260",
+       "fixed": false,
+       "raw": "DateTime"
+      }
+     }
+    },
+    {
+     "$id": "261",
+     "isReadOnly": false,
+     "realPath": [
+      "platformId"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "262",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "263",
+      "fixed": false,
+      "raw": "The Platform ID provided by LINK Mobility"
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "264",
+      "fixed": false,
+      "raw": "platformId"
+     },
+     "serializedName": "platformId",
+     "modelType": {
+      "$id": "265",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "266",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "267",
+     "isReadOnly": false,
+     "realPath": [
+      "platformPartnerId"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "268",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "269",
+      "fixed": false,
+      "raw": "The Platform Partner ID provided by LINK Mobility"
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "270",
+      "fixed": false,
+      "raw": "platformPartnerId"
+     },
+     "serializedName": "platformPartnerId",
+     "modelType": {
+      "$id": "271",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "272",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "273",
+     "isReadOnly": false,
+     "realPath": [
+      "moReferenceId"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "274",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "275",
+      "fixed": false,
+      "raw": "A reference to the ID of the MO message which triggered the MT message"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "276",
+      "fixed": false,
+      "raw": "moReferenceId"
+     },
+     "serializedName": "moReferenceId",
+     "modelType": {
+      "$id": "277",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "278",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "279",
+     "isReadOnly": false,
+     "realPath": [
+      "refId"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "280",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "281",
+      "fixed": false,
+      "raw": "Your own internal transaction ID"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "282",
+      "fixed": false,
+      "raw": "refId"
+     },
+     "serializedName": "refId",
+     "modelType": {
+      "$id": "283",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "284",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "285",
+     "isReadOnly": false,
+     "realPath": [
+      "ignoreResponse"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "286",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "287",
+      "fixed": false,
+      "raw": "Indicates whether you want a response in the body when you submit the message."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "288",
+      "fixed": false,
+      "raw": "ignoreResponse"
+     },
+     "serializedName": "ignoreResponse",
+     "modelType": {
+      "$id": "289",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "deprecated": false,
+      "name": {
+       "$id": "290",
+       "fixed": false,
+       "raw": "Boolean"
+      }
+     }
+    },
+    {
+     "$id": "291",
+     "isReadOnly": false,
+     "realPath": [
+      "customParameters"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "292",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "293",
+      "fixed": false,
+      "raw": "Additional parameters may be specified if needed"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "294",
+      "fixed": false,
+      "raw": "customParameters"
+     },
+     "serializedName": "customParameters",
+     "modelType": {
+      "$id": "295",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "object",
+      "deprecated": false,
+      "name": {
+       "$id": "296",
+       "fixed": false,
+       "raw": "Object"
+      }
+     }
+    }
+   ],
+   "serializedName": "SmsMessageRequest",
+   "documentation": "Describes a single SMS message object",
+   "containsConstantProperties": false,
+   "deprecated": false,
+   "name": {
+    "$id": "297",
+    "fixed": false,
+    "raw": "SmsMessageRequest"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "SmsMessageRequest",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/SmsMessageRequest"
+     ]
+    }
+   }
+  },
+  {
+   "$id": "298",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "299",
+     "isReadOnly": false,
+     "realPath": [
+      "source"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "300",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "301",
+      "fixed": false,
+      "raw": " This is the source number from where the message should be sent"
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "302",
+      "fixed": false,
+      "raw": "source"
+     },
+     "serializedName": "source",
+     "modelType": {
+      "$id": "303",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "304",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "305",
+     "isReadOnly": false,
+     "realPath": [
+      "sourceTON"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "306",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "307",
+      "fixed": false,
+      "raw": "This is the source type of number. See allowed TON values below."
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "TypeOfNumber",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/TypeOfNumber"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "TypeOfNumber",
+       "modelAsString": true,
+       "oldModelAsString": true
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "308",
+      "fixed": false,
+      "raw": "sourceTON"
+     },
+     "serializedName": "sourceTON",
+     "modelType": {
+      "$ref": "147"
+     }
+    },
+    {
+     "$id": "309",
+     "isReadOnly": false,
+     "realPath": [
+      "destination"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "310",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "311",
+      "fixed": false,
+      "raw": "This is the destination number"
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "312",
+      "fixed": false,
+      "raw": "destination"
+     },
+     "serializedName": "destination",
+     "modelType": {
+      "$id": "313",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "314",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "315",
+     "isReadOnly": false,
+     "realPath": [
+      "destinationTON"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "316",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "317",
+      "fixed": false,
+      "raw": "This is the destination type of number"
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "TypeOfNumber",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/TypeOfNumber"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "TypeOfNumber",
+       "modelAsString": true,
+       "oldModelAsString": true
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "318",
+      "fixed": false,
+      "raw": "destinationTON"
+     },
+     "serializedName": "destinationTON",
+     "modelType": {
+      "$ref": "147"
+     }
+    },
+    {
+     "$id": "319",
+     "isReadOnly": false,
+     "realPath": [
+      "dcs"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "320",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "321",
+      "fixed": false,
+      "raw": "This is the Data Coding Scheme that should be used when sending the SMS"
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "DataCodingScheme",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/DataCodingScheme"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "DataCodingScheme",
+       "modelAsString": true,
+       "oldModelAsString": true
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "322",
+      "fixed": false,
+      "raw": "dcs"
+     },
+     "serializedName": "dcs",
+     "modelType": {
+      "$ref": "168"
+     }
+    },
+    {
+     "$id": "323",
+     "isReadOnly": false,
+     "realPath": [
+      "userDataHeader"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "324",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "325",
+      "fixed": false,
+      "raw": "This value may be specified when sending concatenated SMS, WAP-push, etc. The format is hex encoded 8-bit bytes"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "326",
+      "fixed": false,
+      "raw": "userDataHeader"
+     },
+     "serializedName": "userDataHeader",
+     "modelType": {
+      "$id": "327",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "328",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "329",
+     "isReadOnly": false,
+     "realPath": [
+      "userData"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "330",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "331",
+      "fixed": false,
+      "raw": "This is the message content itself. The DCS specifies the format (encoding) on this value"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "332",
+      "fixed": false,
+      "raw": "userData"
+     },
+     "serializedName": "userData",
+     "modelType": {
+      "$id": "333",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "334",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "335",
+     "isReadOnly": false,
+     "realPath": [
+      "priority"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "336",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "337",
+      "fixed": false,
+      "raw": "Specifies the priority to be given to the message"
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "Priority",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/Priority"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "Priority",
+       "modelAsString": true,
+       "oldModelAsString": true
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "338",
+      "fixed": false,
+      "raw": "priority"
+     },
+     "serializedName": "priority",
+     "modelType": {
+      "$ref": "192"
+     }
+    },
+    {
+     "$id": "339",
+     "isReadOnly": false,
+     "realPath": [
+      "age"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "340",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "341",
+      "fixed": false,
+      "raw": "Allowed age for (adult) content"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "342",
+      "fixed": false,
+      "raw": "age"
+     },
+     "serializedName": "age",
+     "modelType": {
+      "$id": "343",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "deprecated": false,
+      "name": {
+       "$id": "344",
+       "fixed": false,
+       "raw": "Int"
+      }
+     }
+    },
+    {
+     "$id": "345",
+     "isReadOnly": false,
+     "realPath": [
+      "productDescription"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "346",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "347",
+      "fixed": false,
+      "raw": "When sending premium messages, a description of the service"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "348",
+      "fixed": false,
+      "raw": "productDescription"
+     },
+     "serializedName": "productDescription",
+     "modelType": {
+      "$id": "349",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "350",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "351",
+     "isReadOnly": false,
+     "realPath": [
+      "productCategory"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "352",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "353",
+      "fixed": false,
+      "raw": "When sending premium messages, specify which category the service is"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "354",
+      "fixed": false,
+      "raw": "productCategory"
+     },
+     "serializedName": "productCategory",
+     "modelType": {
+      "$id": "355",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "deprecated": false,
+      "name": {
+       "$id": "356",
+       "fixed": false,
+       "raw": "Int"
+      }
+     }
+    },
+    {
+     "$id": "357",
+     "isReadOnly": false,
+     "realPath": [
+      "tariff"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "358",
+      "fixed": false,
+      "raw": "0"
+     },
+     "documentation": {
+      "$id": "359",
+      "fixed": false,
+      "raw": "Price, in local currency, in 1/100 of currency"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "360",
+      "fixed": false,
+      "raw": "tariff"
+     },
+     "serializedName": "tariff",
+     "modelType": {
+      "$id": "361",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "int",
+      "deprecated": false,
+      "name": {
+       "$id": "362",
+       "fixed": false,
+       "raw": "Int"
+      }
+     }
+    },
+    {
+     "$id": "363",
+     "isReadOnly": false,
+     "realPath": [
+      "currency"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "364",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "365",
+      "fixed": false,
+      "raw": "The currency should be set if the default country currency not to be used."
+     },
+     "extensions": {
+      "x-ms-metadata": {
+       "apiVersions": [
+        "v1.0"
+       ],
+       "filename": [
+        "mem:///103?oai3.shaken.json"
+       ],
+       "name": "Currency",
+       "originalLocations": [
+        "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/Currency"
+       ]
+      },
+      "x-ms-enum": {
+       "name": "Currency",
+       "modelAsString": true,
+       "oldModelAsString": true
+      }
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "366",
+      "fixed": false,
+      "raw": "currency"
+     },
+     "serializedName": "currency",
+     "modelType": {
+      "$ref": "227"
+     }
+    },
+    {
+     "$id": "367",
+     "isReadOnly": false,
+     "realPath": [
+      "moReferenceId"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "368",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "369",
+      "fixed": false,
+      "raw": "A reference to the ID of the MO message which triggered the MT message"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "370",
+      "fixed": false,
+      "raw": "moReferenceId"
+     },
+     "serializedName": "moReferenceId",
+     "modelType": {
+      "$id": "371",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "372",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    }
+   ],
+   "serializedName": "SmsBatchMessage",
+   "documentation": "A single message within a batch",
+   "containsConstantProperties": false,
+   "deprecated": false,
+   "name": {
+    "$id": "373",
+    "fixed": false,
+    "raw": "SmsBatchMessage"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "SmsBatchMessage",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/SmsBatchMessage"
+     ]
+    }
+   }
+  },
+  {
+   "$id": "374",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "375",
+     "isReadOnly": false,
+     "realPath": [
+      "useDeliveryReport"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "376",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "377",
+      "fixed": false,
+      "raw": "True indicates that a delivery report should be sent back when the message has come to a final state"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "378",
+      "fixed": false,
+      "raw": "useDeliveryReport"
+     },
+     "serializedName": "useDeliveryReport",
+     "modelType": {
+      "$id": "379",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "deprecated": false,
+      "name": {
+       "$id": "380",
+       "fixed": false,
+       "raw": "Boolean"
+      }
+     }
+    },
+    {
+     "$id": "381",
+     "isReadOnly": false,
+     "realPath": [
+      "deliveryReportGates"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "382",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "383",
+      "fixed": false,
+      "raw": "One or more gates that should be used for sending delivery reports"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "384",
+      "fixed": false,
+      "raw": "deliveryReportGates"
+     },
+     "serializedName": "deliveryReportGates",
+     "modelType": {
+      "$id": "385",
+      "$type": "SequenceType",
+      "elementType": {
+       "$id": "386",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "string",
+       "deprecated": false,
+       "name": {
+        "$id": "387",
+        "fixed": false,
+        "raw": "String"
+       }
+      },
+      "deprecated": false,
+      "name": {
+       "$id": "388",
+       "fixed": false
+      }
+     }
+    },
+    {
+     "$id": "389",
+     "isReadOnly": false,
+     "realPath": [
+      "relativeValidityTime"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "390",
+      "fixed": false,
+      "raw": "172800000"
+     },
+     "documentation": {
+      "$id": "391",
+      "fixed": false,
+      "raw": "This specifies how long (in milliseconds) the message is supposed to live"
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "392",
+      "fixed": false,
+      "raw": "relativeValidityTime"
+     },
+     "serializedName": "relativeValidityTime",
+     "modelType": {
+      "$id": "393",
+      "$type": "PrimaryType",
+      "format": "long",
+      "knownPrimaryType": "int",
+      "deprecated": false,
+      "name": {
+       "$id": "394",
+       "fixed": false,
+       "raw": "Int"
+      }
+     }
+    },
+    {
+     "$id": "395",
+     "isReadOnly": false,
+     "realPath": [
+      "absoluteValidityTime"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "396",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "397",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "398",
+      "fixed": false,
+      "raw": "absoluteValidityTime"
+     },
+     "serializedName": "absoluteValidityTime",
+     "modelType": {
+      "$id": "399",
+      "$type": "PrimaryType",
+      "format": "date",
+      "knownPrimaryType": "date",
+      "deprecated": false,
+      "name": {
+       "$id": "400",
+       "fixed": false,
+       "raw": "Date"
+      }
+     }
+    },
+    {
+     "$id": "401",
+     "isReadOnly": false,
+     "realPath": [
+      "platformId"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "402",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "403",
+      "fixed": false,
+      "raw": "The Platform ID provided by LINK Mobility"
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "404",
+      "fixed": false,
+      "raw": "platformId"
+     },
+     "serializedName": "platformId",
+     "modelType": {
+      "$id": "405",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "406",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "407",
+     "isReadOnly": false,
+     "realPath": [
+      "platformPartnerId"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "408",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "409",
+      "fixed": false,
+      "raw": "The Platform Partner ID provided by LINK Mobility"
+     },
+     "isRequired": true,
+     "isConstant": false,
+     "name": {
+      "$id": "410",
+      "fixed": false,
+      "raw": "platformPartnerId"
+     },
+     "serializedName": "platformPartnerId",
+     "modelType": {
+      "$id": "411",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "412",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "413",
+     "isReadOnly": false,
+     "realPath": [
+      "ignoreResponse"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "414",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "415",
+      "fixed": false,
+      "raw": "Indicates whether you want a response in the body when you submit the message."
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "416",
+      "fixed": false,
+      "raw": "ignoreResponse"
+     },
+     "serializedName": "ignoreResponse",
+     "modelType": {
+      "$id": "417",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "boolean",
+      "deprecated": false,
+      "name": {
+       "$id": "418",
+       "fixed": false,
+       "raw": "Boolean"
+      }
+     }
+    },
+    {
+     "$id": "419",
+     "isReadOnly": false,
+     "realPath": [
+      "customParameters"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "420",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "421",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "422",
+      "fixed": false,
+      "raw": "customParameters"
+     },
+     "serializedName": "customParameters",
+     "modelType": {
+      "$id": "423",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "object",
+      "deprecated": false,
+      "name": {
+       "$id": "424",
+       "fixed": false,
+       "raw": "Object"
+      }
+     }
+    },
+    {
+     "$id": "425",
+     "isReadOnly": false,
+     "realPath": [
+      "sendRequestMessages"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "426",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "427",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "428",
+      "fixed": false,
+      "raw": "sendRequestMessages"
+     },
+     "serializedName": "sendRequestMessages",
+     "modelType": {
+      "$id": "429",
+      "$type": "SequenceType",
+      "elementType": {
+       "$ref": "298"
+      },
+      "deprecated": false,
+      "name": {
+       "$id": "430",
+       "fixed": false
+      }
+     }
+    }
+   ],
+   "serializedName": "SmsBatchSendRequest",
+   "documentation": "A batch of messages that are sent in a single operation",
+   "containsConstantProperties": false,
+   "deprecated": false,
+   "name": {
+    "$id": "431",
+    "fixed": false,
+    "raw": "SmsBatchSendRequest"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "SmsBatchSendRequest",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/SmsBatchSendRequest"
+     ]
+    }
+   }
+  },
   {
    "$id": "432",
    "$type": "CompositeType",
@@ -2992,16 +2990,118 @@
      "$id": "433",
      "isReadOnly": false,
      "realPath": [
-      "Location"
+      "errorCode"
      ],
+     "deprecated": false,
      "collectionFormat": "none",
      "defaultValue": {
       "$id": "434",
       "fixed": false
      },
-     "deprecated": false,
      "documentation": {
       "$id": "435",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "436",
+      "fixed": false,
+      "raw": "errorCode"
+     },
+     "serializedName": "errorCode",
+     "modelType": {
+      "$id": "437",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "438",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    },
+    {
+     "$id": "439",
+     "isReadOnly": false,
+     "realPath": [
+      "description"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "440",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "441",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "442",
+      "fixed": false,
+      "raw": "description"
+     },
+     "serializedName": "description",
+     "modelType": {
+      "$id": "443",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "deprecated": false,
+      "name": {
+       "$id": "444",
+       "fixed": false,
+       "raw": "String"
+      }
+     }
+    }
+   ],
+   "serializedName": "ErrorResponse",
+   "containsConstantProperties": false,
+   "deprecated": false,
+   "name": {
+    "$id": "445",
+    "fixed": false,
+    "raw": "ErrorResponse"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "ErrorResponse",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/schemas/ErrorResponse"
+     ]
+    }
+   }
+  }
+ ],
+ "headerTypes": [
+  {
+   "$id": "446",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "447",
+     "isReadOnly": false,
+     "realPath": [
+      "Location"
+     ],
+     "deprecated": false,
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "448",
+      "fixed": false
+     },
+     "documentation": {
+      "$id": "449",
       "fixed": false,
       "raw": "The URL location where the newly created route is accessible"
      },
@@ -3022,18 +3122,18 @@
      "isRequired": false,
      "isConstant": false,
      "name": {
-      "$id": "436",
+      "$id": "450",
       "fixed": false,
       "raw": "Location"
      },
      "serializedName": "Location",
      "modelType": {
-      "$id": "437",
+      "$id": "451",
       "$type": "PrimaryType",
       "knownPrimaryType": "string",
       "deprecated": false,
       "name": {
-       "$id": "438",
+       "$id": "452",
        "fixed": false,
        "raw": "String"
       }
@@ -3045,7 +3145,7 @@
    "containsConstantProperties": false,
    "deprecated": false,
    "name": {
-    "$id": "439",
+    "$id": "453",
     "fixed": false,
     "raw": "keyword-create-Headers"
    }
@@ -3053,22 +3153,22 @@
  ],
  "enumTypes": [
   {
-   "$ref": "39"
+   "$ref": "19"
   },
   {
-   "$ref": "60"
+   "$ref": "35"
   },
   {
-   "$ref": "84"
+   "$ref": "147"
   },
   {
-   "$ref": "119"
+   "$ref": "168"
   },
   {
-   "$ref": "341"
+   "$ref": "192"
   },
   {
-   "$ref": "357"
+   "$ref": "227"
   }
  ],
  "name": "LINKMobilityRESTAPIv10",
@@ -3077,21 +3177,28 @@
  "apiVersion": "v1.0",
  "baseUrl": "https://wsx.sp247.net",
  "documentation": "OpenAPI Specification of the LINK Mobility Common Layer",
+ "extensions": {
+  "security": [
+   {
+    "basicAuth": []
+   }
+  ]
+ },
  "properties": [
   {
-   "$id": "440",
+   "$id": "454",
    "isReadOnly": false,
    "realPath": [
     "number"
    ],
+   "deprecated": false,
    "collectionFormat": "none",
    "defaultValue": {
-    "$id": "441",
+    "$id": "455",
     "fixed": false
    },
-   "deprecated": false,
    "documentation": {
-    "$id": "442",
+    "$id": "456",
     "fixed": false,
     "raw": "The number that the keyword will be routed to"
    },
@@ -3113,37 +3220,37 @@
    "isRequired": true,
    "isConstant": false,
    "name": {
-    "$id": "443",
+    "$id": "457",
     "fixed": false,
     "raw": "number"
    },
    "serializedName": "number",
    "modelType": {
-    "$id": "444",
+    "$id": "458",
     "$type": "PrimaryType",
     "knownPrimaryType": "string",
     "deprecated": false,
     "name": {
-     "$id": "445",
+     "$id": "459",
      "fixed": false,
      "raw": "String"
     }
    }
   },
   {
-   "$id": "446",
+   "$id": "460",
    "isReadOnly": false,
    "realPath": [
     "number"
    ],
+   "deprecated": false,
    "collectionFormat": "none",
    "defaultValue": {
-    "$id": "447",
+    "$id": "461",
     "fixed": false
    },
-   "deprecated": false,
    "documentation": {
-    "$id": "448",
+    "$id": "462",
     "fixed": false,
     "raw": "The number that the keywords are routed to"
    },
@@ -3155,9 +3262,9 @@
      "filename": [
       "mem:///103?oai3.shaken.json"
      ],
-     "name": "paths·1shf5zx·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·0",
+     "name": "paths·17hhmjo·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·0",
      "originalLocations": [
-      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1shf5zx·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·0"
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·17hhmjo·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·0"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -3165,37 +3272,37 @@
    "isRequired": true,
    "isConstant": false,
    "name": {
-    "$id": "449",
+    "$id": "463",
     "fixed": false,
     "raw": "Number1"
    },
    "serializedName": "number",
    "modelType": {
-    "$id": "450",
+    "$id": "464",
     "$type": "PrimaryType",
     "knownPrimaryType": "string",
     "deprecated": false,
     "name": {
-     "$id": "451",
+     "$id": "465",
      "fixed": false,
      "raw": "String"
     }
    }
   },
   {
-   "$id": "452",
+   "$id": "466",
    "isReadOnly": false,
    "realPath": [
     "platformId"
    ],
+   "deprecated": false,
    "collectionFormat": "none",
    "defaultValue": {
-    "$id": "453",
+    "$id": "467",
     "fixed": false
    },
-   "deprecated": false,
    "documentation": {
-    "$id": "454",
+    "$id": "468",
     "fixed": false,
     "raw": "The ID of the Platform assigned by LINK Mobility"
    },
@@ -3207,9 +3314,9 @@
      "filename": [
       "mem:///103?oai3.shaken.json"
      ],
-     "name": "paths·1ohsko1·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·1",
+     "name": "paths·1cvrn4m·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·1",
      "originalLocations": [
-      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1ohsko1·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·1"
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1cvrn4m·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·1"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -3217,37 +3324,37 @@
    "isRequired": true,
    "isConstant": false,
    "name": {
-    "$id": "455",
+    "$id": "469",
     "fixed": false,
     "raw": "platformId"
    },
    "serializedName": "platformId",
    "modelType": {
-    "$id": "456",
+    "$id": "470",
     "$type": "PrimaryType",
     "knownPrimaryType": "string",
     "deprecated": false,
     "name": {
-     "$id": "457",
+     "$id": "471",
      "fixed": false,
      "raw": "String"
     }
    }
   },
   {
-   "$id": "458",
+   "$id": "472",
    "isReadOnly": false,
    "realPath": [
     "partnerId"
    ],
+   "deprecated": false,
    "collectionFormat": "none",
    "defaultValue": {
-    "$id": "459",
+    "$id": "473",
     "fixed": false
    },
-   "deprecated": false,
    "documentation": {
-    "$id": "460",
+    "$id": "474",
     "fixed": false,
     "raw": "The ID of the Partner assigned by LINK Mobility"
    },
@@ -3259,9 +3366,9 @@
      "filename": [
       "mem:///103?oai3.shaken.json"
      ],
-     "name": "paths·dtk9fd·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·2",
+     "name": "paths·i8rcuq·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·2",
      "originalLocations": [
-      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·dtk9fd·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·2"
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·i8rcuq·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·2"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -3269,37 +3376,37 @@
    "isRequired": true,
    "isConstant": false,
    "name": {
-    "$id": "461",
+    "$id": "475",
     "fixed": false,
     "raw": "partnerId"
    },
    "serializedName": "partnerId",
    "modelType": {
-    "$id": "462",
+    "$id": "476",
     "$type": "PrimaryType",
     "knownPrimaryType": "string",
     "deprecated": false,
     "name": {
-     "$id": "463",
+     "$id": "477",
      "fixed": false,
      "raw": "String"
     }
    }
   },
   {
-   "$id": "464",
+   "$id": "478",
    "isReadOnly": false,
    "realPath": [
     "id"
    ],
+   "deprecated": false,
    "collectionFormat": "none",
    "defaultValue": {
-    "$id": "465",
+    "$id": "479",
     "fixed": false
    },
-   "deprecated": false,
    "documentation": {
-    "$id": "466",
+    "$id": "480",
     "fixed": false,
     "raw": "The ID of the Route to be returned"
    },
@@ -3311,9 +3418,9 @@
      "filename": [
       "mem:///103?oai3.shaken.json"
      ],
-     "name": "paths·errrdo·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·3",
+     "name": "paths·dxg5ea·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·3",
      "originalLocations": [
-      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·errrdo·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·3"
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·dxg5ea·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·3"
      ]
     },
     "x-ms-parameter-location": "method"
@@ -3321,37 +3428,37 @@
    "isRequired": true,
    "isConstant": false,
    "name": {
-    "$id": "467",
+    "$id": "481",
     "fixed": false,
     "raw": "id"
    },
    "serializedName": "id",
    "modelType": {
-    "$id": "468",
+    "$id": "482",
     "$type": "PrimaryType",
     "knownPrimaryType": "string",
     "deprecated": false,
     "name": {
-     "$id": "469",
+     "$id": "483",
      "fixed": false,
      "raw": "String"
     }
    }
   },
   {
-   "$id": "470",
+   "$id": "484",
    "isReadOnly": false,
    "realPath": [
     "number"
    ],
+   "deprecated": false,
    "collectionFormat": "none",
    "defaultValue": {
-    "$id": "471",
+    "$id": "485",
     "fixed": false
    },
-   "deprecated": false,
    "documentation": {
-    "$id": "472",
+    "$id": "486",
     "fixed": false,
     "raw": "The number that the keywords are routed to"
    },
@@ -3373,37 +3480,37 @@
    "isRequired": true,
    "isConstant": false,
    "name": {
-    "$id": "473",
+    "$id": "487",
     "fixed": false,
     "raw": "Number2"
    },
    "serializedName": "number",
    "modelType": {
-    "$id": "474",
+    "$id": "488",
     "$type": "PrimaryType",
     "knownPrimaryType": "string",
     "deprecated": false,
     "name": {
-     "$id": "475",
+     "$id": "489",
      "fixed": false,
      "raw": "String"
     }
    }
   },
   {
-   "$id": "476",
+   "$id": "490",
    "isReadOnly": false,
    "realPath": [
     "platformId"
    ],
+   "deprecated": false,
    "collectionFormat": "none",
    "defaultValue": {
-    "$id": "477",
+    "$id": "491",
     "fixed": false
    },
-   "deprecated": false,
    "documentation": {
-    "$id": "478",
+    "$id": "492",
     "fixed": false,
     "raw": "The ID of the Platform assigned by LINK Mobility"
    },
@@ -3425,37 +3532,37 @@
    "isRequired": true,
    "isConstant": false,
    "name": {
-    "$id": "479",
+    "$id": "493",
     "fixed": false,
     "raw": "PlatformId1"
    },
    "serializedName": "platformId",
    "modelType": {
-    "$id": "480",
+    "$id": "494",
     "$type": "PrimaryType",
     "knownPrimaryType": "string",
     "deprecated": false,
     "name": {
-     "$id": "481",
+     "$id": "495",
      "fixed": false,
      "raw": "String"
     }
    }
   },
   {
-   "$id": "482",
+   "$id": "496",
    "isReadOnly": false,
    "realPath": [
     "partnerId"
    ],
+   "deprecated": false,
    "collectionFormat": "none",
    "defaultValue": {
-    "$id": "483",
+    "$id": "497",
     "fixed": false
    },
-   "deprecated": false,
    "documentation": {
-    "$id": "484",
+    "$id": "498",
     "fixed": false,
     "raw": "The ID of the Partner assigned by LINK Mobility"
    },
@@ -3477,37 +3584,37 @@
    "isRequired": true,
    "isConstant": false,
    "name": {
-    "$id": "485",
+    "$id": "499",
     "fixed": false,
     "raw": "PartnerId1"
    },
    "serializedName": "partnerId",
    "modelType": {
-    "$id": "486",
+    "$id": "500",
     "$type": "PrimaryType",
     "knownPrimaryType": "string",
     "deprecated": false,
     "name": {
-     "$id": "487",
+     "$id": "501",
      "fixed": false,
      "raw": "String"
     }
    }
   },
   {
-   "$id": "488",
+   "$id": "502",
    "isReadOnly": false,
    "realPath": [
     "refid"
    ],
+   "deprecated": false,
    "collectionFormat": "none",
    "defaultValue": {
-    "$id": "489",
+    "$id": "503",
     "fixed": false
    },
-   "deprecated": false,
    "documentation": {
-    "$id": "490",
+    "$id": "504",
     "fixed": false,
     "raw": ""
    },
@@ -3529,18 +3636,174 @@
    "isRequired": true,
    "isConstant": false,
    "name": {
-    "$id": "491",
+    "$id": "505",
     "fixed": false,
     "raw": "refid"
    },
    "serializedName": "refid",
    "modelType": {
-    "$id": "492",
+    "$id": "506",
     "$type": "PrimaryType",
     "knownPrimaryType": "string",
     "deprecated": false,
     "name": {
-     "$id": "493",
+     "$id": "507",
+     "fixed": false,
+     "raw": "String"
+    }
+   }
+  },
+  {
+   "$id": "508",
+   "isReadOnly": false,
+   "realPath": [
+    "number"
+   ],
+   "deprecated": false,
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "509",
+    "fixed": false
+   },
+   "documentation": {
+    "$id": "510",
+    "fixed": false,
+    "raw": "The number that the keywords are routed to"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "paths·i4z91n·number-number-keyword-platform-platformid-partner-partnerid·get·parameters·0",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·i4z91n·number-number-keyword-platform-platformid-partner-partnerid·get·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "511",
+    "fixed": false,
+    "raw": "Number3"
+   },
+   "serializedName": "number",
+   "modelType": {
+    "$id": "512",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "deprecated": false,
+    "name": {
+     "$id": "513",
+     "fixed": false,
+     "raw": "String"
+    }
+   }
+  },
+  {
+   "$id": "514",
+   "isReadOnly": false,
+   "realPath": [
+    "platformId"
+   ],
+   "deprecated": false,
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "515",
+    "fixed": false
+   },
+   "documentation": {
+    "$id": "516",
+    "fixed": false,
+    "raw": "The ID of the Platform assigned by LINK Mobility"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "paths·rr6bi7·number-number-keyword-platform-platformid-partner-partnerid·get·parameters·1",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·rr6bi7·number-number-keyword-platform-platformid-partner-partnerid·get·parameters·1"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "517",
+    "fixed": false,
+    "raw": "PlatformId2"
+   },
+   "serializedName": "platformId",
+   "modelType": {
+    "$id": "518",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "deprecated": false,
+    "name": {
+     "$id": "519",
+     "fixed": false,
+     "raw": "String"
+    }
+   }
+  },
+  {
+   "$id": "520",
+   "isReadOnly": false,
+   "realPath": [
+    "partnerId"
+   ],
+   "deprecated": false,
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "521",
+    "fixed": false
+   },
+   "documentation": {
+    "$id": "522",
+    "fixed": false,
+    "raw": "The ID of the Partner assigned by LINK Mobility"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "v1.0"
+     ],
+     "filename": [
+      "mem:///103?oai3.shaken.json"
+     ],
+     "name": "paths·4ru4j1·number-number-keyword-platform-platformid-partner-partnerid·get·parameters·2",
+     "originalLocations": [
+      "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·4ru4j1·number-number-keyword-platform-platformid-partner-partnerid·get·parameters·2"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "523",
+    "fixed": false,
+    "raw": "PartnerId2"
+   },
+   "serializedName": "partnerId",
+   "modelType": {
+    "$id": "524",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "deprecated": false,
+    "name": {
+     "$id": "525",
      "fixed": false,
      "raw": "String"
     }
@@ -3549,22 +3812,22 @@
  ],
  "operations": [
   {
-   "$id": "494",
+   "$id": "526",
    "methods": [
     {
-     "$id": "495",
+     "$id": "527",
      "parameters": [
       {
-       "$id": "496",
+       "$id": "528",
        "location": "body",
+       "deprecated": false,
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "497",
+        "$id": "529",
         "fixed": false
        },
-       "deprecated": false,
        "documentation": {
-        "$id": "498",
+        "$id": "530",
         "fixed": false
        },
        "extensions": {
@@ -3584,29 +3847,29 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "499",
+        "$id": "531",
         "fixed": false,
         "raw": "body"
        },
        "serializedName": "body",
        "modelType": {
-        "$ref": "324"
+        "$ref": "2"
        }
       },
       {
-       "$id": "500",
+       "$id": "532",
        "clientProperty": {
-        "$ref": "440"
+        "$ref": "454"
        },
        "location": "path",
+       "deprecated": false,
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "501",
+        "$id": "533",
         "fixed": false
        },
-       "deprecated": false,
        "documentation": {
-        "$id": "502",
+        "$id": "534",
         "fixed": false,
         "raw": "The number that the keyword will be routed to"
        },
@@ -3628,18 +3891,18 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "503",
+        "$id": "535",
         "fixed": false,
         "raw": "number"
        },
        "serializedName": "number",
        "modelType": {
-        "$id": "504",
+        "$id": "536",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "505",
+         "$id": "537",
          "fixed": false,
          "raw": "String"
         }
@@ -3647,12 +3910,12 @@
       }
      ],
      "name": {
-      "$id": "506",
+      "$id": "538",
       "fixed": false,
       "raw": "create"
      },
      "group": {
-      "$id": "507",
+      "$id": "539",
       "fixed": false,
       "raw": "keyword"
      },
@@ -3662,12 +3925,12 @@
      "httpMethod": "post",
      "responses": {
       "Created": {
-       "$id": "508",
+       "$id": "540",
        "headers": {
-        "$ref": "432"
+        "$ref": "446"
        },
        "extensions": {
-        "$id": "509",
+        "$id": "541",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -3684,23 +3947,15 @@
        "isNullable": true
       },
       "BadRequest": {
-       "$id": "510",
+       "$id": "542",
        "body": {
-        "$id": "511",
-        "$type": "PrimaryType",
-        "knownPrimaryType": "object",
-        "deprecated": false,
-        "name": {
-         "$id": "512",
-         "fixed": false,
-         "raw": "Object"
-        }
-       },
-       "headers": {
         "$ref": "432"
        },
+       "headers": {
+        "$ref": "446"
+       },
        "extensions": {
-        "$id": "513",
+        "$id": "543",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -3717,23 +3972,15 @@
        "isNullable": true
       },
       "Conflict": {
-       "$id": "514",
+       "$id": "544",
        "body": {
-        "$id": "515",
-        "$type": "PrimaryType",
-        "knownPrimaryType": "object",
-        "deprecated": false,
-        "name": {
-         "$id": "516",
-         "fixed": false,
-         "raw": "Object"
-        }
-       },
-       "headers": {
         "$ref": "432"
        },
+       "headers": {
+        "$ref": "446"
+       },
        "extensions": {
-        "$id": "517",
+        "$id": "545",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -3751,16 +3998,16 @@
       }
      },
      "defaultResponse": {
-      "$id": "518",
+      "$id": "546",
       "isNullable": true
      },
      "returnType": {
-      "$id": "519",
+      "$id": "547",
       "body": {
-       "$ref": "511"
+       "$ref": "432"
       },
       "headers": {
-       "$ref": "432"
+       "$ref": "446"
       },
       "isNullable": true
      },
@@ -3796,33 +4043,28 @@
         "url": "https://deb.linkmobility.io",
         "description": "Germany 2 (Franfurt) Node"
        }
-      ],
-      "security": [
-       {
-        "basicAuth": []
-       }
       ]
      },
      "deprecated": false,
      "hidden": false
     },
     {
-     "$id": "520",
+     "$id": "548",
      "parameters": [
       {
-       "$id": "521",
+       "$id": "549",
        "clientProperty": {
-        "$ref": "440"
+        "$ref": "454"
        },
        "location": "path",
+       "deprecated": false,
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "522",
+        "$id": "550",
         "fixed": false
        },
-       "deprecated": false,
        "documentation": {
-        "$id": "523",
+        "$id": "551",
         "fixed": false,
         "raw": "The number that the keywords are routed to"
        },
@@ -3834,9 +4076,9 @@
          "filename": [
           "mem:///103?oai3.shaken.json"
          ],
-         "name": "paths·1shf5zx·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·0",
+         "name": "paths·17hhmjo·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·0",
          "originalLocations": [
-          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1shf5zx·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·0"
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·17hhmjo·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·0"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -3844,37 +4086,37 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "524",
+        "$id": "552",
         "fixed": false,
         "raw": "number"
        },
        "serializedName": "number",
        "modelType": {
-        "$id": "525",
+        "$id": "553",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "526",
+         "$id": "554",
          "fixed": false,
          "raw": "String"
         }
        }
       },
       {
-       "$id": "527",
+       "$id": "555",
        "clientProperty": {
-        "$ref": "452"
+        "$ref": "466"
        },
        "location": "path",
+       "deprecated": false,
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "528",
+        "$id": "556",
         "fixed": false
        },
-       "deprecated": false,
        "documentation": {
-        "$id": "529",
+        "$id": "557",
         "fixed": false,
         "raw": "The ID of the Platform assigned by LINK Mobility"
        },
@@ -3886,9 +4128,9 @@
          "filename": [
           "mem:///103?oai3.shaken.json"
          ],
-         "name": "paths·1ohsko1·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·1",
+         "name": "paths·1cvrn4m·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·1",
          "originalLocations": [
-          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1ohsko1·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·1"
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1cvrn4m·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·1"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -3896,37 +4138,37 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "530",
+        "$id": "558",
         "fixed": false,
         "raw": "platformId"
        },
        "serializedName": "platformId",
        "modelType": {
-        "$id": "531",
+        "$id": "559",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "532",
+         "$id": "560",
          "fixed": false,
          "raw": "String"
         }
        }
       },
       {
-       "$id": "533",
+       "$id": "561",
        "clientProperty": {
-        "$ref": "458"
+        "$ref": "472"
        },
        "location": "path",
+       "deprecated": false,
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "534",
+        "$id": "562",
         "fixed": false
        },
-       "deprecated": false,
        "documentation": {
-        "$id": "535",
+        "$id": "563",
         "fixed": false,
         "raw": "The ID of the Partner assigned by LINK Mobility"
        },
@@ -3938,9 +4180,9 @@
          "filename": [
           "mem:///103?oai3.shaken.json"
          ],
-         "name": "paths·dtk9fd·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·2",
+         "name": "paths·i8rcuq·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·2",
          "originalLocations": [
-          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·dtk9fd·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·2"
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·i8rcuq·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·2"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -3948,37 +4190,37 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "536",
+        "$id": "564",
         "fixed": false,
         "raw": "partnerId"
        },
        "serializedName": "partnerId",
        "modelType": {
-        "$id": "537",
+        "$id": "565",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "538",
+         "$id": "566",
          "fixed": false,
          "raw": "String"
         }
        }
       },
       {
-       "$id": "539",
+       "$id": "567",
        "clientProperty": {
-        "$ref": "464"
+        "$ref": "478"
        },
        "location": "path",
+       "deprecated": false,
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "540",
+        "$id": "568",
         "fixed": false
        },
-       "deprecated": false,
        "documentation": {
-        "$id": "541",
+        "$id": "569",
         "fixed": false,
         "raw": "The ID of the Route to be returned"
        },
@@ -3990,9 +4232,9 @@
          "filename": [
           "mem:///103?oai3.shaken.json"
          ],
-         "name": "paths·errrdo·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·3",
+         "name": "paths·dxg5ea·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·3",
          "originalLocations": [
-          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·errrdo·number-number-keyword-platform-platformid-partner-partnerid-id-id·get·parameters·3"
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·dxg5ea·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·3"
          ]
         },
         "x-ms-parameter-location": "method"
@@ -4000,18 +4242,18 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "542",
+        "$id": "570",
         "fixed": false,
         "raw": "id"
        },
        "serializedName": "id",
        "modelType": {
-        "$id": "543",
+        "$id": "571",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "544",
+         "$id": "572",
          "fixed": false,
          "raw": "String"
         }
@@ -4019,12 +4261,12 @@
       }
      ],
      "name": {
-      "$id": "545",
+      "$id": "573",
       "fixed": false,
       "raw": "get"
      },
      "group": {
-      "$id": "546",
+      "$id": "574",
       "fixed": false,
       "raw": "keyword"
      },
@@ -4034,12 +4276,12 @@
      "httpMethod": "get",
      "responses": {
       "OK": {
-       "$id": "547",
+       "$id": "575",
        "body": {
-        "$ref": "324"
+        "$ref": "2"
        },
        "extensions": {
-        "$id": "548",
+        "$id": "576",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -4056,20 +4298,12 @@
        "isNullable": true
       },
       "NotFound": {
-       "$id": "549",
+       "$id": "577",
        "body": {
-        "$id": "550",
-        "$type": "PrimaryType",
-        "knownPrimaryType": "object",
-        "deprecated": false,
-        "name": {
-         "$id": "551",
-         "fixed": false,
-         "raw": "Object"
-        }
+        "$ref": "432"
        },
        "extensions": {
-        "$id": "552",
+        "$id": "578",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -4087,18 +4321,18 @@
       }
      },
      "defaultResponse": {
-      "$id": "553",
+      "$id": "579",
       "isNullable": true
      },
      "returnType": {
-      "$id": "554",
+      "$id": "580",
       "body": {
-       "$id": "555",
+       "$id": "581",
        "$type": "PrimaryType",
        "knownPrimaryType": "object",
        "deprecated": false,
        "name": {
-        "$id": "556",
+        "$id": "582",
         "fixed": false,
         "raw": "Object"
        }
@@ -4143,22 +4377,361 @@
      "hidden": false
     },
     {
-     "$id": "557",
+     "$id": "583",
      "parameters": [
       {
-       "$id": "558",
+       "$id": "584",
        "clientProperty": {
-        "$ref": "440"
+        "$ref": "454"
        },
        "location": "path",
+       "deprecated": false,
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "559",
+        "$id": "585",
         "fixed": false
        },
-       "deprecated": false,
        "documentation": {
-        "$id": "560",
+        "$id": "586",
+        "fixed": false,
+        "raw": "The number that the keywords are routed to"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·17hhmjo·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·0",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·17hhmjo·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·0"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "587",
+        "fixed": false,
+        "raw": "number"
+       },
+       "serializedName": "number",
+       "modelType": {
+        "$id": "588",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "589",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "590",
+       "clientProperty": {
+        "$ref": "466"
+       },
+       "location": "path",
+       "deprecated": false,
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "591",
+        "fixed": false
+       },
+       "documentation": {
+        "$id": "592",
+        "fixed": false,
+        "raw": "The ID of the Platform assigned by LINK Mobility"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·1cvrn4m·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·1",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·1cvrn4m·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·1"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "593",
+        "fixed": false,
+        "raw": "platformId"
+       },
+       "serializedName": "platformId",
+       "modelType": {
+        "$id": "594",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "595",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "596",
+       "clientProperty": {
+        "$ref": "472"
+       },
+       "location": "path",
+       "deprecated": false,
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "597",
+        "fixed": false
+       },
+       "documentation": {
+        "$id": "598",
+        "fixed": false,
+        "raw": "The ID of the Partner assigned by LINK Mobility"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·i8rcuq·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·2",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·i8rcuq·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·2"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "599",
+        "fixed": false,
+        "raw": "partnerId"
+       },
+       "serializedName": "partnerId",
+       "modelType": {
+        "$id": "600",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "601",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "602",
+       "clientProperty": {
+        "$ref": "478"
+       },
+       "location": "path",
+       "deprecated": false,
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "603",
+        "fixed": false
+       },
+       "documentation": {
+        "$id": "604",
+        "fixed": false,
+        "raw": "The ID of the Route to be returned"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·dxg5ea·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·3",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·dxg5ea·number-number-keyword-platform-platformid-partner-partnerid-id-id·parameters·3"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "605",
+        "fixed": false,
+        "raw": "id"
+       },
+       "serializedName": "id",
+       "modelType": {
+        "$id": "606",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "607",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      }
+     ],
+     "name": {
+      "$id": "608",
+      "fixed": false,
+      "raw": "update"
+     },
+     "group": {
+      "$id": "609",
+      "fixed": false,
+      "raw": "keyword"
+     },
+     "serializedName": "keyword_update",
+     "url": "/number/{number}/keyword/platform/{platformId}/partner/{partnerId}/id/{id}",
+     "isAbsoluteUrl": false,
+     "httpMethod": "put",
+     "responses": {
+      "NoContent": {
+       "$id": "610",
+       "extensions": {
+        "$id": "611",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·560iqh·number-number-keyword-platform-platformid-partner-partnerid-id-id·put·responses·204",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·560iqh·number-number-keyword-platform-platformid-partner-partnerid-id-id·put·responses·204"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "BadRequest": {
+       "$id": "612",
+       "body": {
+        "$ref": "432"
+       },
+       "extensions": {
+        "$id": "613",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·afn88g·number-number-keyword-platform-platformid-partner-partnerid-id-id·put·responses·400",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·afn88g·number-number-keyword-platform-platformid-partner-partnerid-id-id·put·responses·400"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "Conflict": {
+       "$id": "614",
+       "body": {
+        "$ref": "432"
+       },
+       "extensions": {
+        "$id": "615",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·3wbs4n·number-number-keyword-platform-platformid-partner-partnerid-id-id·put·responses·409",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·3wbs4n·number-number-keyword-platform-platformid-partner-partnerid-id-id·put·responses·409"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "616",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "617",
+      "body": {
+       "$ref": "432"
+      },
+      "isNullable": true
+     },
+     "description": "",
+     "summary": "Updates a Keyword Route",
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": [
+       {
+        "url": "https://wsx.sp247.net/",
+        "description": "General API Gateway"
+       },
+       {
+        "url": "https://n-eu.linkmobility.io",
+        "description": "Northern Europe (Sweden) Node"
+       },
+       {
+        "url": "https://s-eu.linkmobility.io",
+        "description": "Southern European (Spain) Node"
+       },
+       {
+        "url": "https://c-eu.linkmobility.io",
+        "description": "Central Europe (Germany) Node"
+       },
+       {
+        "url": "https://no.linkmobility.io",
+        "description": "Norwegian Node"
+       },
+       {
+        "url": "https://deb.linkmobility.io",
+        "description": "Germany 2 (Franfurt) Node"
+       }
+      ]
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "618",
+     "parameters": [
+      {
+       "$id": "619",
+       "clientProperty": {
+        "$ref": "454"
+       },
+       "location": "path",
+       "deprecated": false,
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "620",
+        "fixed": false
+       },
+       "documentation": {
+        "$id": "621",
         "fixed": false,
         "raw": "The number that the keywords are routed to"
        },
@@ -4180,37 +4753,37 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "561",
+        "$id": "622",
         "fixed": false,
         "raw": "number"
        },
        "serializedName": "number",
        "modelType": {
-        "$id": "562",
+        "$id": "623",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "563",
+         "$id": "624",
          "fixed": false,
          "raw": "String"
         }
        }
       },
       {
-       "$id": "564",
+       "$id": "625",
        "clientProperty": {
-        "$ref": "452"
+        "$ref": "466"
        },
        "location": "path",
+       "deprecated": false,
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "565",
+        "$id": "626",
         "fixed": false
        },
-       "deprecated": false,
        "documentation": {
-        "$id": "566",
+        "$id": "627",
         "fixed": false,
         "raw": "The ID of the Platform assigned by LINK Mobility"
        },
@@ -4232,37 +4805,37 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "567",
+        "$id": "628",
         "fixed": false,
         "raw": "platformId"
        },
        "serializedName": "platformId",
        "modelType": {
-        "$id": "568",
+        "$id": "629",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "569",
+         "$id": "630",
          "fixed": false,
          "raw": "String"
         }
        }
       },
       {
-       "$id": "570",
+       "$id": "631",
        "clientProperty": {
-        "$ref": "458"
+        "$ref": "472"
        },
        "location": "path",
+       "deprecated": false,
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "571",
+        "$id": "632",
         "fixed": false
        },
-       "deprecated": false,
        "documentation": {
-        "$id": "572",
+        "$id": "633",
         "fixed": false,
         "raw": "The ID of the Partner assigned by LINK Mobility"
        },
@@ -4284,37 +4857,37 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "573",
+        "$id": "634",
         "fixed": false,
         "raw": "partnerId"
        },
        "serializedName": "partnerId",
        "modelType": {
-        "$id": "574",
+        "$id": "635",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "575",
+         "$id": "636",
          "fixed": false,
          "raw": "String"
         }
        }
       },
       {
-       "$id": "576",
+       "$id": "637",
        "clientProperty": {
-        "$ref": "488"
+        "$ref": "502"
        },
        "location": "path",
+       "deprecated": false,
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "577",
+        "$id": "638",
         "fixed": false
        },
-       "deprecated": false,
        "documentation": {
-        "$id": "578",
+        "$id": "639",
         "fixed": false,
         "raw": ""
        },
@@ -4336,18 +4909,18 @@
        "isRequired": true,
        "isConstant": false,
        "name": {
-        "$id": "579",
+        "$id": "640",
         "fixed": false,
         "raw": "refid"
        },
        "serializedName": "refid",
        "modelType": {
-        "$id": "580",
+        "$id": "641",
         "$type": "PrimaryType",
         "knownPrimaryType": "string",
         "deprecated": false,
         "name": {
-         "$id": "581",
+         "$id": "642",
          "fixed": false,
          "raw": "String"
         }
@@ -4355,12 +4928,12 @@
       }
      ],
      "name": {
-      "$id": "582",
+      "$id": "643",
       "fixed": false,
       "raw": "getByRefId"
      },
      "group": {
-      "$id": "583",
+      "$id": "644",
       "fixed": false,
       "raw": "keyword"
      },
@@ -4370,12 +4943,12 @@
      "httpMethod": "get",
      "responses": {
       "OK": {
-       "$id": "584",
+       "$id": "645",
        "body": {
-        "$ref": "324"
+        "$ref": "2"
        },
        "extensions": {
-        "$id": "585",
+        "$id": "646",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -4392,20 +4965,12 @@
        "isNullable": true
       },
       "NotFound": {
-       "$id": "586",
+       "$id": "647",
        "body": {
-        "$id": "587",
-        "$type": "PrimaryType",
-        "knownPrimaryType": "object",
-        "deprecated": false,
-        "name": {
-         "$id": "588",
-         "fixed": false,
-         "raw": "Object"
-        }
+        "$ref": "432"
        },
        "extensions": {
-        "$id": "589",
+        "$id": "648",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -4423,18 +4988,18 @@
       }
      },
      "defaultResponse": {
-      "$id": "590",
+      "$id": "649",
       "isNullable": true
      },
      "returnType": {
-      "$id": "591",
+      "$id": "650",
       "body": {
-       "$id": "592",
+       "$id": "651",
        "$type": "PrimaryType",
        "knownPrimaryType": "object",
        "deprecated": false,
        "name": {
-        "$id": "593",
+        "$id": "652",
         "fixed": false,
         "raw": "Object"
        }
@@ -4476,36 +5041,321 @@
      },
      "deprecated": false,
      "hidden": false
+    },
+    {
+     "$id": "653",
+     "parameters": [
+      {
+       "$id": "654",
+       "clientProperty": {
+        "$ref": "454"
+       },
+       "location": "path",
+       "deprecated": false,
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "655",
+        "fixed": false
+       },
+       "documentation": {
+        "$id": "656",
+        "fixed": false,
+        "raw": "The number that the keywords are routed to"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·i4z91n·number-number-keyword-platform-platformid-partner-partnerid·get·parameters·0",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·i4z91n·number-number-keyword-platform-platformid-partner-partnerid·get·parameters·0"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "657",
+        "fixed": false,
+        "raw": "number"
+       },
+       "serializedName": "number",
+       "modelType": {
+        "$id": "658",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "659",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "660",
+       "clientProperty": {
+        "$ref": "466"
+       },
+       "location": "path",
+       "deprecated": false,
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "661",
+        "fixed": false
+       },
+       "documentation": {
+        "$id": "662",
+        "fixed": false,
+        "raw": "The ID of the Platform assigned by LINK Mobility"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·rr6bi7·number-number-keyword-platform-platformid-partner-partnerid·get·parameters·1",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·rr6bi7·number-number-keyword-platform-platformid-partner-partnerid·get·parameters·1"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "663",
+        "fixed": false,
+        "raw": "platformId"
+       },
+       "serializedName": "platformId",
+       "modelType": {
+        "$id": "664",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "665",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      },
+      {
+       "$id": "666",
+       "clientProperty": {
+        "$ref": "472"
+       },
+       "location": "path",
+       "deprecated": false,
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "667",
+        "fixed": false
+       },
+       "documentation": {
+        "$id": "668",
+        "fixed": false,
+        "raw": "The ID of the Partner assigned by LINK Mobility"
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·4ru4j1·number-number-keyword-platform-platformid-partner-partnerid·get·parameters·2",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/parameters/paths·4ru4j1·number-number-keyword-platform-platformid-partner-partnerid·get·parameters·2"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "669",
+        "fixed": false,
+        "raw": "partnerId"
+       },
+       "serializedName": "partnerId",
+       "modelType": {
+        "$id": "670",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "deprecated": false,
+        "name": {
+         "$id": "671",
+         "fixed": false,
+         "raw": "String"
+        }
+       }
+      }
+     ],
+     "name": {
+      "$id": "672",
+      "fixed": false,
+      "raw": "getAll"
+     },
+     "group": {
+      "$id": "673",
+      "fixed": false,
+      "raw": "keyword"
+     },
+     "serializedName": "keyword_getAll",
+     "url": "/number/{number}/keyword/platform/{platformId}/partner/{partnerId}",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "674",
+       "body": {
+        "$id": "675",
+        "$type": "SequenceType",
+        "elementType": {
+         "$ref": "2"
+        },
+        "deprecated": false,
+        "name": {
+         "$id": "676",
+         "fixed": false
+        }
+       },
+       "extensions": {
+        "$id": "677",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·10z6mr·number-number-keyword-platform-platformid-partner-partnerid·get·responses·200",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·10z6mr·number-number-keyword-platform-platformid-partner-partnerid·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      },
+      "NotFound": {
+       "$id": "678",
+       "body": {
+        "$ref": "2"
+       },
+       "extensions": {
+        "$id": "679",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "v1.0"
+         ],
+         "filename": [
+          "mem:///103?oai3.shaken.json"
+         ],
+         "name": "paths·epwrp·number-number-keyword-platform-platformid-partner-partnerid·get·responses·404",
+         "originalLocations": [
+          "file:///C:/dev/deveel/deveel.lm.client/docs/openapi/link-api-v1.json#/components/responses/paths·epwrp·number-number-keyword-platform-platformid-partner-partnerid·get·responses·404"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "680",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "681",
+      "body": {
+       "$id": "682",
+       "$type": "PrimaryType",
+       "knownPrimaryType": "object",
+       "deprecated": false,
+       "name": {
+        "$id": "683",
+        "fixed": false,
+        "raw": "Object"
+       }
+      },
+      "isNullable": true
+     },
+     "description": "Gets a list of keywords that are mapped within a certain number and that has a certain platformId and a certain partnerId",
+     "summary": "Lists the Keyword Routes of a Partner",
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": [
+       {
+        "url": "https://wsx.sp247.net/",
+        "description": "General API Gateway"
+       },
+       {
+        "url": "https://n-eu.linkmobility.io",
+        "description": "Northern Europe (Sweden) Node"
+       },
+       {
+        "url": "https://s-eu.linkmobility.io",
+        "description": "Southern European (Spain) Node"
+       },
+       {
+        "url": "https://c-eu.linkmobility.io",
+        "description": "Central Europe (Germany) Node"
+       },
+       {
+        "url": "https://no.linkmobility.io",
+        "description": "Norwegian Node"
+       },
+       {
+        "url": "https://deb.linkmobility.io",
+        "description": "Germany 2 (Franfurt) Node"
+       }
+      ]
+     },
+     "deprecated": false,
+     "hidden": false
     }
    ],
    "name": {
-    "$id": "594",
+    "$id": "684",
     "fixed": false,
     "raw": "Keyword"
    },
    "typeName": {
-    "$id": "595",
+    "$id": "685",
     "fixed": false
    },
    "nameForProperty": "Keyword"
   },
   {
-   "$id": "596",
+   "$id": "686",
    "methods": [
     {
-     "$id": "597",
+     "$id": "687",
      "parameters": [
       {
-       "$id": "598",
+       "$id": "688",
        "location": "body",
+       "deprecated": false,
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "599",
+        "$id": "689",
         "fixed": false
        },
-       "deprecated": false,
        "documentation": {
-        "$id": "600",
+        "$id": "690",
         "fixed": false
        },
        "extensions": {
@@ -4525,23 +5375,23 @@
        "isRequired": false,
        "isConstant": false,
        "name": {
-        "$id": "601",
+        "$id": "691",
         "fixed": false,
         "raw": "body"
        },
        "serializedName": "body",
        "modelType": {
-        "$ref": "28"
+        "$ref": "136"
        }
       }
      ],
      "name": {
-      "$id": "602",
+      "$id": "692",
       "fixed": false,
       "raw": "send"
      },
      "group": {
-      "$id": "603",
+      "$id": "693",
       "fixed": false,
       "raw": "sms"
      },
@@ -4551,12 +5401,12 @@
      "httpMethod": "post",
      "responses": {
       "OK": {
-       "$id": "604",
+       "$id": "694",
        "body": {
-        "$ref": "2"
+        "$ref": "110"
        },
        "extensions": {
-        "$id": "605",
+        "$id": "695",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -4573,9 +5423,9 @@
        "isNullable": true
       },
       "NoContent": {
-       "$id": "606",
+       "$id": "696",
        "extensions": {
-        "$id": "607",
+        "$id": "697",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -4593,13 +5443,13 @@
       }
      },
      "defaultResponse": {
-      "$id": "608",
+      "$id": "698",
       "isNullable": true
      },
      "returnType": {
-      "$id": "609",
+      "$id": "699",
       "body": {
-       "$ref": "2"
+       "$ref": "110"
       },
       "isNullable": true
      },
@@ -4646,19 +5496,19 @@
      "hidden": false
     },
     {
-     "$id": "610",
+     "$id": "700",
      "parameters": [
       {
-       "$id": "611",
+       "$id": "701",
        "location": "body",
+       "deprecated": false,
        "collectionFormat": "none",
        "defaultValue": {
-        "$id": "612",
+        "$id": "702",
         "fixed": false
        },
-       "deprecated": false,
        "documentation": {
-        "$id": "613",
+        "$id": "703",
         "fixed": false
        },
        "extensions": {
@@ -4678,23 +5528,23 @@
        "isRequired": false,
        "isConstant": false,
        "name": {
-        "$id": "614",
+        "$id": "704",
         "fixed": false,
         "raw": "body"
        },
        "serializedName": "body",
        "modelType": {
-        "$ref": "266"
+        "$ref": "374"
        }
       }
      ],
      "name": {
-      "$id": "615",
+      "$id": "705",
       "fixed": false,
       "raw": "batchSend"
      },
      "group": {
-      "$id": "616",
+      "$id": "706",
       "fixed": false,
       "raw": "sms"
      },
@@ -4704,21 +5554,21 @@
      "httpMethod": "post",
      "responses": {
       "OK": {
-       "$id": "617",
+       "$id": "707",
        "body": {
-        "$id": "618",
+        "$id": "708",
         "$type": "SequenceType",
         "elementType": {
-         "$ref": "2"
+         "$ref": "110"
         },
         "deprecated": false,
         "name": {
-         "$id": "619",
+         "$id": "709",
          "fixed": false
         }
        },
        "extensions": {
-        "$id": "620",
+        "$id": "710",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -4735,9 +5585,9 @@
        "isNullable": true
       },
       "NoContent": {
-       "$id": "621",
+       "$id": "711",
        "extensions": {
-        "$id": "622",
+        "$id": "712",
         "x-ms-metadata": {
          "apiVersions": [
           "v1.0"
@@ -4755,13 +5605,13 @@
       }
      },
      "defaultResponse": {
-      "$id": "623",
+      "$id": "713",
       "isNullable": true
      },
      "returnType": {
-      "$id": "624",
+      "$id": "714",
       "body": {
-       "$ref": "618"
+       "$ref": "708"
       },
       "isNullable": true
      },
@@ -4797,11 +5647,6 @@
         "url": "https://deb.linkmobility.io",
         "description": "Germany 2 (Franfurt) Node"
        }
-      ],
-      "security": [
-       {
-        "basicAuth": []
-       }
       ]
      },
      "deprecated": false,
@@ -4809,12 +5654,12 @@
     }
    ],
    "name": {
-    "$id": "625",
+    "$id": "715",
     "fixed": false,
     "raw": "Sms"
    },
    "typeName": {
-    "$id": "626",
+    "$id": "716",
     "fixed": false
    },
    "nameForProperty": "Sms"

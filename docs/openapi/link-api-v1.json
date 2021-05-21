@@ -39,6 +39,7 @@
             "description": "Germany 2 (Franfurt) Node"
         }
     ],
+    "security": [{ "basicAuth":[] }],
     "paths": {
         "/number/{number}/keyword": {
             "post": {
@@ -57,7 +58,6 @@
                 "summary": "Creates a new Keyword Route",
                 "description": "Adds a keyword data to the storage by posting a keyword object",
                 "tags": ["keyword", "route"],
-                "security": [ { "basicAuth":[] } ],
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -104,48 +104,49 @@
             }
         },
         "/number/{number}/keyword/platform/{platformId}/partner/{partnerId}/id/{id}": {
+            "parameters": [
+                {
+                    "in": "path",
+                    "required": true,
+                    "name": "number",
+                    "description": "The number that the keywords are routed to",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "platformId",
+                    "required": true,
+                    "in": "path",
+                    "description": "The ID of the Platform assigned by LINK Mobility",
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "partnerId",
+                    "required": true,
+                    "in": "path",
+                    "description": "The ID of the Partner assigned by LINK Mobility",
+                    "schema": {
+                        "type": "string"
+                    }    
+                },
+                {
+                    "name": "id",
+                    "required": true,
+                    "in": "path",
+                    "description": "The ID of the Route to be returned",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
             "get": {
                 "operationId": "keyword_get",
                 "summary": "Gets a Keyword Route by ID",
                 "description": "Retrieves a keyword route from a partner by its id",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "required": true,
-                        "name": "number",
-                        "description": "The number that the keywords are routed to",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "platformId",
-                        "required": true,
-                        "in": "path",
-                        "description": "The ID of the Platform assigned by LINK Mobility",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "partnerId",
-                        "required": true,
-                        "in": "path",
-                        "description": "The ID of the Partner assigned by LINK Mobility",
-                        "schema": {
-                            "type": "string"
-                        }    
-                    },
-                    {
-                        "name": "id",
-                        "required": true,
-                        "in": "path",
-                        "description": "The ID of the Route to be returned",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
+                "tags": ["keyword", "route"],
                 "responses": {
                     "200": {
                         "description": "The keyword route was found",
@@ -168,12 +169,44 @@
                         }
                     }
                 }
+            },
+            "put": {
+                "operationId": "keyword_update",
+                "summary": "Updates a Keyword Route",
+                "description": "",
+                "tags": ["keyword", "route"],
+                "responses": {
+                    "204": {
+                        "description": "The route was successfully updated"
+                    },
+                    "400": {
+                        "description": "The route object includes some invalid data",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        }
+                    },
+                    "409": {
+                        "description": "The route object already exists",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        }
+                    }
+                }
             }
         },
         "/number/{number}/keyword/platform/{platformId}/partner/{partnerId}/refid/{refid}": {
             "get": {
                 "operationId": "keyword_getByRefId",
                 "summary": "Gets a Keyword Route by a Reference ID",
+                "tags": ["keyword", "route"],
                 "parameters": [
                     {
                         "in": "path",
@@ -236,6 +269,68 @@
                 }
             }
         },
+        "/number/{number}/keyword/platform/{platformId}/partner/{partnerId}": {
+            "get": {
+                "operationId": "keyword_getAll",
+                "summary": "Lists the Keyword Routes of a Partner",
+                "description": "Gets a list of keywords that are mapped within a certain number and that has a certain platformId and a certain partnerId",
+                "tags": ["keyword", "route"],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "name": "number",
+                        "description": "The number that the keywords are routed to",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "platformId",
+                        "required": true,
+                        "in": "path",
+                        "description": "The ID of the Platform assigned by LINK Mobility",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "partnerId",
+                        "required": true,
+                        "in": "path",
+                        "description": "The ID of the Partner assigned by LINK Mobility",
+                        "schema": {
+                            "type": "string"
+                        }    
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The list of Keyword Routes for the Partner is returned",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Route"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "The partner was not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Route"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/sms/send": {
             "post": {
                 "operationId": "sms_send",
@@ -275,11 +370,6 @@
                 "summary": "Sends a batch of SMS Messages",
                 "description": "",
                 "tags": ["sms"],
-                "security": [
-                    {
-                        "basicAuth":[]
-                    }
-                ],
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -581,7 +671,15 @@
                 }
             },
             "ErrorResponse": {
-                "type": "object"
+                "type": "object",
+                "properties": {
+                    "errorCode": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    }
+                }
             },
             "Route": {
                 "type": "object",

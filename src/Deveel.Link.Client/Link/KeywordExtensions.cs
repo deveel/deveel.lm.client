@@ -32,7 +32,7 @@ namespace Deveel.Link
             /// <param name='number'>
             /// The number that the keyword will be routed to
             /// </param>
-            public static object Create(this IKeyword operations, Route body, string number)
+            public static ErrorResponse Create(this IKeyword operations, Route body, string number)
             {
                 return operations.CreateAsync(body, number).GetAwaiter().GetResult();
             }
@@ -54,7 +54,7 @@ namespace Deveel.Link
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<object> CreateAsync(this IKeyword operations, Route body, string number, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ErrorResponse> CreateAsync(this IKeyword operations, Route body, string number, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.CreateWithHttpMessagesAsync(body, number, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -79,7 +79,7 @@ namespace Deveel.Link
             /// <param name='customHeaders'>
             /// Headers that will be added to request.
             /// </param>
-            public static HttpOperationResponse<object,KeywordCreateHeaders> CreateWithHttpMessages(this IKeyword operations, Route body, string number, Dictionary<string, List<string>> customHeaders = null)
+            public static HttpOperationResponse<ErrorResponse,KeywordCreateHeaders> CreateWithHttpMessages(this IKeyword operations, Route body, string number, Dictionary<string, List<string>> customHeaders = null)
             {
                 return operations.CreateWithHttpMessagesAsync(body, number, customHeaders, CancellationToken.None).ConfigureAwait(false).GetAwaiter().GetResult();
             }
@@ -172,6 +172,84 @@ namespace Deveel.Link
             }
 
             /// <summary>
+            /// Updates a Keyword Route
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='number'>
+            /// The number that the keywords are routed to
+            /// </param>
+            /// <param name='platformId'>
+            /// The ID of the Platform assigned by LINK Mobility
+            /// </param>
+            /// <param name='partnerId'>
+            /// The ID of the Partner assigned by LINK Mobility
+            /// </param>
+            /// <param name='id'>
+            /// The ID of the Route to be returned
+            /// </param>
+            public static ErrorResponse Update(this IKeyword operations, string number, string platformId, string partnerId, string id)
+            {
+                return operations.UpdateAsync(number, platformId, partnerId, id).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Updates a Keyword Route
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='number'>
+            /// The number that the keywords are routed to
+            /// </param>
+            /// <param name='platformId'>
+            /// The ID of the Platform assigned by LINK Mobility
+            /// </param>
+            /// <param name='partnerId'>
+            /// The ID of the Partner assigned by LINK Mobility
+            /// </param>
+            /// <param name='id'>
+            /// The ID of the Route to be returned
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task<ErrorResponse> UpdateAsync(this IKeyword operations, string number, string platformId, string partnerId, string id, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                using (var _result = await operations.UpdateWithHttpMessagesAsync(number, platformId, partnerId, id, null, cancellationToken).ConfigureAwait(false))
+                {
+                    return _result.Body;
+                }
+            }
+
+            /// <summary>
+            /// Updates a Keyword Route
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='number'>
+            /// The number that the keywords are routed to
+            /// </param>
+            /// <param name='platformId'>
+            /// The ID of the Platform assigned by LINK Mobility
+            /// </param>
+            /// <param name='partnerId'>
+            /// The ID of the Partner assigned by LINK Mobility
+            /// </param>
+            /// <param name='id'>
+            /// The ID of the Route to be returned
+            /// </param>
+            /// <param name='customHeaders'>
+            /// Headers that will be added to request.
+            /// </param>
+            public static HttpOperationResponse<ErrorResponse> UpdateWithHttpMessages(this IKeyword operations, string number, string platformId, string partnerId, string id, Dictionary<string, List<string>> customHeaders = null)
+            {
+                return operations.UpdateWithHttpMessagesAsync(number, platformId, partnerId, id, customHeaders, CancellationToken.None).ConfigureAwait(false).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
             /// Gets a Keyword Route by a Reference ID
             /// </summary>
             /// <param name='operations'>
@@ -244,6 +322,87 @@ namespace Deveel.Link
             public static HttpOperationResponse<object> GetByRefIdWithHttpMessages(this IKeyword operations, string number, string platformId, string partnerId, string refid, Dictionary<string, List<string>> customHeaders = null)
             {
                 return operations.GetByRefIdWithHttpMessagesAsync(number, platformId, partnerId, refid, customHeaders, CancellationToken.None).ConfigureAwait(false).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Lists the Keyword Routes of a Partner
+            /// </summary>
+            /// <remarks>
+            /// Gets a list of keywords that are mapped within a certain number and that
+            /// has a certain platformId and a certain partnerId
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='number'>
+            /// The number that the keywords are routed to
+            /// </param>
+            /// <param name='platformId'>
+            /// The ID of the Platform assigned by LINK Mobility
+            /// </param>
+            /// <param name='partnerId'>
+            /// The ID of the Partner assigned by LINK Mobility
+            /// </param>
+            public static object GetAll(this IKeyword operations, string number, string platformId, string partnerId)
+            {
+                return operations.GetAllAsync(number, platformId, partnerId).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Lists the Keyword Routes of a Partner
+            /// </summary>
+            /// <remarks>
+            /// Gets a list of keywords that are mapped within a certain number and that
+            /// has a certain platformId and a certain partnerId
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='number'>
+            /// The number that the keywords are routed to
+            /// </param>
+            /// <param name='platformId'>
+            /// The ID of the Platform assigned by LINK Mobility
+            /// </param>
+            /// <param name='partnerId'>
+            /// The ID of the Partner assigned by LINK Mobility
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task<object> GetAllAsync(this IKeyword operations, string number, string platformId, string partnerId, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                using (var _result = await operations.GetAllWithHttpMessagesAsync(number, platformId, partnerId, null, cancellationToken).ConfigureAwait(false))
+                {
+                    return _result.Body;
+                }
+            }
+
+            /// <summary>
+            /// Lists the Keyword Routes of a Partner
+            /// </summary>
+            /// <remarks>
+            /// Gets a list of keywords that are mapped within a certain number and that
+            /// has a certain platformId and a certain partnerId
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='number'>
+            /// The number that the keywords are routed to
+            /// </param>
+            /// <param name='platformId'>
+            /// The ID of the Platform assigned by LINK Mobility
+            /// </param>
+            /// <param name='partnerId'>
+            /// The ID of the Partner assigned by LINK Mobility
+            /// </param>
+            /// <param name='customHeaders'>
+            /// Headers that will be added to request.
+            /// </param>
+            public static HttpOperationResponse<object> GetAllWithHttpMessages(this IKeyword operations, string number, string platformId, string partnerId, Dictionary<string, List<string>> customHeaders = null)
+            {
+                return operations.GetAllWithHttpMessagesAsync(number, platformId, partnerId, customHeaders, CancellationToken.None).ConfigureAwait(false).GetAwaiter().GetResult();
             }
 
     }
